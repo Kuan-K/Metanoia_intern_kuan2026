@@ -58,6 +58,7 @@
 | `dgx-spark-aerial-oai-installation.md` |  30% | 7/3  |
 | `wnc-ru-config-index.md`               |  30% | 7/3  |
 | `pegatron-ru-config-index.md`          |  30% | 7/3  |
+| `week1-checkpoint.md`                  | 100% | 7/3  |
 
 ## 7/3 通過標準
 
@@ -226,6 +227,7 @@
 | `month1-open-issues.md`                             | 100% | 7/31 |
 | `month1-summary.md`                                 | 100% | 7/31 |
 | `month2-metanoia-entry-plan.md`                     | 100% | 7/31 |
+| `week5-checkpoint.md`                               | 100% | 7/31 |
 
 ## 7/31 月檢查通過標準
 
@@ -446,6 +448,7 @@
 | `metanoia-oai-aerial-integration-feasibility.md`  | 100% | 8/28 |
 | `month3-integration-plan.md`                      | 100% | 8/28 |
 | `month2-summary.md`                               | 100% | 8/28 |
+| `week9-checkpoint.md`                             | 100% | 8/28 |
 
 ## 8/28 月檢查通過標準
 
