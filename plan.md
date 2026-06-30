@@ -27,7 +27,7 @@
 | W9    | 8/24–8/28 | 8/28  | 完成 Metanoia 開源碼研究總結，產出 9 月整合可行性與計畫                                    |   72% |
 | W10   | 8/31-9/4  | 9/4   |建立 OAI + Ariel cuBB + Metanoia RU 初版 config pack 與 launch flow                      | 78%  |
 | W11   | 9/7–9/11  | 9/11  |完成第一次 OAI + Ariel cuBB + Metanoia RU launch attempt                                 | 84% |
-| W12   | 9/14–9/18 | 9/14  |完成第二次測試 / debug / 狀態判定，建立與 Pegatron RU 版本比較初版                          | 92% |
+| W12   | 9/14–9/18 | 9/18  |完成第二次測試 / debug / 狀態判定，建立與 Pegatron RU 版本比較初版                          | 92% |
 | W13   | 9/21–9/25 | 9/25  |完成最終驗證報告、comparison、handover guide                                              | 98% |
 | Final | 9/26      | 9/26  |最終檢查點                                                                               | 100% |
 
@@ -44,9 +44,9 @@
 
 | 日期     | 工作                                                                                                           | 截止日期 | 預期產出                                                                       |
 | ------ | ------------------------------------------------------------------------------------------------------------ | ---- | -------------------------------------------------------------------------- |
-| 7/1（三） | 準備 Ming / Richard 交接問題清單；與 Ming 開會，交接已跑通的 OAI L2/L3 + OAI L1 + Pegatron RU E2E，確認 gNB 與 RU 設定檔位置、主要參數、成功條件   | 7/1  | `2026-07-01-ming-handover.md`                                              |
+| 7/1（三） | 準備 Ming / Richard 交接問題清單；與 Ming 開會，交接已跑通的 OAI L2/L3 + OAI L1 + Pegatron RU E2E，確認 gNB 與 RU 設定檔位置、主要參數、成功條件   | 7/1  | `2026-07-01-ming-meeting note.md`                                              |
 | 7/2（四） | LAB workshop                                                                                                 | 7/2  | 無需技術產出，只列入行程                                                               |
-| 7/3（五） | 嘗試安裝 DGX Spark；與 Richard 開會交接 DGX Spark 安裝手冊、Aerial L1 + OAI L2 安裝手冊、WNC RU config 位置、OAI / Ariel RAN 參數設定方式 | 7/3  | `2026-07-03-richard-handover.md`、`dgx-spark-aerial-oai-installation.md` 初版 |
+| 7/3（五） | 嘗試安裝 DGX Spark；與 Richard 開會交接 DGX Spark 安裝手冊、Aerial L1 + OAI L2 安裝手冊、WNC RU config 位置、OAI / Ariel RAN 參數設定方式 | 7/3  | `2026-07-03-richard-meeting note.md`、`dgx-spark-aerial-oai-installation.md` 初版 |
 
 ## 本週產出與百分比
 
@@ -216,7 +216,7 @@
 
 | 產出                                                  |  完成度 | 截止日期 |
 | --------------------------------------------------- | ---: | ---- |
-| `oai-pegatron-baseline-summary.md`                  | 100% | 7/27 |
+| `oai-pegatron-baseline.md`                          | 100% | 7/27 |
 | `oai-aerial-pegatron-e2e-status.md`                 | 100% | 7/28 |
 | `oai-pegatron-vs-oai-aerial-pegatron-comparison.md` | 100% | 7/31 |
 | `oai-gnb-parameter-table.md`                        |  90% | 7/31 |
@@ -273,8 +273,6 @@
 > **Metanoia RU 開源碼研究。**
 
 8 月的成果不是只說「看過程式碼」，而是要留下可交接的研究文件，讓 9 月可以根據這些文件把 Metanoia RU 接到 OAI L2/L3 + Ariel cuBB。
-
-8 月最終應完成：
 
 # W6：2026/8/3（一）–2026/8/7（五）
 
@@ -478,14 +476,6 @@
 3. 保存 log、error report、status
 4. 與 7 月 Pegatron RU 版本比較
 5. 完成最終交接文件
----
-
-# 9 月週目標總表
-
-| 週次    | 日期        | 週里程碑                                                           | 檢查點  |
-| ----- | --------- | -------------------------------------------------------------- | ---- |
-| W10   | 8/31–9/4  
-
 ---
 
 # W10：2026/8/31（一）–2026/9/4（五）
