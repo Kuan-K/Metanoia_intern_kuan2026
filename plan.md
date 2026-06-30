@@ -80,7 +80,7 @@
 
 | 日期      | 工作                                                                                                 | 截止日期 | 預期產出                                                      |
 | ------- | -------------------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------- |
-| 7/6（一）  | 整理已跑通的 OAI L2/L3 + OAI L1 + Pegatron RU E2E baseline：使用版本、config、command、log、成功條件                  | 7/6  | `oai-pegatron-baseline-summary.md` 60%                    |
+| 7/6（一）  | 整理已跑通的 OAI L2/L3 + OAI L1 + Pegatron RU E2E baseline：使用版本、config、command、log、成功條件                  | 7/6  | `oai-pegatron-baseline.md` 60%                    |
 | 7/7（二）  | 深入整理 OAI gNB 設定檔參數：頻段、bandwidth、numerology、TDD pattern、RU/fronthaul 相關設定                           | 7/7  | `oai-gnb-parameter-table.md` 50%                          |
 | 7/8（三）  | 深入整理 Pegatron RU 設定檔參數：RU IP、port、clock/sync、frequency、bandwidth、gain、antenna、eCPRI/fronthaul 相關設定 | 7/8  | `pegatron-ru-parameter-table.md` 50%                      |
 | 7/9（四）  | 整理 DGX Spark / Aerial L1 + OAI L2 安裝手冊：環境需求、安裝步驟、依賴套件、啟動方式、可能錯誤                                    | 7/9  | `dgx-spark-aerial-oai-installation.md` 70%                |
@@ -206,7 +206,7 @@
 
 | 日期      | 工作                                                                              | 截止日期 | 預期產出                                                    |
 | ------- | ------------------------------------------------------------------------------- | ---- | ------------------------------------------------------- |
-| 7/27（一） | 整理 OAI + Pegatron baseline 的最終版本：config、command、參數、log、成功條件                     | 7/27 | `oai-pegatron-baseline-summary.md` 100%                 |
+| 7/27（一） | 整理 OAI + Pegatron baseline 的最終版本：config、command、參數、log、成功條件                     | 7/27 | `oai-pegatron-baseline.md` 100%                 |
 | 7/28（二） | 整理 OAI + Ariel cuBB + Pegatron RU 的最終狀態：config、command、log、成功 / 失敗 / blocked 原因 | 7/28 | `oai-aerial-pegatron-e2e-status.md` 100%                |
 | 7/29（三） | 建立兩套系統的比較表：架構、參數、啟動流程、log、錯誤、限制、可重現性                                            | 7/29 | `oai-pegatron-vs-oai-aerial-pegatron-comparison.md` 80% |
 | 7/30（四） | 整理 7 月 meeting notes 中 Action Items 的完成狀態；整理 open issues 與 8 月銜接方向              | 7/30 | `month1-open-issues.md`、meeting notes 更新                |
@@ -423,8 +423,8 @@
 
 | 日期      | 工作                                                                    | 截止日期 | 預期產出                                                 |
 | ------- | --------------------------------------------------------------------- | ---- | ---------------------------------------------------- |
-| 8/24（一） | 補齊 Metanoia repo overview、source tree、build guide、run entrypoint      | 8/24 | W6/W7 文件更新到 90% 以上                                   |
-| 8/25（二） | 補齊 Metanoia parameter table、interface notes、mapping checklist         | 8/25 | W8 文件更新到 90% 以上                                      |
+| 8/24（一） | 補齊 Metanoia repo overview、source tree、build guide、run entrypoint      | 8/24 | 補齊 `metanoia-repo-overview.md`、`metanoia-source-tree.md`、`metanoia-build-guide.md`、`metanoia-run-entrypoint.md`  |
+| 8/25（二） | 補齊 Metanoia parameter table、interface notes、mapping checklist         | 8/25 | 補齊 `metanoia-parameter-table.md`、`metanoia-ru-interface-notes.md`、`metanoia-ru-to-aerial-cubb-mapping-checklist.md`|
 | 8/26（三） | 撰寫 OAI + Ariel cuBB + Metanoia RU 整合可行性報告                             | 8/26 | `metanoia-oai-aerial-integration-feasibility.md` 70% |
 | 8/27（四） | 建立 9 月整合計畫：config pack、launch sequence、log collection、risk mitigation | 8/27 | `month3-integration-plan.md` 80%                     |
 | 8/28（五） | 月檢查點：完成 8 月總結，明確列出 9 月第一週要做什麼                                         | 8/28 | `month2-summary.md`、`week9-checkpoint.md`            |
@@ -459,6 +459,17 @@
 | Risk            | 主要整合風險都有驗證方法                                     |
 | September entry | 明確知道 9 月第一週要建立哪些 config 與 launch flow            |
 
+# 8 月月末應完成產出
+
+| 類型 | 產出 |
+|---|---|
+| Repo 理解 | `metanoia-repo-overview.md`、`metanoia-source-tree.md` |
+| Build / Run | `metanoia-build-guide.md`、`metanoia-build-log.md`、`metanoia-run-entrypoint.md` |
+| Config | `metanoia-config-location-index.md`、`metanoia-parameter-table.md` |
+| Interface | `metanoia-ru-interface-notes.md`、`metanoia-ru-to-aerial-cubb-mapping-checklist.md` |
+| Comparison | `pegatron-vs-metanoia-ru-comparison.md` |
+| Integration | `metanoia-oai-aerial-integration-feasibility.md`、`month3-integration-plan.md` |
+| Summary | `month2-summary.md` |
 ---
 
 # 9 月總目標
