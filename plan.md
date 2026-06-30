@@ -54,25 +54,22 @@
 ## 每日工作
 
 | 日期 | 主要工作 | 預估工時 | 補充工作 / 緩衝 | 截止日期 | 預期產出 |
-| --- | --- | ---: | --- | --- | --- |
-| 7/1（三） | OAI + Pegatron RU 設定檔介紹：找出學長已跑通 E2E 的 gNB / RU 設定檔，列出 Pegatron RU 頻段與型號，建立 gNB 參數表、RU 參數表、gNB-RU 對應表 | 7h | 若不知道設定檔路徑，直接問 Ming 或 Johnson；知道的參數先填，不知道的先留白並標記 Need Confirm | 7/1 | [`2026-07-01-ming-meeting note.md`](07-oai-aerial-pegatron/meeting-notes/2026-07-01-ming-meeting%20note.md)、[`oai-pegatron-baseline.md`](07-oai-aerial-pegatron/baseline-and-config/oai-pegatron-baseline.md)、[`oai-gnb-parameter-table.md`](07-oai-aerial-pegatron/baseline-and-config/oai-gnb-parameter-table.md)、[`pegatron-ru-parameter-table.md`](07-oai-aerial-pegatron/baseline-and-config/pegatron-ru-parameter-table.md)、[`oai-gnb-to-pegatron-ru-parameter-mapping.md`](07-oai-aerial-pegatron/mapping-and-readiness/oai-gnb-to-pegatron-ru-parameter-mapping.md) |
-| 7/2（四） | LAB workshop | 6h | 以 workshop 為主；若有空檔，補齊 7/1 未完成欄位，整理要問 Richard 的 WNC / cuBB 設定檔問題 | 7/2 | 無需技術產出，只列入行程 |
-| 7/3（五） | OAI + cuBB for WNC RU 設定檔介紹與初步比較：找出 OAI + cuBB + WNC RU 的 gNB 設定檔，整理 WNC RU 頻段與型號，建立 OAI + Pegatron RU 與 OAI + cuBB for WNC RU 比較表 | 7h | 若不知道 `xxWNC.html` 或 NVIDIA 文件位置，直接問 Richard；先完成設定檔表格與差異欄位，無法確認的地方標記 Need Confirm | 7/3 | [`2026-07-03-richard-meeting note.md`](07-oai-aerial-pegatron/meeting-notes/2026-07-03-richard-meeting%20note.md)、[`wnc-ru-config-index.md`](07-oai-aerial-pegatron/baseline-and-config/wnc-ru-config-index.md)、[`aerial-cubb-parameter-table.md`](07-oai-aerial-pegatron/baseline-and-config/aerial-cubb-parameter-table.md)、[`oai-pegatron-vs-oai-aerial-pegatron-comparison.md`](07-oai-aerial-pegatron/comparison-and-summary/oai-pegatron-vs-oai-aerial-pegatron-comparison.md)、[`week1-checkpoint.md`](checkpoints/week1-checkpoint.md) |
+|---|---|---:|---|---|---|
+| 7/1（三） | 準備 Ming / Richard 交接問題清單；與 Ming 開會，交接已跑通的 OAI L2/L3 + OAI L1 + Pegatron RU E2E | 4h | 整理會議問題、記錄 gNB 與 RU 設定檔位置、主要參數、成功條件；若資訊不足，列入待確認問題 | 7/1 | `2026-07-01-ming-meeting note.md` |
+| 7/2（四） | LAB workshop | 7h | 以參與 workshop 為主；若有空檔，整理 7/1 meeting note 與 7/3 Richard meeting 問題清單 | 7/2 | 無需技術產出，只列入行程 |
+| 7/3（五） | 嘗試安裝 DGX Spark；與 Richard 開會交接 DGX Spark 安裝手冊、Aerial L1 + OAI L2 安裝手冊、WNC RU config 位置、OAI / Ariel RAN 參數設定方式 | 7h | 整理 Richard meeting note、DGX Spark 安裝狀態、blocked issue、WNC / Pegatron config 入口 | 7/3 | `2026-07-03-richard-meeting note.md`、`dgx-spark-aerial-oai-installation.md` 初版 |
 
 ## 本週產出與百分比
 
-| 產出 | 完成度 | 截止日期 |
-| --- | ---: | --- |
-| [`2026-07-01-ming-meeting note.md`](07-oai-aerial-pegatron/meeting-notes/2026-07-01-ming-meeting%20note.md) | 100% | 7/1 |
-| [`oai-pegatron-baseline.md`](07-oai-aerial-pegatron/baseline-and-config/oai-pegatron-baseline.md) | 60% | 7/1 |
-| [`oai-gnb-parameter-table.md`](07-oai-aerial-pegatron/baseline-and-config/oai-gnb-parameter-table.md) | 50% | 7/1 |
-| [`pegatron-ru-parameter-table.md`](07-oai-aerial-pegatron/baseline-and-config/pegatron-ru-parameter-table.md) | 50% | 7/1 |
-| [`oai-gnb-to-pegatron-ru-parameter-mapping.md`](07-oai-aerial-pegatron/mapping-and-readiness/oai-gnb-to-pegatron-ru-parameter-mapping.md) | 50% | 7/1 |
-| [`2026-07-03-richard-meeting note.md`](07-oai-aerial-pegatron/meeting-notes/2026-07-03-richard-meeting%20note.md) | 100% | 7/3 |
-| [`wnc-ru-config-index.md`](07-oai-aerial-pegatron/baseline-and-config/wnc-ru-config-index.md) | 60% | 7/3 |
-| [`aerial-cubb-parameter-table.md`](07-oai-aerial-pegatron/baseline-and-config/aerial-cubb-parameter-table.md) | 60% | 7/3 |
-| [`oai-pegatron-vs-oai-aerial-pegatron-comparison.md`](07-oai-aerial-pegatron/comparison-and-summary/oai-pegatron-vs-oai-aerial-pegatron-comparison.md) | 40% | 7/3 |
-| [`week1-checkpoint.md`](checkpoints/week1-checkpoint.md) | 100% | 7/3 |
+| 產出                                     |  完成度 | 截止日期 |
+| -------------------------------------- | ---: | ---- |
+| `2026-07-01-ming-meeting note.md`      | 100% | 7/1  |
+| `2026-07-03-richard-meeting note.md`   | 100% | 7/3  |
+| `oai-pegatron-baseline.md`             |  40% | 7/3  |
+| `dgx-spark-aerial-oai-installation.md` |  30% | 7/3  |
+| `wnc-ru-config-index.md`               |  30% | 7/3  |
+| `pegatron-ru-config-index.md`          |  30% | 7/3  |
+| `week1-checkpoint.md`                  | 100% | 7/3  |
 
 
 ## 7/3 通過標準
