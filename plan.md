@@ -7,7 +7,7 @@
 | 月份  | 月目標                                                                  | 月檢查點 |
 | --- | -------------------------------------------------------------------- | ---- |
 | 7 月 | 完成 Richard / Ming 交接，建立 OAI + Ariel cuBB + Pegatron RU baseline 與比較表 | 7/31 |
-| 8 月 | 完成 Metanoia MOSART 開源碼研究，建立 build / config / parameter / mapping 文件  | 8/28 |
+| 8 月 | 完成 Metanoia MOSART 開源碼研究，建立 build / config / parameter / mapping 文件，留下可交接的研究文件  | 8/28 |
 | 9 月 | 完成 OAI + Ariel cuBB + Metanoia RU 整合測試、驗證報告與最終交接文件                   | 9/26 |
 
 ---
@@ -16,20 +16,20 @@
 
 | 週次    | 日期        | 週五檢查點 | 週里程碑                                                   | 預期總進度 |
 | ----- | --------- | ----- | ------------------------------------------------------ | ----: |
-| W1    | 7/1–7/3   | 7/3   | 與 Ming / Richard 完成交接，確認 action items 與資料入口          | 8%   |
+| W1    | 7/1–7/3   | 7/3   | 與 Ming / Richard 完成交接，確認 action items 與資料入口                                  | 8%   |
 | W2    | 7/6–7/10  | 7/10  | 完成 OAI + Pegatron RU baseline 深入整理，並整理 DGX Spark / Aerial L1 + OAI L2 安裝手冊  |  16% |
-| W3    | 7/13–7/17 | 7/17  | 完成 Pegatron RU 設定檔理解，嘗試讓 RU 參數對齊 Ariel cuBB 需求             | 24%  |
-| W4    | 7/20–7/24 | 7/24  | 嘗試跑通 OAI L2/L3 + Ariel cuBB + Pegatron RU E2E       | 32%  |
-| W5    | 7/27–7/31 | 7/31  | 完成 OAI + Pegatron baseline 與 OAI + Ariel cuBB + Pegatron 的差異比較與月報       | 40%  |
-| W6    | 8/3–8/7   | 8/7   | 完成 Metanoia MOSART repo 架構與 README / source tree 初版      |   48% |
-| W7    | 8/10–8/14 | 8/14  | 完成 Metanoia build / run / config 初版驗證                     |   56% |
-| W8    | 8/17–8/21 | 8/21  | 完成 Pegatron vs Metanoia config mapping 與整合可行性初版        |   64% |
-| W9    | 8/24–8/28 | 8/28  | 完成 8 月月檢查：Metanoia source study 與 9 月整合計畫           |   72% |
-| W10   | 8/31–9/4  | 9/4   | 完成 OAI + Ariel + Metanoia 初版 config pack 與 launch flow    |   80% |
-| W11   | 9/7–9/11  | 9/11  | 完成第一次 Metanoia E2E run log 與 error report                 |   86% |
-| W12   | 9/14–9/18 | 9/18  | 完成第二次測試、debug tree、Pegatron vs Metanoia E2E 比較         |   92% |
-| W13   | 9/21–9/25 | 9/25  | 完成最終報告、handover guide、config pack、experiment logs      |   98% |
-| Final | 9/26      | 9/26  | 最終檢查，不新增工作，只確認提交完整性                            |  100% |
+| W3    | 7/13–7/17 | 7/17  | 完成 Pegatron RU 設定檔理解，嘗試讓 RU 參數對齊 Ariel cuBB 需求                            | 24%  |
+| W4    | 7/20–7/24 | 7/24  | 嘗試跑通 OAI L2/L3 + Ariel cuBB + Pegatron RU E2E                                       | 32%  |
+| W5    | 7/27–7/31 | 7/31  | 完成 OAI + Pegatron baseline 與 OAI + Ariel cuBB + Pegatron 的差異比較與月報             | 40%  |
+| W6    | 8/3–8/7   | 8/7   | 完成 Metanoia repo 初步研究，找出 source tree、README、build/config 入口                  |   48% |
+| W7    | 8/10–8/14 | 8/14  | 完成 Metanoia build / run / config 初版研究，留下 build log 與 runtime notes             |   56% |
+| W8    | 8/17–8/21 | 8/21  | 完成 Metanoia RU 參數與介面研究，建立 Pegatron RU vs Metanoia RU 比較                     |   64% |
+| W9    | 8/24–8/28 | 8/28  | 完成 Metanoia 開源碼研究總結，產出 9 月整合可行性與計畫                                    |   72% |
+| W10   | 8/31-9/4  | 9/4   |建立 OAI + Ariel cuBB + Metanoia RU 初版 config pack 與 launch flow                      | 78%  |
+| W11   | 9/7–9/11  | 9/11  |完成第一次 OAI + Ariel cuBB + Metanoia RU launch attempt                                 | 84% |
+| W12   | 9/14–9/18 | 9/14  |完成第二次測試 / debug / 狀態判定，建立與 Pegatron RU 版本比較初版                          | 92% |
+| W13   | 9/21–9/25 | 9/25  |完成最終驗證報告、comparison、handover guide                                              | 98% |
+| Final | 9/26      | 9/26  |最終檢查點                                                                               | 100% |
 
 
 # 三、週計畫
@@ -51,7 +51,7 @@
 ## 本週產出與百分比
 
 | 產出                                     |  完成度 | 截止日期 |
-| -------------------------------------- | ---: | ---- |  |
+| -------------------------------------- | ---: | ---- |
 | `2026-07-01-ming-meeting note.md`      | 100% | 7/1  |
 | `2026-07-03-richard-meeting note.md`   | 100% | 7/3  |
 | `oai-pegatron-baseline.md`             |  40% | 7/3  |
@@ -263,366 +263,435 @@
 | 錯誤訊息              | baseline 是否有 error               | Ariel 版本 error                       | 用來定位問題               |
 | 可重現性              | 是否能照文件重跑                         | 是否能照文件重跑                             | 符合 Playbook 可驗證概念    |
 
----
 
-## W6：2026/8/3（一）–2026/8/7（五）
+# 8 月總目標
 
-### 週里程碑
+## Month Goal：2026/8/3–2026/8/28
 
-完成 Metanoia MOSART repo overview、source tree、README summary。
+完成：
 
-### 每日工作
+> **Metanoia RU 開源碼研究。**
 
-| 日期     | 工作                                  |
-| ------ | ----------------------------------- |
-| 8/3（一） | clone / 瀏覽 MOSART repo，整理 README    |
-| 8/4（二） | 建立 source tree，標出主要資料夾功能            |
-| 8/5（三） | 找 build / install / dependency 文件   |
-| 8/6（四） | 找 config、script、example、entry point |
-| 8/7（五） | 週檢查點：完成 repo overview 初版            |
+8 月的成果不是只說「看過程式碼」，而是要留下可交接的研究文件，讓 9 月可以根據這些文件把 Metanoia RU 接到 OAI L2/L3 + Ariel cuBB。
 
-### 本週產出與百分比
+8 月最終應完成：
 
-| 產出                                  |  百分比 |
-| ----------------------------------- | ---: |
-| `metanoia-mosart-repo-overview.md`  |  80% |
-| `metanoia-mosart-source-tree.md`    |  80% |
-| `metanoia-readme-summary.md`        | 100% |
-| `metanoia-build-requirements.md`    |  50% |
-| `metanoia-config-location-index.md` |  50% |
-| `metanoia-open-questions.md`        | 100% |
-| `week6-meeting-notes.md`            | 100% |
-| `week6-daily-notes/`                | 100% |
+# W6：2026/8/3（一）–2026/8/7（五）
 
-### 8/7 通過標準
+## 週里程碑
 
-| 檢查項目           | 通過標準                                       |
-| -------------- | ------------------------------------------ |
-| Repo overview  | 說得出 MOSART repo 的主要資料夾與用途                  |
-| Source tree    | 至少標出 build、config、runtime、radio / PHY 相關位置 |
-| README summary | 整理官方說明、限制、執行提示                             |
-| Open questions | 至少 10 個需要問學長或教授的具體問題                       |
-| Evidence       | 附 repo path、檔案位置或截圖                        |
+完成 Metanoia repo 初步研究，找出 source tree、README、build/config 入口。
 
----
+本週的重點：
 
-## W7：2026/8/10（一）–2026/8/14（五）
+> Metanoia MOSART repo 裡面有哪些資料夾？
+> 哪些部分可能跟 RU、PHY、fronthaul、config、build、runtime 有關？
+> 9 月整合時應該從哪幾個檔案或資料夾開始看？
 
-### 週里程碑
+## 每日工作
 
-完成 Metanoia build / run / config 初版驗證。
+| 日期     | 工作                                                                 | 截止日期 | 預期產出                                                                     |
+| ------ | ------------------------------------------------------------------ | ---- | ------------------------------------------------------------------------ |
+| 8/3（一） | 進入 Metanoia MOSART repo，整理 README、官方說明、主要資料夾名稱                     | 8/3  | `metanoia-repo-overview.md` 40%                                          |
+| 8/4（二） | 建立 source tree，標出 build、config、runtime、RU / PHY / fronthaul 可能相關位置 | 8/4  | `metanoia-source-tree.md` 50%                                            |
+| 8/5（三） | 找出 build system、dependency、安裝說明、可能的 build command                  | 8/5  | `metanoia-build-requirements.md` 50%                                     |
+| 8/6（四） | 找出 config 檔、example、script、啟動入口或執行說明                               | 8/6  | `metanoia-config-location-index.md` 40%、`metanoia-run-entrypoint.md` 30% |
+| 8/7（五） | 週檢查點：整理本週不確定處，形成下週 build / run / config 研究問題清單                     | 8/7  | `week6-checkpoint.md`、`metanoia-open-questions.md`                       |
 
-### 每日工作
+## 本週產出與百分比
 
-| 日期      | 工作                                    |
-| ------- | ------------------------------------- |
-| 8/10（一） | 整理 build system 與 dependencies        |
-| 8/11（二） | 嘗試 build，保存成功或失敗 log                  |
-| 8/12（三） | 找 runtime config 與執行參數                |
-| 8/13（四） | 找 log / debug / error handling 方法     |
-| 8/14（五） | 週檢查點：完成 build guide 與 config notes 初版 |
+| 產出                                  |  完成度 | 截止日期 |
+| ----------------------------------- | ---: | ---- |
+| `metanoia-repo-overview.md`         |  70% | 8/7  |
+| `metanoia-source-tree.md`           |  70% | 8/7  |
+| `metanoia-build-requirements.md`    |  50% | 8/7  |
+| `metanoia-config-location-index.md` |  40% | 8/7  |
+| `metanoia-run-entrypoint.md`        |  30% | 8/7  |
+| `metanoia-open-questions.md`        | 100% | 8/7  |
+| `week6-checkpoint.md`               | 100% | 8/7  |
 
-### 本週產出與百分比
+## 8/7 通過標準
 
-| 產出                                  |  百分比 |
-| ----------------------------------- | ---: |
-| `metanoia-build-guide.md`           |  80% |
-| `metanoia-build-log.md`             | 100% |
-| `metanoia-runtime-config-notes.md`  |  70% |
-| `metanoia-parameter-table.md`       |  60% |
-| `metanoia-log-and-debug-guide.md`   |  60% |
-| `metanoia-error-report-template.md` | 100% |
-| `week7-meeting-notes.md`            | 100% |
-| `week7-daily-notes/`                | 100% |
-
-### 8/14 通過標準
-
-| 檢查項目            | 通過標準                                      |
-| --------------- | ----------------------------------------- |
-| Build guide     | 有環境需求、build command、expected output       |
-| Build log       | 成功或失敗都要保存完整 log                           |
-| Runtime notes   | 找到主要執行入口或說明沒有找到的證據                        |
-| Parameter table | 至少 15 個 Metanoia 相關參數或設定欄位                |
-| Error template  | 可用來記錄 reproduction steps、logs、environment |
+| 檢查項目            | 通過標準                                                    |
+| --------------- | ------------------------------------------------------- |
+| Repo overview   | 能說明 Metanoia repo 的主要資料夾與用途                             |
+| Source tree     | 至少標出 build、config、runtime、RU / PHY / fronthaul 相關位置     |
+| Build entrance  | 找到 build 說明、build script、CMake/Makefile 或標出尚未找到         |
+| Config entrance | 找到可能的 config/example/script，或標出尚未找到                     |
+| Open questions  | 至少列出 8 個需要下週釐清的問題                                       |
+| Daily Notes     | 8/3–8/7 每天都有 plan、review、evidence、next working day plan |
 
 ---
 
-## W8：2026/8/17（一）–2026/8/21（五）
+# W7：2026/8/10（一）–2026/8/14（五）
 
-### 週里程碑
+## 週里程碑
 
-完成 Pegatron RU vs Metanoia RU config mapping 與 OAI + Ariel 整合可行性初版。
+完成 Metanoia build / run / config 初版研究，留下 build log 與 runtime notes。
 
-### 每日工作
+這週要留下可重現證據：
 
-| 日期      | 工作                                     |
-| ------- | -------------------------------------- |
-| 8/17（一） | 深入整理 Metanoia 參數表                      |
-| 8/18（二） | 對照 Pegatron RU config                  |
-| 8/19（三） | 建立 Pegatron vs Metanoia config mapping |
-| 8/20（四） | 分析接 OAI + Ariel cuBB 的可行性與風險           |
-| 8/21（五） | 週檢查點：完成 feasibility report 初版          |
+> 如果 build 成功，要知道成功條件。
+> 如果 build 失敗，要知道錯在哪、怎麼重現、下一步要補什麼。
 
-### 本週產出與百分比
+## 每日工作
 
-| 產出                                          |  百分比 |
-| ------------------------------------------- | ---: |
-| `metanoia-parameter-table.md`               |  90% |
-| `pegatron-vs-metanoia-config-mapping.md`    |  80% |
-| `pegatron-vs-metanoia-ru-comparison.md`     |  80% |
-| `metanoia-oai-aerial-feasibility-report.md` |  70% |
-| `metanoia-integration-risk-list.md`         |  90% |
-| `metanoia-interface-notes.md`               |  70% |
-| `week8-meeting-notes.md`                    | 100% |
-| `week8-daily-notes/`                        | 100% |
+| 日期      | 工作                                                                   | 截止日期 | 預期產出                                                                    |
+| ------- | -------------------------------------------------------------------- | ---- | ----------------------------------------------------------------------- |
+| 8/10（一） | 依 W6 找到的 build 說明整理建置環境：OS、dependency、toolchain、driver、library       | 8/10 | `metanoia-build-guide.md` 40%                                           |
+| 8/11（二） | 執行第一次 build attempt，保存 command、environment、terminal output、error log | 8/11 | `metanoia-build-log.md` 100%                                            |
+| 8/12（三） | 分析 build 結果，整理成功條件或失敗原因，更新 build guide                               | 8/12 | `metanoia-build-guide.md` 70%、`metanoia-build-error-report.md` 50%      |
+| 8/13（四） | 整理 runtime 入口：執行檔、script、config、啟動參數、預期 log                          | 8/13 | `metanoia-run-entrypoint.md` 70%、`metanoia-runtime-config-notes.md` 50% |
+| 8/14（五） | 週檢查點：確認 W8 能開始整理 RU 參數與 interface mapping                            | 8/14 | `week7-checkpoint.md`、`metanoia-parameter-table.md` 初版                  |
 
-### 8/21 通過標準
+## 本週產出與百分比
 
-| 檢查項目               | 通過標準                                     |
-| ------------------ | ---------------------------------------- |
-| Config mapping     | 至少 15 個 Pegatron config 欄位對應 Metanoia 欄位 |
-| RU comparison      | 至少比較架構、config、啟動方式、log、限制、風險             |
-| Feasibility report | 明確判斷可行 / 部分可行 / 目前不可行，並說明原因              |
-| Risk list          | 至少列出 5 個整合風險與對應驗證方式                      |
-| Evidence           | 每個 mapping 欄位都要有來源位置或註明待確認               |
+| 產出                                 |  完成度 | 截止日期 |
+| ---------------------------------- | ---: | ---- |
+| `metanoia-build-guide.md`          |  80% | 8/14 |
+| `metanoia-build-log.md`            | 100% | 8/11 |
+| `metanoia-build-error-report.md`   |  70% | 8/14 |
+| `metanoia-run-entrypoint.md`       |  80% | 8/14 |
+| `metanoia-runtime-config-notes.md` |  60% | 8/14 |
+| `metanoia-parameter-table.md`      |  40% | 8/14 |
+| `week7-checkpoint.md`              | 100% | 8/14 |
 
----
+## 8/14 通過標準
 
-## W9：2026/8/24（一）–2026/8/28（五）
-
-### 月里程碑
-
-完成 8 月月檢查：Metanoia MOSART source study、build guide、config mapping、9 月整合計畫。
-
-### 每日工作
-
-| 日期      | 工作                         |
-| ------- | -------------------------- |
-| 8/24（一） | 補齊 Metanoia source study   |
-| 8/25（二） | 補齊 build / run / config 文件 |
-| 8/26（三） | 完成 Pegatron vs Metanoia 比較 |
-| 8/27（四） | 完成 9 月整合測試計畫               |
-| 8/28（五） | 月檢查點：完成 Month 2 summary    |
-
-### 本週產出與百分比
-
-| 產出                                          |  百分比 |
-| ------------------------------------------- | ---: |
-| `month2-summary.md`                         | 100% |
-| `metanoia-mosart-repo-overview.md`          | 100% |
-| `metanoia-mosart-source-tree.md`            | 100% |
-| `metanoia-build-guide.md`                   | 100% |
-| `metanoia-runtime-config-notes.md`          | 100% |
-| `metanoia-parameter-table.md`               | 100% |
-| `metanoia-log-and-debug-guide.md`           |  90% |
-| `pegatron-vs-metanoia-config-mapping.md`    | 100% |
-| `pegatron-vs-metanoia-ru-comparison.md`     | 100% |
-| `metanoia-oai-aerial-feasibility-report.md` | 100% |
-| `month3-integration-plan.md`                | 100% |
-| `month2-action-item-status.md`              | 100% |
-
-### 8/28 月檢查通過標準
-
-| 檢查項目         | 通過標準                                             |
-| ------------ | ------------------------------------------------ |
-| Source study | repo 架構、build、run、config、log 都有整理                |
-| Mapping      | Pegatron vs Metanoia config mapping 完成           |
-| Feasibility  | 9 月整合方向明確                                        |
-| Risk         | 每個主要風險都有驗證方式                                     |
-| Action item  | 所有 8 月 action item 有狀態與 evidence                 |
-| 9 月計畫        | 已列出 first run config、command、log collection plan |
+| 檢查項目             | 通過標準                                                           |
+| ---------------- | -------------------------------------------------------------- |
+| Build guide      | 有 environment、dependency、command、expected result               |
+| Build log        | 至少有 1 次 build attempt log                                      |
+| Error report     | 若 build 失敗，有 reproduction steps、environment、error message、推測原因 |
+| Runtime entrance | 找到可能的執行入口、script、binary 或標出尚未找到                                |
+| Config notes     | 找到 runtime config 或標出目前缺口                                      |
+| W8 準備            | 可以開始整理 Metanoia RU 端參數與介面需求                                    |
 
 ---
 
-# 六、9 月：整合與收斂，工作量降低
+# W8：2026/8/17（一）–2026/8/21（五）
 
-9 月不再安排大量開源碼研究，主要是：
+## 週里程碑
 
-1. 建立初版整合設定
-2. 跑第一次測試
-3. 修正後跑第二次
-4. 整理最終文件
+完成 Metanoia RU 參數與介面研究，建立 Pegatron RU vs Metanoia RU 比較。
 
----
+這週的目標是回答：
 
-## W10：2026/8/31（一）–2026/9/4（五）
+> Metanoia RU 和 Pegatron RU 在設定檔、啟動方式、fronthaul、clock/sync、RF 參數上有哪些差異？
+> 9 月如果要把 Metanoia RU 接到 OAI + Ariel cuBB，哪些參數一定要對齊？
 
-### 週里程碑
+## 每日工作
 
-完成 OAI + Ariel cuBB + Metanoia 初版 config pack 與 launch flow。
+| 日期      | 工作                                                                          | 截止日期 | 預期產出                                                      |
+| ------- | --------------------------------------------------------------------------- | ---- | --------------------------------------------------------- |
+| 8/17（一） | 深入整理 Metanoia RU 相關參數：frequency、bandwidth、SCS、TDD、IP/port、sync、antenna、gain | 8/17 | `metanoia-parameter-table.md` 70%                         |
+| 8/18（二） | 整理 Metanoia RU 介面：與 L1/cuBB/fronthaul 相關的 config、API、script、log             | 8/18 | `metanoia-ru-interface-notes.md` 60%                      |
+| 8/19（三） | 將 7 月 Pegatron RU baseline 參數與 Metanoia RU 參數對照                             | 8/19 | `pegatron-vs-metanoia-ru-comparison.md` 60%               |
+| 8/20（四） | 建立 Metanoia RU 對齊 Ariel cuBB 的 mapping checklist                            | 8/20 | `metanoia-ru-to-aerial-cubb-mapping-checklist.md` 70%     |
+| 8/21（五） | 週檢查點：整理 W9 feasibility report 需要的證據與風險清單                                    | 8/21 | `week8-checkpoint.md`、`metanoia-integration-risk-list.md` |
 
-### 每日工作
+## 本週產出與百分比
 
-| 日期      | 工作                                     |
-| ------- | -------------------------------------- |
-| 8/31（一） | Review 8 月 feasibility report          |
-| 9/1（二）  | 建立 OAI + Ariel + Metanoia 初版 config    |
-| 9/2（三）  | 與 Richard / Ming 確認整合方向                |
-| 9/3（四）  | 補齊 config pack、launch flow、risk review |
-| 9/4（五）  | 週檢查點：確認可以進入 first run                  |
+| 產出                                                |  完成度 | 截止日期 |
+| ------------------------------------------------- | ---: | ---- |
+| `metanoia-parameter-table.md`                     |  90% | 8/21 |
+| `metanoia-ru-interface-notes.md`                  |  80% | 8/21 |
+| `pegatron-vs-metanoia-ru-comparison.md`           |  80% | 8/21 |
+| `metanoia-ru-to-aerial-cubb-mapping-checklist.md` |  80% | 8/21 |
+| `metanoia-integration-risk-list.md`               | 100% | 8/21 |
+| `week8-checkpoint.md`                             | 100% | 8/21 |
 
-### 本週產出與百分比
+## 8/21 通過標準
 
-| 產出                                      |  百分比 |
-| --------------------------------------- | ---: |
-| `oai-aerial-metanoia-initial-config.md` |  80% |
-| `oai-aerial-metanoia-config-pack/`      |  70% |
-| `metanoia-config-mapping-checklist.md`  |  90% |
-| `oai-aerial-metanoia-launch-flow.md`    |  80% |
-| `month3-risk-review.md`                 |  90% |
-| `week10-meeting-notes.md`               | 100% |
-| `week10-daily-notes/`                   | 100% |
-
-### 9/4 通過標準
-
-| 檢查項目        | 通過標準                                |
-| ----------- | ----------------------------------- |
-| Config pack | OAI、Ariel、Metanoia config 都集中整理     |
-| Launch flow | 有明確 command order                   |
-| Checklist   | Pegatron-to-Metanoia mapping 已逐項確認  |
-| Risk review | 已知風險都有觀察 log 與驗證方式                  |
-| Meeting     | 整合方向已經問過 Richard / Ming 或列為 pending |
+| 檢查項目                | 通過標準                                                                 |
+| ------------------- | -------------------------------------------------------------------- |
+| Metanoia parameters | 至少整理 15 個 Metanoia RU 相關參數                                           |
+| Interface notes     | 能說明 Metanoia RU 與 L1/cuBB/fronthaul 可能的對接位置                          |
+| Pegatron comparison | 至少比較 Pegatron RU 與 Metanoia RU 的 8 個項目                               |
+| Mapping checklist   | 至少包含 frequency、bandwidth、SCS、TDD、IP/port、sync、antenna、gain、fronthaul |
+| Risk list           | 至少列出 5 個 9 月整合風險與驗證方法                                                |
 
 ---
 
-## W11：2026/9/7（一）–2026/9/11（五）
+# W9：2026/8/24（一）–2026/8/28（五）
 
-### 週里程碑
+## 週里程碑
 
-完成第一次 OAI + Ariel cuBB + Metanoia E2E 測試紀錄與 error report。
+完成 Metanoia 開源碼研究總結，產出 9 月整合可行性與計畫。
 
-### 每日工作
+這週要把 8 月研究收斂成 9 月可以直接用的資料。
 
-| 日期      | 工作                             |
-| ------- | ------------------------------ |
-| 9/7（一）  | First run 前檢查 config           |
-| 9/8（二）  | 執行第一次測試                        |
-| 9/9（三）  | 整理 gNB / Ariel / Metanoia logs |
-| 9/10（四） | 分類錯誤，建立 error report           |
-| 9/11（五） | 週檢查點：確認 second run 修正方向        |
+## 每日工作
 
-### 本週產出與百分比
+| 日期      | 工作                                                                    | 截止日期 | 預期產出                                                 |
+| ------- | --------------------------------------------------------------------- | ---- | ---------------------------------------------------- |
+| 8/24（一） | 補齊 Metanoia repo overview、source tree、build guide、run entrypoint      | 8/24 | W6/W7 文件更新到 90% 以上                                   |
+| 8/25（二） | 補齊 Metanoia parameter table、interface notes、mapping checklist         | 8/25 | W8 文件更新到 90% 以上                                      |
+| 8/26（三） | 撰寫 OAI + Ariel cuBB + Metanoia RU 整合可行性報告                             | 8/26 | `metanoia-oai-aerial-integration-feasibility.md` 70% |
+| 8/27（四） | 建立 9 月整合計畫：config pack、launch sequence、log collection、risk mitigation | 8/27 | `month3-integration-plan.md` 80%                     |
+| 8/28（五） | 月檢查點：完成 8 月總結，明確列出 9 月第一週要做什麼                                         | 8/28 | `month2-summary.md`、`week9-checkpoint.md`            |
 
-| 產出                                   |  百分比 |
-| ------------------------------------ | ---: |
-| `metanoia-e2e-first-run-log.md`      | 100% |
-| `metanoia-e2e-error-report.md`       |  90% |
-| `debug-decision-tree.md`             |  80% |
-| `oai-aerial-metanoia-config-pack/`   |  85% |
-| `oai-aerial-metanoia-launch-flow.md` |  90% |
-| `week11-meeting-notes.md`            | 100% |
-| `week11-action-items.md`             | 100% |
+## 本週產出與百分比
 
-### 9/11 通過標準
+| 產出                                                |  完成度 | 截止日期 |
+| ------------------------------------------------- | ---: | ---- |
+| `metanoia-repo-overview.md`                       | 100% | 8/28 |
+| `metanoia-source-tree.md`                         | 100% | 8/28 |
+| `metanoia-build-guide.md`                         | 100% | 8/28 |
+| `metanoia-build-log.md`                           | 100% | 8/28 |
+| `metanoia-run-entrypoint.md`                      | 100% | 8/28 |
+| `metanoia-config-location-index.md`               | 100% | 8/28 |
+| `metanoia-parameter-table.md`                     | 100% | 8/28 |
+| `metanoia-ru-interface-notes.md`                  | 100% | 8/28 |
+| `pegatron-vs-metanoia-ru-comparison.md`           | 100% | 8/28 |
+| `metanoia-ru-to-aerial-cubb-mapping-checklist.md` | 100% | 8/28 |
+| `metanoia-oai-aerial-integration-feasibility.md`  | 100% | 8/28 |
+| `month3-integration-plan.md`                      | 100% | 8/28 |
+| `month2-summary.md`                               | 100% | 8/28 |
 
-| 檢查項目          | 通過標準                                          |
-| ------------- | --------------------------------------------- |
-| First run log | 有 command、config、result、log                   |
-| Error report  | 若失敗，有 reproduction steps、environment、logs     |
-| Debug tree    | 能判斷問題偏向 OAI / Ariel / Metanoia / network / RF |
-| Next action   | 每個 blocking issue 都有 owner、due date、evidence  |
-| Evidence      | 所有 log 都有保存路徑                                 |
+## 8/28 月檢查通過標準
 
----
-
-## W12：2026/9/14（一）–2026/9/18（五）
-
-### 週里程碑
-
-完成第二次測試、debug decision tree、Pegatron vs Metanoia E2E 比較。
-
-### 每日工作
-
-| 日期      | 工作                                     |
-| ------- | -------------------------------------- |
-| 9/14（一） | 修正 W11 blocking issue                  |
-| 9/15（二） | 執行第二次 E2E 測試                           |
-| 9/16（三） | 整理 second run log                      |
-| 9/17（四） | 完成 Pegatron vs Metanoia E2E comparison |
-| 9/18（五） | 週檢查點：確認 final verification 狀態          |
-
-### 本週產出與百分比
-
-| 產出                                         |  百分比 |
-| ------------------------------------------ | ---: |
-| `metanoia-e2e-second-run-log.md`           | 100% |
-| `metanoia-e2e-error-report.md`             | 100% |
-| `debug-decision-tree.md`                   | 100% |
-| `oai-aerial-metanoia-config-pack/`         |  95% |
-| `pegatron-vs-metanoia-e2e-result-table.md` |  90% |
-| `metanoia-e2e-troubleshooting.md`          |  90% |
-| `updated-runbook.md`                       |  90% |
-| `week12-meeting-notes.md`                  | 100% |
-
-### 9/18 通過標準
-
-| 檢查項目            | 通過標準                                |
-| --------------- | ----------------------------------- |
-| Second run      | 有完整 second run log                  |
-| 狀態判定            | 明確標示成功 / 部分成功 / 未成功但可解釋             |
-| Comparison      | Pegatron vs Metanoia E2E 至少比較 8 個項目 |
-| Troubleshooting | 常見錯誤有對應排查步驟                         |
-| Final plan      | 下週只剩補測、整理、交接，不再大改方向                 |
+| 檢查項目            | 通過標準                                             |
+| --------------- | ------------------------------------------------ |
+| Source study    | Metanoia repo 架構、build、run、config、interface 都有整理 |
+| Build evidence  | 有 build guide 與 build log；失敗也要有 error report     |
+| RU parameters   | Metanoia RU 參數表完成                                |
+| Comparison      | 有 Pegatron RU vs Metanoia RU 比較                  |
+| Feasibility     | 明確判斷 9 月整合是 Pass / Partial / Blocked 哪一種準備狀態     |
+| Risk            | 主要整合風險都有驗證方法                                     |
+| September entry | 明確知道 9 月第一週要建立哪些 config 與 launch flow            |
 
 ---
 
-## W13：2026/9/21（一）–2026/9/25（五）
+# 9 月總目標
 
-### 週里程碑
+## Month Goal：2026/8/31–2026/9/26
 
-完成最終報告、handover guide、config pack、experiment logs、meeting notes index。
+完成：
 
-### 每日工作
+> **結合 OAI L2/L3 + Ariel cuBB + Metanoia RU E2E。**
 
-| 日期      | 工作                                                 |
-| ------- | -------------------------------------------------- |
-| 9/21（一） | 最後補測或補 log                                         |
-| 9/22（二） | 完成 final comparison tables                         |
-| 9/23（三） | 完成 final report draft                              |
-| 9/24（四） | 補齊 meeting notes、action item status、handover guide |
-| 9/25（五） | 週檢查點：完成 final deliverables                         |
+9 月的重點不是再做大量 source code 研究，而是：
 
-### 本週產出與百分比
+1. 根據 8 月研究成果建立初版 config
+2. 嘗試 launch / E2E
+3. 保存 log、error report、status
+4. 與 7 月 Pegatron RU 版本比較
+5. 完成最終交接文件
+---
 
-| 產出                                          |  百分比 |
-| ------------------------------------------- | ---: |
-| `metanoia-e2e-final-verification-report.md` | 100% |
-| `final-3-month-report.md`                   |  95% |
-| `final-handover-guide.md`                   |  95% |
-| `final-config-pack/`                        | 100% |
-| `final-experiment-logs/`                    | 100% |
-| `final-comparison-tables.md`                | 100% |
-| `final-action-item-status.md`               | 100% |
-| `all-meeting-notes-index.md`                | 100% |
-| `updated-runbook.md`                        | 100% |
-| `metanoia-e2e-troubleshooting.md`           | 100% |
+# 9 月週目標總表
 
-### 9/25 通過標準
-
-| 檢查項目           | 通過標準                                       |
-| -------------- | ------------------------------------------ |
-| Final report   | 三個月成果、限制、問題、下一步都寫清楚                        |
-| Handover guide | 下一位接手者能照文件找到 config、run command、logs       |
-| Config pack    | OAI / Ariel / Pegatron / Metanoia 都整理好     |
-| Logs           | 所有實驗 log 都集中保存                             |
-| Meeting notes  | 所有 meeting notes 有 index                   |
-| Action items   | 所有 action item 都有 Done / Pending / Blocked |
+| 週次    | 日期        | 週里程碑                                                           | 檢查點  |
+| ----- | --------- | -------------------------------------------------------------- | ---- |
+| W10   | 8/31–9/4  
 
 ---
 
-## Final：2026/9/26（六）
+# W10：2026/8/31（一）–2026/9/4（五）
 
-### 最終檢查點，不安排新工作
+## 週里程碑
 
-| 檢查項目                          | 通過標準 |
-| ----------------------------- | ---- |
-| `final-3-month-report.md`     | 100% |
-| `final-handover-guide.md`     | 100% |
-| `final-config-pack/`          | 100% |
-| `final-experiment-logs/`      | 100% |
-| `final-comparison-tables.md`  | 100% |
-| `final-action-item-status.md` | 100% |
-| `all-meeting-notes-index.md`  | 100% |
-| 每週檢查點紀錄                      | 100% |
-| 7/31、8/28 月檢查紀錄               | 100% |
+建立 OAI + Ariel cuBB + Metanoia RU 初版 config pack 與 launch flow。
 
+## 每日工作
+
+| 日期      | 工作                                                                              | 截止日期 | 預期產出                                                      |
+| ------- | ------------------------------------------------------------------------------- | ---- | --------------------------------------------------------- |
+| 8/31（一） | Review 8 月 feasibility report，確認哪些 Metanoia 參數能對齊 Ariel cuBB                    | 8/31 | `metanoia-integration-start-review.md` 100%               |
+| 9/1（二）  | 建立 OAI + Ariel cuBB + Metanoia RU 初版 config pack                                | 9/1  | `oai-aerial-metanoia-config-pack/` 50%                    |
+| 9/2（三）  | 建立 launch sequence：啟動順序、command、expected log、failure checkpoint                 | 9/2  | `oai-aerial-metanoia-launch-sequence.md` 60%              |
+| 9/3（四）  | 建立 pre-launch checklist：network、sync、fronthaul、frequency、bandwidth、TDD、log path | 9/3  | `oai-aerial-metanoia-pre-launch-checklist.md` 80%         |
+| 9/4（五）  | 週檢查點：確認 W11 first attempt 是否 ready                                              | 9/4  | `week10-checkpoint.md`、`oai-aerial-metanoia-readiness.md` |
+
+## 本週產出與百分比
+
+| 產出                                            |  完成度 | 截止日期 |
+| --------------------------------------------- | ---: | ---- |
+| `metanoia-integration-start-review.md`        | 100% | 8/31 |
+| `oai-aerial-metanoia-config-pack/`            |  70% | 9/4  |
+| `oai-aerial-metanoia-launch-sequence.md`      |  80% | 9/4  |
+| `oai-aerial-metanoia-pre-launch-checklist.md` | 100% | 9/4  |
+| `oai-aerial-metanoia-readiness.md`            | 100% | 9/4  |
+| `week10-checkpoint.md`                        | 100% | 9/4  |
+
+## 9/4 通過標準
+
+| 檢查項目                 | 通過標準                                                        |
+| -------------------- | ----------------------------------------------------------- |
+| Config pack          | OAI、Ariel cuBB、Metanoia RU config 已集中整理                     |
+| Launch sequence      | 有明確啟動順序、command、expected log                                |
+| Pre-launch checklist | 已確認 network、sync、fronthaul、frequency、bandwidth、TDD、log path |
+| Readiness            | 明確標示 Ready / Partial / Blocked                              |
+| Pending              | 若有 blocked item，要寫清原因與下一步                                   |
+
+---
+
+# W11：2026/9/7（一）–2026/9/11（五）
+
+## 週里程碑
+
+完成第一次 OAI + Ariel cuBB + Metanoia RU launch attempt，留下完整 experiment log。
+
+## 每日工作
+
+| 日期      | 工作                                                                          | 截止日期 | 預期產出                                                           |
+| ------- | --------------------------------------------------------------------------- | ---- | -------------------------------------------------------------- |
+| 9/7（一）  | Launch 前最後檢查，確認 config、command、log path、環境狀態                                | 9/7  | `first-attempt-precheck.md` 100%                               |
+| 9/8（二）  | 執行第一次 OAI + Ariel cuBB + Metanoia RU launch attempt                         | 9/8  | `oai-aerial-metanoia-first-attempt-log.md` 100%                |
+| 9/9（三）  | 分析 first attempt log，分類問題屬於 OAI / Ariel cuBB / Metanoia RU / network / sync | 9/9  | `oai-aerial-metanoia-error-report.md` 50%                      |
+| 9/10（四） | 根據錯誤整理修正方向，補齊 config difference notes                                       | 9/10 | `oai-aerial-metanoia-debug-notes.md` 60%                       |
+| 9/11（五） | 週檢查點：確認 W12 second attempt 或補測方向                                            | 9/11 | `week11-checkpoint.md`、`oai-aerial-metanoia-e2e-status.md` 50% |
+
+## 本週產出與百分比
+
+| 產出                                         |  完成度 | 截止日期 |
+| ------------------------------------------ | ---: | ---- |
+| `first-attempt-precheck.md`                | 100% | 9/7  |
+| `oai-aerial-metanoia-first-attempt-log.md` | 100% | 9/8  |
+| `oai-aerial-metanoia-error-report.md`      |  70% | 9/11 |
+| `oai-aerial-metanoia-debug-notes.md`       |  70% | 9/11 |
+| `oai-aerial-metanoia-e2e-status.md`        |  50% | 9/11 |
+| `week11-checkpoint.md`                     | 100% | 9/11 |
+
+## 9/11 通過標準
+
+| 檢查項目           | 通過標準                                            |
+| -------------- | ----------------------------------------------- |
+| First attempt  | 至少完成 1 次 launch attempt                         |
+| Experiment log | 有 command、config、environment、logs、actual result |
+| Error report   | 若失敗，有 reproduction steps、logs、environment、推測原因  |
+| Debug notes    | 能初步分類問題來源                                       |
+| E2E status     | 明確標示 Pass / Partial / Blocked                   |
+| Next step      | W12 要修正或補測的方向明確                                 |
+
+---
+
+# W12：2026/9/14（一）–2026/9/18（五）
+
+## 週里程碑
+
+完成第二次測試 / debug / 狀態判定，建立與 Pegatron RU 版本比較初版。
+
+## 每日工作
+
+| 日期      | 工作                                                                   | 截止日期 | 預期產出                                                           |
+| ------- | -------------------------------------------------------------------- | ---- | -------------------------------------------------------------- |
+| 9/14（一） | 根據 W11 error report 修正 config、launch sequence 或環境設定                  | 9/14 | `oai-aerial-metanoia-config-pack/` 90%                         |
+| 9/15（二） | 執行第二次 OAI + Ariel cuBB + Metanoia RU launch attempt 或補測 blocked step | 9/15 | `oai-aerial-metanoia-second-attempt-log.md` 100%               |
+| 9/16（三） | 分析第二次測試結果，更新 error report 與 debug notes                              | 9/16 | `oai-aerial-metanoia-error-report.md` 100%                     |
+| 9/17（四） | 建立 Pegatron RU 版本 vs Metanoia RU 版本比較初版                              | 9/17 | `pegatron-vs-metanoia-e2e-comparison.md` 70%                   |
+| 9/18（五） | 週檢查點：確認最終狀態與 W13 要收斂的內容                                              | 9/18 | `week12-checkpoint.md`、`oai-aerial-metanoia-e2e-status.md` 90% |
+
+## 本週產出與百分比
+
+| 產出                                          |  完成度 | 截止日期 |
+| ------------------------------------------- | ---: | ---- |
+| `oai-aerial-metanoia-config-pack/`          |  90% | 9/18 |
+| `oai-aerial-metanoia-second-attempt-log.md` | 100% | 9/15 |
+| `oai-aerial-metanoia-error-report.md`       | 100% | 9/16 |
+| `oai-aerial-metanoia-debug-notes.md`        | 100% | 9/18 |
+| `pegatron-vs-metanoia-e2e-comparison.md`    |  80% | 9/18 |
+| `oai-aerial-metanoia-e2e-status.md`         |  90% | 9/18 |
+| `week12-checkpoint.md`                      | 100% | 9/18 |
+
+## 9/18 通過標準
+
+| 檢查項目             | 通過標準                                        |
+| ---------------- | ------------------------------------------- |
+| Second attempt   | 有第二次 attempt log，或清楚說明無法執行的 blocking reason |
+| Error report     | 錯誤分析完整，能支援後續接手                              |
+| E2E status       | 明確判定 Pass / Partial / Blocked / Fail        |
+| Comparison draft | 至少比較 Pegatron RU 版本與 Metanoia RU 版本的 8 個項目  |
+| Final scope      | W13 只做收斂、補文件、最終報告，不再大改方向                    |
+
+---
+
+# W13：2026/9/21（一）–2026/9/25（五）
+
+## 週里程碑
+
+完成最終驗證報告、comparison、handover guide。
+
+## 每日工作
+
+| 日期      | 工作                                                          | 截止日期 | 預期產出                                              |
+| ------- | ----------------------------------------------------------- | ---- | ------------------------------------------------- |
+| 9/21（一） | 補齊 final E2E status、config pack、attempt logs                | 9/21 | `oai-aerial-metanoia-final-verification.md` 70%   |
+| 9/22（二） | 完成 Pegatron RU 版本 vs Metanoia RU 版本比較                       | 9/22 | `pegatron-vs-metanoia-e2e-comparison.md` 100%     |
+| 9/23（三） | 撰寫 final handover guide：repo、config、build、launch、logs、debug | 9/23 | `final-handover-guide.md` 80%                     |
+| 9/24（四） | 整理所有 meeting notes 產生的 Action Items 狀態與 open issues         | 9/24 | `final-open-issues.md`、meeting notes 更新           |
+| 9/25（五） | 週檢查點：完成最終文件與 9/26 檢查準備                                      | 9/25 | `final-3-month-summary.md`、`week13-checkpoint.md` |
+
+## 本週產出與百分比
+
+| 產出                                          |  完成度 | 截止日期 |
+| ------------------------------------------- | ---: | ---- |
+| `oai-aerial-metanoia-final-verification.md` | 100% | 9/25 |
+| `pegatron-vs-metanoia-e2e-comparison.md`    | 100% | 9/22 |
+| `final-handover-guide.md`                   | 100% | 9/25 |
+| `final-open-issues.md`                      | 100% | 9/25 |
+| `final-3-month-summary.md`                  | 100% | 9/25 |
+| `week13-checkpoint.md`                      | 100% | 9/25 |
+
+## 9/25 通過標準
+
+| 檢查項目               | 通過標準                                             |
+| ------------------ | ------------------------------------------------ |
+| Final verification | 有 OAI + Ariel cuBB + Metanoia RU 最終狀態報告          |
+| Comparison         | 有 Pegatron RU 版本 vs Metanoia RU 版本比較             |
+| Handover           | 下一位接手者能找到 repo、config、build、launch、logs、debug 文件 |
+| Open issues        | 所有未完成項目有原因、狀態、下一步                                |
+| Meeting KPI        | Meeting Notes 中 Action Items 的狀態有回收              |
+| Final summary      | 能清楚說明 7–9 月完成了什麼、未完成什麼、下一步是什麼                    |
+
+---
+
+# Final Checkpoint：2026/9/26（六）
+
+## 最終檢查點，不安排新技術工作
+
+| 檢查項目                                        | 通過標準                                                |
+| ------------------------------------------- | --------------------------------------------------- |
+| `month2-summary.md`                         | 100%                                                |
+| `month3-integration-plan.md`                | 100%                                                |
+| `oai-aerial-metanoia-final-verification.md` | 100%                                                |
+| `pegatron-vs-metanoia-e2e-comparison.md`    | 100%                                                |
+| `final-handover-guide.md`                   | 100%                                                |
+| `final-open-issues.md`                      | 100%                                                |
+| `final-3-month-summary.md`                  | 100%                                                |
+| Meeting Notes                               | 所有會議都有 Action Items 或註明無新增 Action Items             |
+| Daily Notes                                 | 每個工作日都有 plan、review、evidence、next working day plan  |
+| Evidence                                    | 每個實驗結果都有 command、config、log、result 或 blocked reason |
+
+---
+
+# 9 月最終比較項目
+
+9 月要比較的是：
+
+> **7 月：OAI L2/L3 + Ariel cuBB + Pegatron RU**
+> **9 月：OAI L2/L3 + Ariel cuBB + Metanoia RU**
+
+建議比較：
+
+| 比較項目                  | Pegatron RU 版本           | Metanoia RU 版本           | 為什麼要比                |
+| --------------------- | ------------------------ | ------------------------ | -------------------- |
+| RU 類型                 | Pegatron RU              | Metanoia RU              | 主要替換對象               |
+| OAI L2/L3             | OAI                      | OAI                      | 確認上層是否一致             |
+| L1 / cuBB             | Ariel cuBB               | Ariel cuBB               | 確認 L1/cuBB 是否一致      |
+| RU config             | Pegatron RU config       | Metanoia RU config       | RU 對接差異              |
+| Frequency / bandwidth | 7 月設定                    | 9 月設定                    | 需要對齊                 |
+| Numerology / SCS      | 7 月設定                    | 9 月設定                    | 需要對齊                 |
+| TDD pattern           | 7 月設定                    | 9 月設定                    | 影響 timing            |
+| IP / port             | Pegatron 設定              | Metanoia 設定              | 對接必要條件               |
+| fronthaul / eCPRI     | Pegatron 行為              | Metanoia 行為              | cuBB 對 RU 連線核心       |
+| clock / sync          | Pegatron 設定              | Metanoia 設定              | 常見 blocking point    |
+| antenna / gain        | Pegatron 設定              | Metanoia 設定              | RF 行為差異              |
+| launch sequence       | 7 月流程                    | 9 月流程                    | 操作差異                 |
+| log location          | Pegatron logs            | Metanoia logs            | debug 可行性            |
+| E2E status            | Pass / Partial / Blocked | Pass / Partial / Blocked | 最終驗證                 |
+| error type            | 7 月錯誤                    | 9 月錯誤                    | 找出 Metanoia 特有問題     |
+| reproducibility       | 是否能照文件重跑                 | 是否能照文件重跑                 | 符合 Playbook 可驗證與交接概念 |
+
+---
