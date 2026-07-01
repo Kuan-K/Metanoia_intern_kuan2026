@@ -10,7 +10,7 @@
 |---|---:|---|---|
 | W1 | 50% | 7/1 | `oai-gnb-to-pegatron-ru-parameter-mapping.md` |
 | W3 | 70% | 7/13 | `oai-gnb-to-pegatron-ru-parameter-mapping.md` |
-| W3 | 70% | 7/17 | `oai-gnb-to-pegatron-ru-parameter-mapping.md` |
+| W4 | 100% | 7/17 | `oai-gnb-to-pegatron-ru-parameter-mapping.md` |
 
 ## Open Research Playbook Checklist
 
