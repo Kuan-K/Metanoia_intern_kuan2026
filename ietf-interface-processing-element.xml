@@ -1,0 +1,24 @@
+<interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+	<interface>
+		<name>fm1-mac9</name>
+		<mac-address xmlns="urn:o-ran:interfaces:1.0">48:21:0b:4b:93:8e</mac-address>
+	</interface>
+	<interface>
+		<name>cuplane</name>
+		<mac-address xmlns="urn:o-ran:interfaces:1.0">48:21:0b:4b:93:8e</mac-address>
+		<vlan-id xmlns="urn:o-ran:interfaces:1.0">103</vlan-id>
+	</interface>
+</interfaces>
+<processing-elements xmlns="urn:o-ran:processing-element:1.0">
+	<ru-elements>
+		<name>pse3</name>
+		<transport-flow>
+			<interface-name>cuplane</interface-name>
+			<eth-flow>
+				<ru-mac-address>48:21:0b:4b:93:8e</ru-mac-address>
+				<vlan-id>103</vlan-id>
+				<o-du-mac-address>00:11:22:33:44:66</o-du-mac-address>
+			</eth-flow>
+		</transport-flow>
+	</ru-elements>
+</processing-elements>
