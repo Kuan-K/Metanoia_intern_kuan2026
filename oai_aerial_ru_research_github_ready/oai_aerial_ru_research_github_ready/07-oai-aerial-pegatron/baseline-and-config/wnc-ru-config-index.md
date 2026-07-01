@@ -8,7 +8,7 @@
 
 | Related Week | Planned Completion | Due Date | Planned Deliverable |
 |---|---:|---|---|
-| W1 | 60% | 7/3 | `wnc-ru-config-index.md` |
+| W1 | 100% | 7/3 | `wnc-ru-config-index.md` |
 
 ## Open Research Playbook Checklist
 
