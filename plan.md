@@ -49,40 +49,64 @@
 
 ## 週里程碑
 
-完成 Ming / Richard 初次交接，確認 7 月工作入口與 meeting action items。
+完成兩組已知成功設定檔的背景資料整理，建立後續比較與 Pegatron RU 對接 Ariel cuBB 的基礎。
+
+本週重點不是先嘗試 E2E launch，而是先完成：
+
+1. OAI + Pegatron RU 成功設定檔介紹
+2. OAI + cuBB for WNC RU 成功設定檔介紹
+3. OAI + Pegatron RU 與 OAI + cuBB for WNC RU 的初步差異比較
+
+## 協作者與分工
+
+| 協作者 | 角色 | 分工 |
+|---|---|---|
+| Kuan | Owner | 負責整理設定檔、建立參數表、補 hyperlink、完成 mapping、comparison 與 checkpoint |
+| Ming | Supporter | 協助提供 OAI + Pegatron RU E2E 成功的 gNB / RU 設定檔位置、command、log 與成功條件 |
+| Richard | Supporter | 協助提供 OAI + cuBB for WNC RU 設定檔位置、NVIDIA / Aerial 文件入口與 WNC RU 頻段、型號 |
+| Professor | Reviewer | 檢查研究方向與產出是否符合「直接比較設定檔差異」的目標 |
 
 ## 每日工作
 
 | 日期 | 主要工作 | 預估工時 | 補充工作 / 緩衝 | 截止日期 | 預期產出 |
-| --- | --- | ---: | --- | --- | --- |
-| 7/1（三） | OAI + Pegatron RU 設定檔介紹：找出學長已跑通 E2E 的 gNB / RU 設定檔，列出 Pegatron RU 頻段與型號，建立 gNB 參數表、RU 參數表、gNB-RU 對應表 | 7h | 若不知道設定檔路徑，直接問 Ming 或 Johnson；知道的參數先填，不知道的先留白並標記 Need Confirm | 7/1 | [`2026-07-01-ming-meeting note.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/meeting-notes/2026-07-01-ming-meeting%20note.md)、[`oai-pegatron-baseline.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/oai-pegatron-baseline.md)、[`oai-gnb-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/oai-gnb-parameter-table.md)、[`pegatron-ru-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/pegatron-ru-parameter-table.md)、[`oai-gnb-to-pegatron-ru-parameter-mapping.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/oai-gnb-to-pegatron-ru-parameter-mapping.md) |
-| 7/2（四） | LAB workshop | 6h | 以 workshop 為主；若有空檔，補齊 7/1 未完成欄位，整理要問 Richard 的 WNC / cuBB 設定檔問題 | 7/2 | 無需技術產出，只列入行程 |
-| 7/3（五） | OAI + cuBB for WNC RU 設定檔介紹與初步比較：找出 OAI + cuBB + WNC RU 的 gNB 設定檔，整理 WNC RU 頻段與型號，建立 OAI + Pegatron RU 與 OAI + cuBB for WNC RU 比較表 | 7h | 若不知道 `xxWNC.html` 或 NVIDIA 文件位置，直接問 Richard；先完成設定檔表格與差異欄位，無法確認的地方標記 Need Confirm | 7/3 | [`2026-07-03-richard-meeting note.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/meeting-notes/2026-07-03-richard-meeting%20note.md)、[`wnc-ru-config-index.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/wnc-ru-config-index.md)、[`aerial-cubb-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/aerial-cubb-parameter-table.md)、[`oai-pegatron-vs-oai-aerial-pegatron-comparison.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/oai-pegatron-vs-oai-aerial-pegatron-comparison.md)、[`week1-checkpoint.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week1-checkpoint.md) |
+|---|---|---:|---|---|---|
+| 7/1（三） | 找出學長做 OAI + Pegatron RU E2E 成功的 gNB 與 RU 設定檔，並列出 Pegatron RU 頻段、型號 | 10min | 若路徑或型號不確定，直接問 Ming | 7/1 | [oai-pegatron-baseline.md][oai-pegatron-baseline] |
+| 7/1（三） | 用表格介紹 OAI + Pegatron RU 的 gNB 設定檔參數 | 2h | 不知道的參數意義、資料型態或範圍先留白，Status 標記 Need Confirm，不硬猜 | 7/1 | [oai-gnb-parameter-table.md][oai-gnb-parameter-table] |
+| 7/1（三） | 用表格介紹 Pegatron RU 設定檔參數 | 2h | 不知道的參數意義、資料型態或範圍先留白，Status 標記 Need Confirm，不硬猜 | 7/1 | [pegatron-ru-parameter-table.md][pegatron-ru-parameter-table] |
+| 7/1（三） | 用第三個表格整理 OAI gNB 與 Pegatron RU 的相對對應參數 | 3h | 優先整理 frequency、bandwidth、SCS / numerology、TDD、IP / port、clock / sync、antenna、gain、fronthaul；找不到對應關係的項目標記 Need Confirm | 7/1 | [oai-gnb-to-pegatron-ru-parameter-mapping.md][oai-gnb-to-pegatron-ru-parameter-mapping] |
+| 7/2（四） | LAB workshop | 6h | 無，該日以 workshop 為主；若有空檔，回填 7/1 文件中 Need Confirm 的欄位 | 7/2 | 無需技術產出，只列入行程 |
+| 7/3（五） | 找出 OAI + cuBB for WNC RU 的 gNB 設定檔，例如 `xxWNC.html`，並查出 WNC RU 頻段、型號 | 30min | 若找不到設定檔或型號，直接問 Richard；若 NVIDIA 文件未寫清楚，標記 Need Confirm | 7/3 | [wnc-ru-config-index.md][wnc-ru-config-index] |
+| 7/3（五） | 用一個表格介紹 OAI + cuBB for WNC RU 的 gNB 設定檔 | 3h | 將 `xxWNC.html` 中與 RU 對接相關的參數整理成表格；未知意義、範圍、型態先留白並標記 Need Confirm | 7/3 | [aerial-cubb-parameter-table.md][aerial-cubb-parameter-table] |
+| 7/3（五） | 用一個表格比較 OAI + Pegatron RU 與 OAI + cuBB for WNC RU 的設定檔差異 | 3h | 只比較兩組已知成功設定檔，不延伸到 E2E launch；差異不確定的項目標記 Need Confirm | 7/3 | [oai-pegatron-vs-oai-aerial-pegatron-comparison.md][oai-pegatron-vs-oai-aerial-pegatron-comparison] |
+| 7/3（五） | W1 checkpoint：檢查兩組設定檔資料是否已整理成可比較狀態 | 30min | 補齊文件連結、整理 Done / Pending / Blocked，列出下週要問 Ming / Johnson / Richard 的問題 | 7/3 | [week1-checkpoint.md][week1-checkpoint] |
 
 ## 本週產出與百分比
 
 | 產出 | 完成度 | 截止日期 |
-| --- | ---: | --- |
-| [`2026-07-01-ming-meeting note.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/meeting-notes/2026-07-01-ming-meeting%20note.md) | 100% | 7/1 |
-| [`oai-pegatron-baseline.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/oai-pegatron-baseline.md) | 60% | 7/1 |
-| [`oai-gnb-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/oai-gnb-parameter-table.md) | 50% | 7/1 |
-| [`pegatron-ru-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/pegatron-ru-parameter-table.md) | 50% | 7/1 |
-| [`oai-gnb-to-pegatron-ru-parameter-mapping.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/oai-gnb-to-pegatron-ru-parameter-mapping.md) | 50% | 7/1 |
-| [`2026-07-03-richard-meeting note.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/meeting-notes/2026-07-03-richard-meeting%20note.md) | 100% | 7/3 |
-| [`wnc-ru-config-index.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/wnc-ru-config-index.md) | 60% | 7/3 |
-| [`aerial-cubb-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/aerial-cubb-parameter-table.md) | 60% | 7/3 |
-| [`oai-pegatron-vs-oai-aerial-pegatron-comparison.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/oai-pegatron-vs-oai-aerial-pegatron-comparison.md) | 40% | 7/3 |
-| [`week1-checkpoint.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week1-checkpoint.md) | 100% | 7/3 |
-
+|---|---:|---|
+| [oai-pegatron-baseline.md][oai-pegatron-baseline] | 60% | 7/1 |
+| [oai-gnb-parameter-table.md][oai-gnb-parameter-table] | 50% | 7/1 |
+| [pegatron-ru-parameter-table.md][pegatron-ru-parameter-table] | 50% | 7/1 |
+| [oai-gnb-to-pegatron-ru-parameter-mapping.md][oai-gnb-to-pegatron-ru-parameter-mapping] | 50% | 7/1 |
+| [wnc-ru-config-index.md][wnc-ru-config-index] | 60% | 7/3 |
+| [aerial-cubb-parameter-table.md][aerial-cubb-parameter-table] | 60% | 7/3 |
+| [oai-pegatron-vs-oai-aerial-pegatron-comparison.md][oai-pegatron-vs-oai-aerial-pegatron-comparison] | 40% | 7/3 |
+| [week1-checkpoint.md][week1-checkpoint] | 100% | 7/3 |
 
 ## 7/3 通過標準
 
-| 檢查項目                  | 通過標準                                                                          |
-| --------------------- | ----------------------------------------------------------------------------- |
-| Ming meeting notes    | 有記錄 OAI + Pegatron RU E2E 已跑通的 config、command、log、成功條件                        |
-| Richard meeting notes | 有記錄 DGX Spark / Aerial L1 + OAI L2 安裝手冊來源、WNC RU config 位置、OAI / Ariel 參數設定入口 |
-| Action Items          | 只放在 meeting notes 裡，每個 action item 有 owner、deliverable、due date、evidence      |
-| 下週工作入口           | 明確知道 W2 要整理哪幾份 config、哪份安裝手冊、哪個 baseline log                                  |
+| 檢查項目 | 通過標準 |
+|---|---|
+| OAI + Pegatron RU 設定檔來源 | [oai-pegatron-baseline.md][oai-pegatron-baseline] 中有列出 gNB 設定檔路徑、RU 設定檔路徑、Pegatron RU 頻段、型號、資料來源；若不知道，需標記 Need Confirm 並寫明要問 Ming 或 Johnson |
+| OAI gNB 參數表 | [oai-gnb-parameter-table.md][oai-gnb-parameter-table] 中已用表格列出 gNB 設定檔參數，至少包含 Parameter、Value、Meaning、Data Type、Range、Source、Status；不知道的欄位可留白，但 Status 必須標記 Need Confirm |
+| Pegatron RU 參數表 | [pegatron-ru-parameter-table.md][pegatron-ru-parameter-table] 中已用表格列出 RU 設定檔參數，至少包含 Parameter、Value、Meaning、Data Type、Range、Source、Status；不知道的欄位可留白，但 Status 必須標記 Need Confirm |
+| gNB 與 Pegatron RU 對應參數 | [oai-gnb-to-pegatron-ru-parameter-mapping.md][oai-gnb-to-pegatron-ru-parameter-mapping] 中已建立 gNB 與 RU 對應表，至少包含 frequency、bandwidth、SCS / numerology、TDD、IP / port、clock / sync、antenna、gain、fronthaul / eCPRI |
+| OAI + cuBB for WNC RU 設定檔來源 | [wnc-ru-config-index.md][wnc-ru-config-index] 中有列出 `xxWNC.html` 或對應 gNB 設定檔位置、NVIDIA / Aerial 文件來源、WNC RU 頻段、型號；若不知道，需標記 Need Confirm 並寫明要問 Richard |
+| OAI + cuBB for WNC RU 參數表 | [aerial-cubb-parameter-table.md][aerial-cubb-parameter-table] 中已用表格整理 OAI + cuBB for WNC RU 的 gNB 設定檔參數，並標示 Value、Meaning、Data Type、Range、Source、Status |
+| 兩組成功設定檔比較 | [oai-pegatron-vs-oai-aerial-pegatron-comparison.md][oai-pegatron-vs-oai-aerial-pegatron-comparison] 中已比較 OAI + Pegatron RU 與 OAI + cuBB for WNC RU，至少包含 RU 類型、RU 頻段 / 型號、gNB config、frequency、bandwidth、SCS / numerology、TDD、IP / port、clock / sync、fronthaul、antenna / gain |
+| Evidence / 超連結 | 每個產出表格中都要有 Source 或 Evidence 欄位，可放設定檔路徑、GitHub 連結、NVIDIA 文件連結、log path，不能只寫「已確認」 |
+| Pending / Blocked | 不知道的地方不能亂補，必須標記 Need Confirm，並寫明要問誰：Ming、Johnson 或 Richard |
+| Week 1 checkpoint | [week1-checkpoint.md][week1-checkpoint] 中有整理 W1 每個產出的 Done / Pending / Blocked 狀態、缺少的資料、下週要補的問題 |
 
 ---
 
@@ -90,39 +114,40 @@
 
 ## 週里程碑
 
-完成 **OAI + Pegatron RU baseline 的深入整理**，並完成 **DGX Spark / Aerial L1 + OAI L2 安裝手冊整理到可照著做的程度**。
+根據 W1 完成的 OAI + Pegatron RU 與 OAI + cuBB for WNC RU 設定檔整理，補齊參數意義、資料型態、範圍與 Need Confirm 項目，並整理出 Pegatron RU 對接 Ariel cuBB 時需要對齊或修改的參數清單。
 
 ## 每日工作
 
-| 日期      | 工作                                                                                                 | 截止日期 | 預期產出                                                      |
-| ------- | -------------------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------- |
-| 7/6（一）  | 整理已跑通的 OAI L2/L3 + OAI L1 + Pegatron RU E2E baseline：使用版本、config、command、log、成功條件                  | 7/6  | [`oai-pegatron-baseline.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/oai-pegatron-baseline.md) 60%                    |
-| 7/7（二）  | 深入整理 OAI gNB 設定檔參數：頻段、bandwidth、numerology、TDD pattern、RU/fronthaul 相關設定                           | 7/7  | [`oai-gnb-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/oai-gnb-parameter-table.md) 50%                          |
-| 7/8（三）  | 深入整理 Pegatron RU 設定檔參數：RU IP、port、clock/sync、frequency、bandwidth、gain、antenna、eCPRI/fronthaul 相關設定 | 7/8  | [`pegatron-ru-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/pegatron-ru-parameter-table.md) 50%                      |
-| 7/9（四）  | 整理 DGX Spark / Aerial L1 + OAI L2 安裝手冊：環境需求、安裝步驟、依賴套件、啟動方式、可能錯誤                                    | 7/9  | [`dgx-spark-aerial-oai-installation.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/dgx-spark-aerial-oai-installation.md) 70%                |
-| 7/10（五） | 週檢查點：整理 baseline、參數表、安裝手冊；確認 W3 要把 Pegatron RU 哪些參數對齊 Ariel cuBB                                   | 7/10 | [`week2-checkpoint.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week2-checkpoint.md)、[`ru-to-cubb-alignment-questions.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/ru-to-cubb-alignment-questions.md) |
+| 日期 | 主要工作 | 預估工時 | 補充工作 / 緩衝 | 截止日期 | 預期產出 |
+|---|---|---:|---|---|---|
+| 7/6（一） | 補齊 OAI + Pegatron RU baseline 文件，確認 gNB / RU 設定檔來源、版本、成功條件與 evidence | 6h | 若設定檔來源或成功條件不完整，列 Pending 並詢問 Ming / Johnson；同時補齊 config-file-location-index | 7/6 | [oai-pegatron-baseline.md][oai-pegatron-baseline] 80%、[config-file-location-index.md][config-file-location-index] 50% |
+| 7/7（二） | 補齊 OAI gNB 設定檔參數意義、資料型態、範圍與 Source | 6h | 不知道的參數不硬猜，Status 標記 Need Confirm；優先處理 E2E / RU 對接相關參數 | 7/7 | [oai-gnb-parameter-table.md][oai-gnb-parameter-table] 60% |
+| 7/8（三） | 補齊 Pegatron RU 設定檔參數意義、資料型態、範圍，並對照 gNB 參數 | 6h | 將可能影響 cuBB 對接的 RU 參數標出，例如 frequency、bandwidth、sync、IP / port、fronthaul | 7/8 | [pegatron-ru-parameter-table.md][pegatron-ru-parameter-table] 60% |
+| 7/9（四） | 整理 DGX Spark / Aerial L1 + OAI L2 安裝手冊與 OAI + cuBB for WNC RU 文件來源 | 7h | 若 NVIDIA / Aerial 文件中有 blocked issue 或版本限制，整理在文件中；不確定處標記 Need Confirm | 7/9 | [dgx-spark-aerial-oai-installation.md][dgx-spark-aerial-oai-installation] 70% |
+| 7/10（五） | 週檢查點：根據 W1 / W2 的兩組設定檔差異，整理 Pegatron RU 對接 Ariel cuBB 前必須確認的問題 | 6h | 補齊本週文件、整理 Pending / Blocked、列出 W3 config pack 與 readiness checklist 需要的輸入 | 7/10 | [week2-checkpoint.md][week2-checkpoint]、[ru-to-cubb-alignment-questions.md][ru-to-cubb-alignment-questions] |
 
 ## 本週產出與百分比
 
-| 產出                                     |  完成度 | 截止日期 |
-| -------------------------------------- | ---: | ---- |
-| [`oai-pegatron-baseline.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/oai-pegatron-baseline.md)             |  80% | 7/10 |
-| [`oai-gnb-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/oai-gnb-parameter-table.md)           |  60% | 7/10 |
-| [`pegatron-ru-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/pegatron-ru-parameter-table.md)       |  60% | 7/10 |
-| [`dgx-spark-aerial-oai-installation.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/dgx-spark-aerial-oai-installation.md) |  70% | 7/10 |
-| [`config-file-location-index.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/config-file-location-index.md)        |  80% | 7/10 |
-| [`ru-to-cubb-alignment-questions.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/ru-to-cubb-alignment-questions.md)    | 100% | 7/10 |
-| [`week2-checkpoint.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week2-checkpoint.md)                  | 100% | 7/10 |
+| 產出 | 完成度 | 截止日期 |
+|---|---:|---|
+| [oai-pegatron-baseline.md][oai-pegatron-baseline] | 80% | 7/10 |
+| [oai-gnb-parameter-table.md][oai-gnb-parameter-table] | 60% | 7/10 |
+| [pegatron-ru-parameter-table.md][pegatron-ru-parameter-table] | 60% | 7/10 |
+| [dgx-spark-aerial-oai-installation.md][dgx-spark-aerial-oai-installation] | 70% | 7/10 |
+| [config-file-location-index.md][config-file-location-index] | 80% | 7/10 |
+| [ru-to-cubb-alignment-questions.md][ru-to-cubb-alignment-questions] | 100% | 7/10 |
+| [week2-checkpoint.md][week2-checkpoint] | 100% | 7/10 |
 
 ## 7/10 通過標準
 
-| 檢查項目                    | 通過標準                                  |
-| ----------------------- | ------------------------------------- |
-| OAI + Pegatron baseline | 有 config、command、log、成功條件，不只是寫「已跑通」   |
-| OAI gNB 參數              | 至少整理 10 個與 E2E / RU 對接有關的參數           |
-| Pegatron RU 參數          | 至少整理 10 個 RU 端參數，並標示哪些可能要對齊 cuBB      |
-| DGX / Aerial 安裝手冊       | 至少整理環境需求、安裝步驟、啟動入口、blocked issue      |
-| W3 準備                   | 有列出「Pegatron RU 要對齊 Ariel cuBB」的待確認問題 |
+| 檢查項目 | 通過標準 |
+|---|---|
+| OAI + Pegatron baseline | [oai-pegatron-baseline.md][oai-pegatron-baseline] 有 gNB config、RU config、command、log、成功條件與 Source / Evidence，不只是寫「已跑通」 |
+| OAI gNB 參數表 | [oai-gnb-parameter-table.md][oai-gnb-parameter-table] 至少整理 10 個與 E2E / RU 對接有關的參數，並包含 Meaning、Data Type、Range、Source、Status |
+| Pegatron RU 參數表 | [pegatron-ru-parameter-table.md][pegatron-ru-parameter-table] 至少整理 10 個 RU 端參數，並標示哪些可能要對齊 Ariel cuBB |
+| DGX / Aerial 安裝手冊 | [dgx-spark-aerial-oai-installation.md][dgx-spark-aerial-oai-installation] 至少整理環境需求、安裝步驟、啟動入口、文件來源與 blocked issue |
+| Config location | [config-file-location-index.md][config-file-location-index] 有整理 OAI、Pegatron RU、WNC RU、Aerial / cuBB 相關設定檔位置或待確認位置 |
+| W3 準備 | [ru-to-cubb-alignment-questions.md][ru-to-cubb-alignment-questions] 有列出 Pegatron RU 要對齊 Ariel cuBB 前必須確認的問題，並標示要問 Ming / Johnson / Richard 的項目 |
 
 ---
 
@@ -130,44 +155,41 @@
 
 ## 週里程碑
 
-完成 Pegatron RU 設定檔理解，並嘗試將 RU 設定對齊 Ariel cuBB 需求。
-
-重點是回答：
-> Pegatron RU 原本是怎麼跟 OAI L1 對接的？
-> 若要改成 Ariel cuBB，RU 端哪些參數必須一致？
+根據 W1 / W2 的設定檔比較結果，整理 Pegatron RU 對接 Ariel cuBB 時需要修改或確認的參數，建立 OAI + Ariel cuBB + Pegatron RU 初版 config pack 與 launch readiness checklist。
 
 ## 每日工作
 
-| 日期      | 工作                                                                                                            | 截止日期 | 預期產出                                                  |
-| ------- | ------------------------------------------------------------------------------------------------------------- | ---- | ----------------------------------------------------- |
-| 7/13（一） | 整理 OAI L1 baseline 中 gNB 與 Pegatron RU 的參數對應關係                                                                | 7/13 | [`oai-gnb-to-pegatron-ru-parameter-mapping.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/oai-gnb-to-pegatron-ru-parameter-mapping.md) 50%     |
-| 7/14（二） | 整理 Ariel cuBB / Ariel RAN 所需設定：cuBB 需要哪些 RU 端資訊、啟動時讀哪些 config                                                 | 7/14 | [`aerial-cubb-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/aerial-cubb-parameter-table.md) 60%                  |
-| 7/15（三） | 建立 Pegatron RU 對齊 Ariel cuBB 的 mapping checklist：frequency、bandwidth、numerology、TDD、IP/port、sync、antenna、gain | 7/15 | [`pegatron-ru-to-aerial-cubb-mapping-checklist.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/pegatron-ru-to-aerial-cubb-mapping-checklist.md) 70% |
-| 7/16（四） | 依據 mapping checklist 調整或整理 OAI + Ariel cuBB + Pegatron RU 測試用 config pack                                     | 7/16 | `oai-aerial-pegatron-config-pack/` 60%                |
-| 7/17（五） | 週檢查點：確認 W4 launch attempt 所需 config、command、log path、環境需求是否 ready                                             | 7/17 | [`e2e-readiness-checklist.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/e2e-readiness-checklist.md)、[`week3-checkpoint.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week3-checkpoint.md)    |
+| 日期 | 主要工作 | 預估工時 | 補充工作 / 緩衝 | 截止日期 | 預期產出 |
+|---|---|---:|---|---|---|
+| 7/13（一） | 根據 W1 / W2 文件，補齊 OAI gNB 與 Pegatron RU 的參數對應關係 | 6h | 對照 gNB、RU 設定檔與 W1 comparison，找不到對應關係的項目標記 Need Confirm | 7/13 | [oai-gnb-to-pegatron-ru-parameter-mapping.md][oai-gnb-to-pegatron-ru-parameter-mapping] 70% |
+| 7/14（二） | 整理 Ariel cuBB / Ariel RAN 所需設定，確認 cuBB 需要哪些 RU 端資訊 | 6h | 以 OAI + cuBB for WNC RU 成功設定檔為參考，整理對 Pegatron RU 的要求 | 7/14 | [aerial-cubb-parameter-table.md][aerial-cubb-parameter-table] 70% |
+| 7/15（三） | 建立 Pegatron RU 對齊 Ariel cuBB 的 mapping checklist | 6h | 將 frequency、bandwidth、numerology、TDD、IP / port、sync、antenna、gain、fronthaul 分成 Match / Need Modify / Need Confirm | 7/15 | [pegatron-ru-to-aerial-cubb-mapping-checklist.md][pegatron-ru-to-aerial-cubb-mapping-checklist] 80% |
+| 7/16（四） | 依據 mapping checklist 整理 OAI + Ariel cuBB + Pegatron RU 測試用 config pack | 7h | 集中 config、標註來源、記錄修改原因；不確定不直接修改，先保留 original vs modified note | 7/16 | `oai-aerial-pegatron-config-pack/` 60% |
+| 7/17（五） | 週檢查點：確認 W4 launch attempt 所需 config、command、log path、環境需求是否 ready | 6h | 補齊 launch sequence、log location、readiness checklist，整理 W4 測試風險 | 7/17 | [e2e-readiness-checklist.md][e2e-readiness-checklist]、[week3-checkpoint.md][week3-checkpoint] |
 
 ## 本週產出與百分比
 
-| 產出                                                |  完成度 | 截止日期 |
-| ------------------------------------------------- | ---: | ---- |
-| [`oai-gnb-to-pegatron-ru-parameter-mapping.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/oai-gnb-to-pegatron-ru-parameter-mapping.md)     |  70% | 7/17 |
-| [`aerial-cubb-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/aerial-cubb-parameter-table.md)                  |  70% | 7/17 |
-| [`pegatron-ru-to-aerial-cubb-mapping-checklist.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/pegatron-ru-to-aerial-cubb-mapping-checklist.md) |  80% | 7/17 |
-| `oai-aerial-pegatron-config-pack/`                |  60% | 7/17 |
-| [`e2e-readiness-checklist.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/e2e-readiness-checklist.md)                      |  90% | 7/17 |
-| [`e2e-launch-sequence.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/e2e-launch-sequence.md)                          |  70% | 7/17 |
-| [`log-location-and-debug-guide.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/log-location-and-debug-guide.md)                 |  70% | 7/17 |
-| [`week3-checkpoint.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week3-checkpoint.md)                             | 100% | 7/17 |
+| 產出 | 完成度 | 截止日期 |
+|---|---:|---|
+| [oai-gnb-to-pegatron-ru-parameter-mapping.md][oai-gnb-to-pegatron-ru-parameter-mapping] | 70% | 7/17 |
+| [aerial-cubb-parameter-table.md][aerial-cubb-parameter-table] | 70% | 7/17 |
+| [pegatron-ru-to-aerial-cubb-mapping-checklist.md][pegatron-ru-to-aerial-cubb-mapping-checklist] | 80% | 7/17 |
+| `oai-aerial-pegatron-config-pack/` | 60% | 7/17 |
+| [e2e-readiness-checklist.md][e2e-readiness-checklist] | 90% | 7/17 |
+| [e2e-launch-sequence.md][e2e-launch-sequence] | 70% | 7/17 |
+| [log-location-and-debug-guide.md][log-location-and-debug-guide] | 70% | 7/17 |
+| [week3-checkpoint.md][week3-checkpoint] | 100% | 7/17 |
 
 ## 7/17 通過標準
 
-| 檢查項目                 | 通過標準                                                                        |
-| -------------------- | --------------------------------------------------------------------------- |
-| OAI baseline mapping | 能說明 OAI gNB 與 Pegatron RU 哪些參數需要一致                                          |
-| Ariel cuBB 需求        | 能列出 Ariel cuBB 需要從 config 或環境取得哪些 RU 資訊                                     |
-| RU-to-cuBB alignment | checklist 至少包含 frequency、bandwidth、numerology、TDD、IP/port、sync、antenna、gain |
-| Config pack          | OAI、Ariel cuBB、Pegatron RU 測試用 config 已集中整理                                 |
-| W4 readiness         | 已列出 W4 launch attempt 的 command、config、log path、expected result             |
+| 檢查項目 | 通過標準 |
+|---|---|
+| OAI baseline mapping | [oai-gnb-to-pegatron-ru-parameter-mapping.md][oai-gnb-to-pegatron-ru-parameter-mapping] 能說明 OAI gNB 與 Pegatron RU 哪些參數需要一致，未知項目標記 Need Confirm |
+| Ariel cuBB 需求 | [aerial-cubb-parameter-table.md][aerial-cubb-parameter-table] 能列出 Ariel cuBB 需要從 config 或環境取得哪些 RU 資訊 |
+| RU-to-cuBB alignment | [pegatron-ru-to-aerial-cubb-mapping-checklist.md][pegatron-ru-to-aerial-cubb-mapping-checklist] 至少包含 frequency、bandwidth、numerology、TDD、IP / port、sync、antenna、gain、fronthaul |
+| Config pack | `oai-aerial-pegatron-config-pack/` 中的 config 來源、修改原因與尚未確認項目有被記錄 |
+| W4 readiness | [e2e-readiness-checklist.md][e2e-readiness-checklist] 已列出 W4 launch attempt 的 command、config、log path、expected result |
+| Traceability | W3 的 config pack 與 readiness checklist 必須能追溯到 W1 / W2 的設定檔比較與參數表 |
 
 ---
 
@@ -175,40 +197,41 @@
 
 ## 週里程碑
 
-嘗試跑通 **OAI L2/L3 + Ariel cuBB + Pegatron RU E2E**，並留下完整 experiment log。
+根據 W1 / W2 / W3 的設定檔比較、mapping checklist 與 config pack，嘗試跑通 OAI L2/L3 + Ariel cuBB + Pegatron RU E2E，並留下完整 experiment log。
 
 ## 每日工作
 
-| 日期      | 工作                                                                                     | 截止日期 | 預期產出                                                      |
-| ------- | -------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------- |
-| 7/20（一） | 根據 W3 readiness checklist 進行 launch 前檢查：版本、config、network、clock/sync、log path          | 7/20 | [`pre-launch-checklist.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/pre-launch-checklist.md) 100%                            |
-| 7/21（二） | 執行 OAI L2/L3 + Ariel cuBB + Pegatron RU launch attempt，保存 command、config、log、result | 7/21 | [`oai-aerial-pegatron-first-attempt-log.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-first-attempt-log.md) 100%           |
-| 7/22（三） | 分析第一次 attempt log；若失敗，整理 reproduction steps、error、環境、推測原因                              | 7/22 | [`oai-aerial-pegatron-error-report.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-error-report.md) 70%                 |
-| 7/23（四） | 根據 7/22 分析修正設定，進行 launch attempt 或補測關鍵步驟                                            | 7/23 | [`oai-aerial-pegatron-second-attempt-log.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-second-attempt-log.md) 100%          |
-| 7/24（五） | 週檢查點：整理本週 E2E 狀態，確認是 Pass / Partial / Blocked，列出 W5 比較所需 evidence                      | 7/24 | [`week4-checkpoint.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week4-checkpoint.md)、[`oai-aerial-pegatron-e2e-status.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-e2e-status.md) |
+| 日期 | 主要工作 | 預估工時 | 補充工作 / 緩衝 | 截止日期 | 預期產出 |
+|---|---|---:|---|---|---|
+| 7/20（一） | 根據 W3 readiness checklist 進行 launch 前檢查：版本、config、network、clock / sync、log path | 6h | 確認每個 config 都能追溯到 W1 / W2 / W3 文件；若有缺口，標成 Partial / Blocked | 7/20 | [pre-launch-checklist.md][pre-launch-checklist] 100% |
+| 7/21（二） | 執行 OAI L2/L3 + Ariel cuBB + Pegatron RU launch attempt，保存 command、config、log、result | 7h | 不論成功或失敗，都保存完整 command、config、log、actual result；不要只寫「failed」 | 7/21 | [oai-aerial-pegatron-first-attempt-log.md][oai-aerial-pegatron-first-attempt-log] 100% |
+| 7/22（三） | 分析第一次 attempt log；若失敗，整理 reproduction steps、error、環境、推測原因 | 6h | 分類問題來源，補 error report；若 log 不足，補 log path 與重現方式 | 7/22 | [oai-aerial-pegatron-error-report.md][oai-aerial-pegatron-error-report] 70% |
+| 7/23（四） | 根據 7/22 分析修正設定，進行 launch attempt 或補測關鍵步驟 | 7h | 進行第二次 attempt 或針對 blocked step 補測，保存完整紀錄 | 7/23 | [oai-aerial-pegatron-second-attempt-log.md][oai-aerial-pegatron-second-attempt-log] 100% |
+| 7/24（五） | 週檢查點：整理本週 E2E 狀態，確認是 Pass / Partial / Blocked，列出 W5 比較所需 evidence | 6h | 完成 E2E status、common error list、week checkpoint，整理 W5 比較資料 | 7/24 | [week4-checkpoint.md][week4-checkpoint]、[oai-aerial-pegatron-e2e-status.md][oai-aerial-pegatron-e2e-status] |
 
 ## 本週產出與百分比
 
-| 產出                                          |  完成度 | 截止日期 |
-| ------------------------------------------- | ---: | ---- |
-| [`pre-launch-checklist.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/pre-launch-checklist.md)                   | 100% | 7/20 |
-| [`oai-aerial-pegatron-first-attempt-log.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-first-attempt-log.md)  | 100% | 7/21 |
-| [`oai-aerial-pegatron-second-attempt-log.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-second-attempt-log.md) | 100% | 7/23 |
-| [`oai-aerial-pegatron-error-report.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-error-report.md)       |  80% | 7/24 |
-| [`oai-aerial-pegatron-e2e-status.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-e2e-status.md)         | 100% | 7/24 |
-| [`common-error-list.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/common-error-list.md)                      |  80% | 7/24 |
-| [`week4-checkpoint.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week4-checkpoint.md)                       | 100% | 7/24 |
+| 產出 | 完成度 | 截止日期 |
+|---|---:|---|
+| [pre-launch-checklist.md][pre-launch-checklist] | 100% | 7/20 |
+| [oai-aerial-pegatron-first-attempt-log.md][oai-aerial-pegatron-first-attempt-log] | 100% | 7/21 |
+| [oai-aerial-pegatron-second-attempt-log.md][oai-aerial-pegatron-second-attempt-log] | 100% | 7/23 |
+| [oai-aerial-pegatron-error-report.md][oai-aerial-pegatron-error-report] | 80% | 7/24 |
+| [oai-aerial-pegatron-e2e-status.md][oai-aerial-pegatron-e2e-status] | 100% | 7/24 |
+| [common-error-list.md][common-error-list] | 80% | 7/24 |
+| [week4-checkpoint.md][week4-checkpoint] | 100% | 7/24 |
 
 ## 7/24 通過標準
 
-| 檢查項目           | 通過標準                                                         |
-| -------------- | ------------------------------------------------------------ |
-| Launch attempt | 至少完成 1–2 次 OAI + Ariel cuBB + Pegatron RU launch attempt     |
-| Experiment log | 每次 attempt 都有 command、config、log、result                      |
-| E2E status     | 明確標示 Pass / Partial / Blocked                                |
-| Error report   | 若失敗，必須有 reproduction steps、logs、environment、推測原因             |
-| Evidence       | 有足夠資料支撐 W5 與 OAI + Pegatron baseline 比較                      |
-| Action Items   | 若本週有再開會，Action Items 留在該次 meeting note；若沒開會，不新增 action items |
+| 檢查項目 | 通過標準 |
+|---|---|
+| Launch attempt | 至少完成 1–2 次 OAI + Ariel cuBB + Pegatron RU launch attempt，或清楚說明無法執行的 blocking reason |
+| Experiment log | 每次 attempt 都有 command、config、environment、log、actual result |
+| Config traceability | Launch attempt 使用的 config 必須能追溯到 W1 / W2 的設定檔比較與 W3 的 config pack |
+| E2E status | [oai-aerial-pegatron-e2e-status.md][oai-aerial-pegatron-e2e-status] 明確標示 Pass / Partial / Blocked / Fail |
+| Error report | 若失敗，[oai-aerial-pegatron-error-report.md][oai-aerial-pegatron-error-report] 必須有 reproduction steps、logs、environment、推測原因 |
+| Evidence | 有足夠資料支撐 W5 與 OAI + Pegatron baseline 比較 |
+| Action Items | 若本週有正式開會，Action Items 留在該次 meeting note；若沒開會，不新增 action items |
 
 ---
 
@@ -216,71 +239,101 @@
 
 ## 月里程碑
 
-整理 OAI + Pegatron RU baseline 與 OAI + Ariel cuBB + Pegatron RU 的差異，完成 7 月月報。
+整理 7 月兩階段比較結果：第一階段比較 OAI + Pegatron RU 與 OAI + cuBB for WNC RU 的成功設定檔差異；第二階段比較 OAI + Pegatron RU baseline 與 OAI + Ariel cuBB + Pegatron RU attempt 的設定、log、狀態與限制，完成 7 月月報。
 
 ## 每日工作
 
-| 日期      | 工作                                                                              | 截止日期 | 預期產出                                                    |
-| ------- | ------------------------------------------------------------------------------- | ---- | ------------------------------------------------------- |
-| 7/27（一） | 整理 OAI + Pegatron baseline 的最終版本：config、command、參數、log、成功條件                     | 7/27 | [`oai-pegatron-baseline.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/oai-pegatron-baseline.md) 100%                 |
-| 7/28（二） | 整理 OAI + Ariel cuBB + Pegatron RU 的最終狀態：config、command、log、成功 / 失敗 / blocked 原因 | 7/28 | [`oai-aerial-pegatron-e2e-status.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-e2e-status.md) 100%                |
-| 7/29（三） | 建立兩套系統的比較表：架構、參數、啟動流程、log、錯誤、限制、可重現性                                            | 7/29 | [`oai-pegatron-vs-oai-aerial-pegatron-comparison.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/oai-pegatron-vs-oai-aerial-pegatron-comparison.md) 80% |
-| 7/30（四） | 整理 7 月 meeting notes 中 Action Items 的完成狀態；整理 open issues 與 8 月銜接方向              | 7/30 | [`month1-open-issues.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/month1-open-issues.md)、meeting notes 更新                |
-| 7/31（五） | 月檢查點：完成 7 月月報，列出 8 月 Metanoia 研究入口                                              | 7/31 | [`month1-summary.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/month1-summary.md)、[`month2-metanoia-entry-plan.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/month2-metanoia-entry-plan.md)     |
+| 日期 | 主要工作 | 預估工時 | 補充工作 / 緩衝 | 截止日期 | 預期產出 |
+|---|---|---:|---|---|---|
+| 7/27（一） | 整理 OAI + Pegatron RU baseline 的最終版本：config、command、參數、log、成功條件 | 6h | 補齊 W1 / W2 baseline 文件缺漏，確認可支撐後續比較 | 7/27 | [oai-pegatron-baseline.md][oai-pegatron-baseline] 100% |
+| 7/28（二） | 整理 OAI + Ariel cuBB + Pegatron RU 的最終狀態：config、command、log、成功 / 失敗 / blocked 原因 | 6h | 將 W4 attempt log 收斂成 E2E status，明確標示 Pass / Partial / Blocked / Fail | 7/28 | [oai-aerial-pegatron-e2e-status.md][oai-aerial-pegatron-e2e-status] 100% |
+| 7/29（三） | 完成第一階段比較：OAI + Pegatron RU vs OAI + cuBB for WNC RU 的成功設定檔差異 | 7h | 比較 gNB config、RU 類型、頻段 / 型號、frequency、bandwidth、SCS、TDD、IP / port、sync、fronthaul、antenna / gain | 7/29 | [oai-pegatron-vs-oai-aerial-pegatron-comparison.md][oai-pegatron-vs-oai-aerial-pegatron-comparison] 80% |
+| 7/30（四） | 完成第二階段比較：OAI + Pegatron RU baseline vs OAI + Ariel cuBB + Pegatron RU attempt | 6h | 把 W4 launch attempt 的 command、config、log、status、error type 與 baseline 做比較 | 7/30 | [oai-pegatron-vs-oai-aerial-pegatron-comparison.md][oai-pegatron-vs-oai-aerial-pegatron-comparison] 100%、[month1-open-issues.md][month1-open-issues] |
+| 7/31（五） | 月檢查點：完成 7 月月報，列出 8 月 Metanoia 研究入口 | 6h | 完成 month1 summary、week5 checkpoint、8 月研究入口計畫；整理未完成原因與下一步 | 7/31 | [month1-summary.md][month1-summary]、[month2-metanoia-entry-plan.md][month2-metanoia-entry-plan]、[week5-checkpoint.md][week5-checkpoint] |
 
 ## 本週產出與百分比
 
-| 產出                                                  |  完成度 | 截止日期 |
-| --------------------------------------------------- | ---: | ---- |
-| [`oai-pegatron-baseline.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/oai-pegatron-baseline.md)                          | 100% | 7/27 |
-| [`oai-aerial-pegatron-e2e-status.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-e2e-status.md)                 | 100% | 7/28 |
-| [`oai-pegatron-vs-oai-aerial-pegatron-comparison.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/oai-pegatron-vs-oai-aerial-pegatron-comparison.md) | 100% | 7/31 |
-| [`oai-gnb-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/oai-gnb-parameter-table.md)                        |  90% | 7/31 |
-| [`aerial-cubb-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/aerial-cubb-parameter-table.md)                    |  90% | 7/31 |
-| [`pegatron-ru-parameter-table.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/pegatron-ru-parameter-table.md)                    |  90% | 7/31 |
-| [`dgx-spark-aerial-oai-installation.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/dgx-spark-aerial-oai-installation.md)              | 100% | 7/31 |
-| [`month1-open-issues.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/month1-open-issues.md)                             | 100% | 7/31 |
-| [`month1-summary.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/month1-summary.md)                                 | 100% | 7/31 |
-| [`month2-metanoia-entry-plan.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/month2-metanoia-entry-plan.md)                     | 100% | 7/31 |
-| [`week5-checkpoint.md`](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week5-checkpoint.md)                               | 100% | 7/31 |
+| 產出 | 完成度 | 截止日期 |
+|---|---:|---|
+| [oai-pegatron-baseline.md][oai-pegatron-baseline] | 100% | 7/27 |
+| [oai-aerial-pegatron-e2e-status.md][oai-aerial-pegatron-e2e-status] | 100% | 7/28 |
+| [oai-pegatron-vs-oai-aerial-pegatron-comparison.md][oai-pegatron-vs-oai-aerial-pegatron-comparison] | 100% | 7/31 |
+| [oai-gnb-parameter-table.md][oai-gnb-parameter-table] | 90% | 7/31 |
+| [aerial-cubb-parameter-table.md][aerial-cubb-parameter-table] | 90% | 7/31 |
+| [pegatron-ru-parameter-table.md][pegatron-ru-parameter-table] | 90% | 7/31 |
+| [dgx-spark-aerial-oai-installation.md][dgx-spark-aerial-oai-installation] | 100% | 7/31 |
+| [month1-open-issues.md][month1-open-issues] | 100% | 7/31 |
+| [month1-summary.md][month1-summary] | 100% | 7/31 |
+| [month2-metanoia-entry-plan.md][month2-metanoia-entry-plan] | 100% | 7/31 |
+| [week5-checkpoint.md][week5-checkpoint] | 100% | 7/31 |
 
 ## 7/31 月檢查通過標準
 
-| 檢查項目                      | 通過標準                                                                     |
-| ------------------------- | ------------------------------------------------------------------------ |
-| OAI + Pegatron baseline   | 已整理成可比較 baseline，不只是「已跑通」                                                |
-| OAI + Ariel + Pegatron    | 有 launch attempt / E2E result / blocked reason 的完整紀錄                     |
-| Comparison                | 有兩套系統的差異比較表                                                              |
-| Parameter understanding   | OAI、Ariel cuBB、Pegatron RU 的關鍵參數已整理                                      |
-| DGX / Aerial installation | DGX Spark / Aerial L1 + OAI L2 安裝手冊整理完成                                  |
-| Meeting KPI               | Ming / Richard meeting notes 有 Action Items；後續工作有 follow 這些 Action Items |
-| Open issues               | 未完成項目有原因與下一步                                                             |
-| 8 月銜接                   | 明確知道 Metanoia 研究第一週要從哪裡開始                                                |
+| 檢查項目 | 通過標準 |
+|---|---|
+| OAI + Pegatron baseline | [oai-pegatron-baseline.md][oai-pegatron-baseline] 已整理成可比較 baseline，不只是「已跑通」 |
+| 第一階段比較 | [oai-pegatron-vs-oai-aerial-pegatron-comparison.md][oai-pegatron-vs-oai-aerial-pegatron-comparison] 有比較 OAI + Pegatron RU 與 OAI + cuBB for WNC RU 的成功設定檔差異 |
+| 第二階段比較 | [oai-pegatron-vs-oai-aerial-pegatron-comparison.md][oai-pegatron-vs-oai-aerial-pegatron-comparison] 有比較 OAI + Pegatron RU baseline 與 OAI + Ariel cuBB + Pegatron RU attempt 的 config、command、log、status、error type |
+| OAI + Ariel + Pegatron attempt | [oai-aerial-pegatron-e2e-status.md][oai-aerial-pegatron-e2e-status] 有 launch attempt / E2E result / blocked reason 的完整紀錄 |
+| Parameter understanding | OAI、Ariel cuBB、Pegatron RU 的關鍵參數表已整理，未知項目標記 Need Confirm |
+| DGX / Aerial installation | [dgx-spark-aerial-oai-installation.md][dgx-spark-aerial-oai-installation] 整理到可交接程度，包含文件來源、環境需求、啟動入口與 blocked issue |
+| Open issues | [month1-open-issues.md][month1-open-issues] 中所有未完成項目有原因、狀態、下一步與要詢問的協作者 |
+| 8 月銜接 | [month2-metanoia-entry-plan.md][month2-metanoia-entry-plan] 明確知道 Metanoia 研究第一週要從哪裡開始 |
+| Week 5 checkpoint | [week5-checkpoint.md][week5-checkpoint] 中已回顧 W1–W5 的 Done / Pending / Blocked、主要 evidence 與下月工作入口 |
 
 ---
 
-7 月最終比較表比較項目：
+# 7 月最終比較表比較項目
 
-| 比較項目              | OAI + Pegatron RU baseline       | OAI + Ariel cuBB + Pegatron RU       | 為什麼要比                |
-| ----------------- | -------------------------------- | ------------------------------------ | -------------------- |
-| 系統架構              | OAI L2/L3 + OAI L1 + Pegatron RU | OAI L2/L3 + Ariel cuBB + Pegatron RU | 確認 Ariel cuBB 替代了哪一段 |
-| L1 / cuBB 角色      | OAI L1                           | Ariel cuBB                           | 這是兩套系統核心差異           |
-| gNB config        | OAI baseline 使用的 gNB config      | Ariel 版本使用的 OAI config               | 確認 L2/L3 設定是否需要改     |
-| RU config         | Pegatron RU baseline config      | Pegatron RU 對齊 cuBB 後的 config        | 確認 RU 端是否需要重設        |
-| 頻率 / bandwidth    | baseline value                   | Ariel 版本 value                       | 必須對齊                 |
-| numerology / SCS  | baseline value                   | Ariel 版本 value                       | 必須對齊                 |
-| TDD pattern       | baseline value                   | Ariel 版本 value                       | 影響 frame timing      |
-| fronthaul / eCPRI | baseline 設定                      | Ariel cuBB 需求                        | RU 對接 cuBB 的重點       |
-| IP / port         | baseline 設定                      | Ariel 版本設定                           | 對接必須一致               |
-| clock / sync      | baseline 設定                      | Ariel 版本設定                           | 常見 E2E 問題來源          |
-| antenna / gain    | baseline 設定                      | Ariel 版本設定                           | 影響 RF / RU 行為        |
-| 啟動順序              | OAI + Pegatron 啟動流程              | OAI + cuBB + Pegatron 啟動流程           | 確認流程差異               |
-| log 位置            | OAI gNB log、RU log               | OAI log、cuBB log、RU log              | Debug 需要             |
-| 成功條件              | baseline 如何判斷成功                  | Ariel 版本如何判斷成功                       | 避免只看「有沒有跑起來」         |
-| 錯誤訊息              | baseline 是否有 error               | Ariel 版本 error                       | 用來定位問題               |
-| 可重現性              | 是否能照文件重跑                         | 是否能照文件重跑                             | 符合 Playbook 可驗證概念    |
+| 比較項目 | OAI + Pegatron RU baseline | OAI + cuBB for WNC RU | OAI + Ariel cuBB + Pegatron RU attempt | 為什麼要比 |
+|---|---|---|---|---|
+| 系統架構 | OAI L2/L3 + OAI L1 + Pegatron RU | OAI L2/L3 + Ariel cuBB + WNC RU | OAI L2/L3 + Ariel cuBB + Pegatron RU | 確認 Ariel cuBB 替代了哪一段，以及 RU 從 WNC 換成 Pegatron 後的差異 |
+| L1 / cuBB 角色 | OAI L1 | Ariel cuBB | Ariel cuBB | 這是兩套系統核心差異 |
+| RU 類型 | Pegatron RU | WNC RU | Pegatron RU | 確認 cuBB 成功案例與目標 RU 的差異 |
+| RU 頻段 / 型號 | baseline value | WNC value | Pegatron value | 頻段與型號會影響設定檔與 fronthaul 對接 |
+| gNB config | OAI baseline 使用的 gNB config | OAI + cuBB for WNC 使用的 gNB config，例如 `xxWNC.html` | Ariel 版本使用的 OAI config | 確認 L2/L3 設定是否需要改 |
+| RU config | Pegatron RU baseline config | WNC RU 對應 config | Pegatron RU 對齊 cuBB 後的 config | 確認 RU 端是否需要重設 |
+| frequency / bandwidth | baseline value | WNC value | Ariel + Pegatron value | 必須對齊 |
+| numerology / SCS | baseline value | WNC value | Ariel + Pegatron value | 必須對齊 |
+| TDD pattern | baseline value | WNC value | Ariel + Pegatron value | 影響 frame timing |
+| fronthaul / eCPRI | baseline 設定 | cuBB + WNC 成功設定 | cuBB + Pegatron 設定 | RU 對接 cuBB 的重點 |
+| IP / port | baseline 設定 | WNC 設定 | Ariel + Pegatron 設定 | 對接必須一致 |
+| clock / sync | baseline 設定 | WNC 設定 | Ariel + Pegatron 設定 | 常見 E2E 問題來源 |
+| antenna / gain | baseline 設定 | WNC 設定 | Ariel + Pegatron 設定 | 影響 RF / RU 行為 |
+| 啟動順序 | OAI + Pegatron 啟動流程 | OAI + cuBB + WNC 啟動流程 | OAI + cuBB + Pegatron 啟動流程 | 確認流程差異 |
+| log 位置 | OAI gNB log、RU log | OAI log、cuBB log、WNC RU log | OAI log、cuBB log、Pegatron RU log | Debug 需要 |
+| 成功條件 | baseline 如何判斷成功 | WNC 成功案例如何判斷成功 | Ariel + Pegatron 如何判斷成功 / blocked | 避免只看「有沒有跑起來」 |
+| 錯誤訊息 | baseline 是否有 error | WNC 成功案例是否有 warning / limitation | Ariel + Pegatron error | 用來定位問題 |
+| 可重現性 | 是否能照文件重跑 | 是否能照文件重跑 | 是否能照文件重跑 | 符合可驗證與交接概念 |
 
-
+[oai-pegatron-baseline]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/oai-pegatron-baseline.md
+[oai-gnb-parameter-table]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/oai-gnb-parameter-table.md
+[pegatron-ru-parameter-table]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/pegatron-ru-parameter-table.md
+[wnc-ru-config-index]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/wnc-ru-config-index.md
+[aerial-cubb-parameter-table]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/aerial-cubb-parameter-table.md
+[config-file-location-index]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/config-file-location-index.md
+[dgx-spark-aerial-oai-installation]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/dgx-spark-aerial-oai-installation.md
+[ru-to-cubb-alignment-questions]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/baseline-and-config/ru-to-cubb-alignment-questions.md
+[oai-gnb-to-pegatron-ru-parameter-mapping]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/oai-gnb-to-pegatron-ru-parameter-mapping.md
+[pegatron-ru-to-aerial-cubb-mapping-checklist]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/pegatron-ru-to-aerial-cubb-mapping-checklist.md
+[e2e-readiness-checklist]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/e2e-readiness-checklist.md
+[e2e-launch-sequence]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/e2e-launch-sequence.md
+[log-location-and-debug-guide]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/mapping-and-readiness/log-location-and-debug-guide.md
+[pre-launch-checklist]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/pre-launch-checklist.md
+[oai-aerial-pegatron-first-attempt-log]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-first-attempt-log.md
+[oai-aerial-pegatron-second-attempt-log]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-second-attempt-log.md
+[oai-aerial-pegatron-error-report]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-error-report.md
+[oai-aerial-pegatron-e2e-status]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/oai-aerial-pegatron-e2e-status.md
+[common-error-list]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/experiments/common-error-list.md
+[oai-pegatron-vs-oai-aerial-pegatron-comparison]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/oai-pegatron-vs-oai-aerial-pegatron-comparison.md
+[month1-open-issues]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/month1-open-issues.md
+[month1-summary]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/month1-summary.md
+[month2-metanoia-entry-plan]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/07-oai-aerial-pegatron/comparison-and-summary/month2-metanoia-entry-plan.md
+[week1-checkpoint]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week1-checkpoint.md
+[week2-checkpoint]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week2-checkpoint.md
+[week3-checkpoint]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week3-checkpoint.md
+[week4-checkpoint]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week4-checkpoint.md
+[week5-checkpoint]: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/oai_aerial_ru_research_github_ready/oai_aerial_ru_research_github_ready/checkpoints/week5-checkpoint.md
 # 8 月總目標
 
 ## Month Goal：2026/8/3–2026/8/28
