@@ -127,39 +127,39 @@
 # 未確認
 | 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
 |---|---|---|---|---|---|
-| SIB / Cell Common | SIB1 TDA | `sib1_tda` | `15` | 整數；常見 `0`–`15` | 需依 OAI/NR TDA 設定確認 |
-| RF / 頻率設定 | UE 最大上行功率 | `pMax` | `23` | 常見 `-30`–`33` dBm | 依 UE capability / 法規 / RRC 設定 |
-| BWP / PDCCH | Initial DL / UL BWP 位置與頻寬 | `initialDLBWPlocationAndBandwidth`, `initialULBWPlocationAndBandwidth` | `1099`, `1099` | RIV 編碼值；範圍依 carrier PRB 數決定 | conf 註解引用 38.101-1 Table 5.3.2-1 |
-| BWP / PDCCH | Initial DL / UL BWP SCS | `initialDLBWPsubcarrierSpacing`, `initialULBWPsubcarrierSpacing` | `1`, `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz | conf 註解 |
-| BWP / PDCCH | Initial DL BWP CORESET#0 | `initialDLBWPcontrolResourceSetZero` | `10` | 常見 `0`–`15` | 依 MIB / CORESET#0 table |
-| BWP / PDCCH | Initial DL BWP SearchSpace#0 | `initialDLBWPsearchSpaceZero` | `0` | 常見 `0`–`15` | 依 SearchSpace#0 table |
-| PRACH / RACH | PRACH configuration index | `prach_ConfigurationIndex` | `159` | 常見 `0`–`255`；實際依 FR1/FR2、FDD/TDD、SCS table |  |
-| PRACH / RACH | PRACH Msg1 FDM | `prach_msg1_FDM` | `0` | `0`=one, `1`=two, `2`=four, `3`=eight | conf 註解 |
-| PRACH / RACH | PRACH Msg1 frequency start | `prach_msg1_FrequencyStart` | `0` | 非負整數；不可超出 UL BWP / PRB 範圍 |  |
-| PRACH / RACH | Zero correlation zone config | `zeroCorrelationZoneConfig` | `15` | 常見 `0`–`15` |  |
-| PRACH / RACH | Preamble 接收目標功率 | `preambleReceivedTargetPower` | `-104` | 常見 `-202`–`-60` dBm，通常 2 dB step |  |
-| PRACH / RACH | Preamble 最大重傳次數 | `preambleTransMax` | `7` | index `0`–`10` 對應 `3,4,5,6,7,8,10,20,50,100,200` | conf 註解 |
-| PRACH / RACH | Power ramping step | `powerRampingStep` | `2` | `0`=dB0, `1`=dB2, `2`=dB4, `3`=dB6 | conf 註解 |
-| PRACH / RACH | RA response window | `ra_ResponseWindow` | `5` | 常見 index `0`–`7` 對應 `1,2,4,8,10,20,40,80` slots | conf 註解列出可選 window |
-| PRACH / RACH | SSB per RACH occasion 設定 | `ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR`, `ssb_perRACH_OccasionAndCB_PreamblesPerSSB` | `4`, `15` | PR: `1`=oneeighth, `2`=onefourth, `3`=half, `4`=one, `5`=two, `6`=four, `7`=eight, `8`=sixteen；Preambles: `0`–`15` 對應 `4,8,12,...,64` | conf 註解 |
-| PRACH / RACH | RA contention resolution timer | `ra_ContentionResolutionTimer` | `7` | index `0`–`7` 對應 `8,16,24,32,40,48,56,64` | conf 註解 |
-| PRACH / RACH | RSRP threshold SSB | `rsrp_ThresholdSSB` | `19` | 常見 `0`–`127` | RSRP threshold index |
-| PRACH / RACH | PRACH root sequence index 設定 | `prach_RootSequenceIndex_PR`, `prach_RootSequenceIndex` | `2`, `1` | PR: `1`=839, `2`=139；index 範圍依 root sequence length，839 約 `0`–`837`，139 約 `0`–`137` | conf 註解 |
-| PRACH / RACH | Msg1 subcarrier spacing | `msg1_SubcarrierSpacing` | `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz | conf 註解說此值會優先於 PRACH config index 推導值 |
-| PRACH / RACH | Restricted set config | `restrictedSetConfig` | `0` | `0`=unrestricted, `1`=restricted type A, `2`=restricted type B | conf 註解 |
-| PRACH / RACH | Msg3 delta preamble | `msg3_DeltaPreamble` | `2` | 常見非負整數；實際 dB offset = `2 × field value` | conf 註解說明換算方式 |
-| PRACH / RACH | P0 nominal with grant | `p0_NominalWithGrant` | `-96` | 常見 `-202`–`24` dBm |  |
-| PUCCH | PUCCH group hopping | `pucchGroupHopping` | `0` | `0`=neither, `1`=group hopping, `2`=sequence hopping | conf 註解 |
-| PUCCH | Hopping ID | `hoppingId` | `0` | 常見 `0`–`1023` |  |
-| PUCCH | PUCCH P0 nominal | `p0_nominal` | `-96` | 常見 `-202`–`24` dBm |  |
-| SSB / PBCH | SSB positions in burst bitmap | `ssb_PositionsInBurst_Bitmap` | `0x1` | bitmask；長度依 FR1/FR2 與 SSB beams 數決定 |  |
-| SSB / PBCH | SSB periodicity serving cell | `ssb_periodicityServingCell` | `2` | `0`=ms5, `1`=ms10, `2`=ms20, `3`=ms40, `4`=ms80, `5`=ms160, `6`=spare2, `7`=spare1 | conf 註解 |
-| SSB / PBCH | SS/PBCH block power | `ssPBCH_BlockPower` | `0` | 常見 `-60`–`50` dBm |  |
-| DMRS | DMRS Type A position | `dmrs_TypeA_Position` | `0` | `0`=pos2, `1`=pos3 | conf 註解 |
-| Numerology | Cell common subcarrier spacing | `subcarrierSpacing` | `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz | conf 註解 |
-| Security | Ciphering algorithms | `ciphering_algorithms` | `"nea0"` | `nea0`, `nea1`, `nea2`, `nea3` | conf 註解 |
-| Security | Integrity algorithms | `integrity_algorithms` | `"nia2"`, `"nia0"` | `nia0`, `nia1`, `nia2`, `nia3` | conf 註解 |
-| Security | DRB ciphering / integrity 開關 | `drb_ciphering`, `drb_integrity` | `"yes"`, `"no"` | `"yes"` 或 `"no"` | conf 註解 |
+| SIB / Cell Common | SIB1 TDA | `sib1_tda` | `15` | | |
+| RF / 頻率設定 | UE 最大上行功率 | `pMax` | `23` | | |
+| BWP / PDCCH | Initial DL / UL BWP 位置與頻寬 | `initialDLBWPlocationAndBandwidth`, `initialULBWPlocationAndBandwidth` | `1099`, `1099` | | |
+| BWP / PDCCH | Initial DL / UL BWP SCS | `initialDLBWPsubcarrierSpacing`, `initialULBWPsubcarrierSpacing` | `1`, `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz |  |
+| BWP / PDCCH | Initial DL BWP CORESET#0 | `initialDLBWPcontrolResourceSetZero` | `10` || |
+| BWP / PDCCH | Initial DL BWP SearchSpace#0 | `initialDLBWPsearchSpaceZero` | `0` | | |
+| PRACH / RACH | PRACH configuration index | `prach_ConfigurationIndex` | `159` |  |  |
+| PRACH / RACH | PRACH Msg1 FDM | `prach_msg1_FDM` | `0` | `0`=one, `1`=two, `2`=four, `3`=eight |  |
+| PRACH / RACH | PRACH Msg1 frequency start | `prach_msg1_FrequencyStart` | `0` |  |  |
+| PRACH / RACH | Zero correlation zone config | `zeroCorrelationZoneConfig` | `15` |  |  |
+| PRACH / RACH | Preamble 接收目標功率 | `preambleReceivedTargetPower` | `-104` |  |  |
+| PRACH / RACH | Preamble 最大重傳次數 | `preambleTransMax` | `7` | index `0`–`10` 對應 `3,4,5,6,7,8,10,20,50,100,200` | |
+| PRACH / RACH | Power ramping step | `powerRampingStep` | `2` | `0`=dB0, `1`=dB2, `2`=dB4, `3`=dB6 |  |
+| PRACH / RACH | RA response window | `ra_ResponseWindow` | `5` | 常見 index `0`–`7` 對應 `1,2,4,8,10,20,40,80` slots |  |
+| PRACH / RACH | SSB per RACH occasion 設定 | `ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR`, `ssb_perRACH_OccasionAndCB_PreamblesPerSSB` | `4`, `15` | PR: `1`=oneeighth, `2`=onefourth, `3`=half, `4`=one, `5`=two, `6`=four, `7`=eight, `8`=sixteen；Preambles: `0`–`15` 對應 `4,8,12,...,64` |  |
+| PRACH / RACH | RA contention resolution timer | `ra_ContentionResolutionTimer` | `7` | index `0`–`7` 對應 `8,16,24,32,40,48,56,64` | |
+| PRACH / RACH | RSRP threshold SSB | `rsrp_ThresholdSSB` | `19` | | |
+| PRACH / RACH | PRACH root sequence index 設定 | `prach_RootSequenceIndex_PR`, `prach_RootSequenceIndex` | `2`, `1` | PR: `1`=839, `2`=139；index 範圍依 root sequence length，839 約 `0`–`837`，139 約 `0`–`137` |  |
+| PRACH / RACH | Msg1 subcarrier spacing | `msg1_SubcarrierSpacing` | `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz |  |
+| PRACH / RACH | Restricted set config | `restrictedSetConfig` | `0` | `0`=unrestricted, `1`=restricted type A, `2`=restricted type B |  |
+| PRACH / RACH | Msg3 delta preamble | `msg3_DeltaPreamble` | `2` |  |  |
+| PRACH / RACH | P0 nominal with grant | `p0_NominalWithGrant` | `-96` |  |  |
+| PUCCH | PUCCH group hopping | `pucchGroupHopping` | `0` | `0`=neither, `1`=group hopping, `2`=sequence hopping |  |
+| PUCCH | Hopping ID | `hoppingId` | `0` |  |  |
+| PUCCH | PUCCH P0 nominal | `p0_nominal` | `-96` |  |  |
+| SSB / PBCH | SSB positions in burst bitmap | `ssb_PositionsInBurst_Bitmap` | `0x1` | |  |
+| SSB / PBCH | SSB periodicity serving cell | `ssb_periodicityServingCell` | `2` | `0`=ms5, `1`=ms10, `2`=ms20, `3`=ms40, `4`=ms80, `5`=ms160, `6`=spare2, `7`=spare1 |  |
+| SSB / PBCH | SS/PBCH block power | `ssPBCH_BlockPower` | `0` |  |  |
+| DMRS | DMRS Type A position | `dmrs_TypeA_Position` | `0` | `0`=pos2, `1`=pos3 |  |
+| Numerology | Cell common subcarrier spacing | `subcarrierSpacing` | `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz |  |
+| Security | Ciphering algorithms | `ciphering_algorithms` | `"nea0"` | `nea0`, `nea1`, `nea2`, `nea3` |  |
+| Security | Integrity algorithms | `integrity_algorithms` | `"nia2"`, `"nia0"` | `nia0`, `nia1`, `nia2`, `nia3` |  |
+| Security | DRB ciphering / integrity 開關 | `drb_ciphering`, `drb_integrity` | `"yes"`, `"no"` | `"yes"` 或 `"no"` |  |
 | Logging | 各層 log level | `global_log_level`, `hw_log_level`, `phy_log_level`, `mac_log_level`, `rlc_log_level`, `pdcp_log_level`, `rrc_log_level`, `ngap_log_level`, `f1ap_log_level` | 全部 `"info"` | 常見 `error`, `warn`, `info`, `debug`, `trace`；實際依 OAI log 系統 |  |
 
 ## Parameters Related to RU / cuBB Alignment
