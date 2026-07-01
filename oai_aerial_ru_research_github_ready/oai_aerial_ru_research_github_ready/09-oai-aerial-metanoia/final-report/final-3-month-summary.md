@@ -1,45 +1,58 @@
 # Final 3 Month Summary
 
-## Plan Metadata
+## Purpose
 
-| Week | Planned Completion | Due Date |
-|---|---:|---|
-| W13 | 100% | 9/25 |
+說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-- Estimated Time:
-- Status: Not Started / In Progress / Done / Pending / Blocked
-- Evidence Link / Path:
+## Plan Alignment
 
-## Goal
+| Related Week | Planned Completion | Due Date | Planned Deliverable |
+|---|---:|---|---|
+| W13 | 100% | 9/25 | `final-3-month-summary.md` |
+| Final Checkpoint | 100% | Need Confirm | `final-3-month-summary.md` |
 
--
+## Open Research Playbook Checklist
 
-## Completed Work
-
-| Work | Evidence |
+| Requirement | Check |
 |---|---|
-|  |  |
+| Deliverable is measurable and verifiable | ☐ |
+| Evidence path / hyperlink is recorded | ☐ |
+| Unknown items are marked as Need Confirm | ☐ |
+| Pending / Blocked reason is recorded | ☐ |
+| Next step is clear | ☐ |
 
-## Result Summary
+## Summary
 
--
+| Item | Result | Evidence |
+|---|---|---|
+| Goal |  |  |
+| Completed work |  |  |
+| Main finding |  |  |
+| Main limitation |  |  |
+| Next step |  |  |
 
-## Comparison / Findings
+## Completed Deliverables
 
--
-
-## Meeting Notes / Action Items
-
-| Date | Meeting | Key Action Items | Status |
-|---|---|---|---|
-|  |  |  |  |
+| Deliverable | Status | Evidence / Link |
+|---|---|---|
+|  | ☐ Done ☐ Pending ☐ Blocked |  |
 
 ## Open Issues
 
-| Issue | Status | Next Step |
+| Issue | Reason | Owner | Next Step | Status |
+|---|---|---|---|---|
+|  |  |  |  | ☐ Open ☐ Pending ☐ Blocked |
+
+## Handover Notes
+
+| Topic | What the next person needs to know | Evidence |
 |---|---|---|
 |  |  |  |
 
-## Next Month / Next Step
+## Status
 
--
+| Item | Status | Evidence / Note |
+|---|---|---|
+| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
+| If Pending / Blocked | Reason |  |
+| Next step | Action |  |

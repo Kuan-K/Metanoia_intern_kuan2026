@@ -1,36 +1,64 @@
-# Pegatron RU To Aerial Cubb Mapping Checklist
+# Pegatron RU To Aerial cuBB Mapping Checklist
 
-## Plan Metadata
+## Purpose
 
-| Week | Planned Completion | Due Date |
-|---|---:|---|
-| W3 | 80% | 7/17 |
+說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-- Estimated Time:
-- Status: Not Started / In Progress / Done / Pending / Blocked
-- Evidence Link / Path:
+## Plan Alignment
 
-## Comparison Target
+| Related Week | Planned Completion | Due Date | Planned Deliverable |
+|---|---:|---|---|
+| W3 | 80% | 7/15 | `pegatron-ru-to-aerial-cubb-mapping-checklist.md` |
+| W3 | 80% | 7/17 | `pegatron-ru-to-aerial-cubb-mapping-checklist.md` |
 
-- Baseline:
-- New Setup:
+## Open Research Playbook Checklist
 
-## Comparison / Mapping Table
+| Requirement | Check |
+|---|---|
+| Deliverable is measurable and verifiable | ☐ |
+| Evidence path / hyperlink is recorded | ☐ |
+| Unknown items are marked as Need Confirm | ☐ |
+| Pending / Blocked reason is recorded | ☐ |
+| Next step is clear | ☐ |
 
-| Item | Baseline / Current | Target / New Setup | Difference / Match | Evidence |
+## Mapping / Alignment Table
+
+| Item | Source Side | Target Side | Expected Relationship | Current Finding | Evidence | Status |
+|---|---|---|---|---|---|---|
+| frequency |  |  | Must match |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| bandwidth |  |  | Must match |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| numerology / SCS |  |  | Must match |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| TDD pattern |  |  | Must match |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| IP / port |  |  | Must be compatible |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| clock / sync |  |  | Must be compatible |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| antenna / gain |  |  | Must be checked |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| fronthaul / eCPRI |  |  | Must be compatible |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+
+## Modification / Confirmation List
+
+| Item | Required Action | Owner | Due Date | Evidence |
 |---|---|---|---|---|
 |  |  |  |  |  |
 
-## Key Findings
+## Evidence
 
--
-
-## Risks / Limitations
-
-| Risk | Impact | Next Step |
+| Evidence Type | Path / Link | Note |
 |---|---|---|
-|  |  |  |
+| Source config / source file |  |  |
+| Command / script |  |  |
+| Log / screenshot / output |  |  |
+| Related plan / checkpoint |  |  |
 
-## Conclusion
+## Need Confirm / Open Questions
 
--
+| Question | Owner / Ask Who | Due Date | Status | Evidence / Answer |
+|---|---|---|---|---|
+|  |  |  | ☐ Need Confirm ☐ Confirmed |  |
+
+## Status
+
+| Item | Status | Evidence / Note |
+|---|---|---|
+| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
+| If Pending / Blocked | Reason |  |
+| Next step | Action |  |

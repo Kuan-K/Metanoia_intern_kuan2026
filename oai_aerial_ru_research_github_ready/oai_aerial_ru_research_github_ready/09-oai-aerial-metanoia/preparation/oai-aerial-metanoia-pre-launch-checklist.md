@@ -1,36 +1,46 @@
 # OAI Aerial Metanoia Pre Launch Checklist
 
-## Plan Metadata
+## Purpose
 
-| Week | Planned Completion | Due Date |
-|---|---:|---|
-| W10 | 100% | 9/4 |
+說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-- Estimated Time:
-- Status: Not Started / In Progress / Done / Pending / Blocked
-- Evidence Link / Path:
+## Plan Alignment
 
-## Comparison Target
+| Related Week | Planned Completion | Due Date | Planned Deliverable |
+|---|---:|---|---|
+| W10 | 80% | 9/3 | `oai-aerial-metanoia-pre-launch-checklist.md` |
+| W10 | 100% | 9/4 | `oai-aerial-metanoia-pre-launch-checklist.md` |
 
-- Baseline:
-- New Setup:
+## Open Research Playbook Checklist
 
-## Comparison / Mapping Table
+| Requirement | Check |
+|---|---|
+| Deliverable is measurable and verifiable | ☐ |
+| Evidence path / hyperlink is recorded | ☐ |
+| Unknown items are marked as Need Confirm | ☐ |
+| Pending / Blocked reason is recorded | ☐ |
+| Next step is clear | ☐ |
 
-| Item | Baseline / Current | Target / New Setup | Difference / Match | Evidence |
+## Checklist
+
+| Check Item | Expected Condition | Actual / Current Condition | Evidence | Status |
+|---|---|---|---|---|
+| Config path confirmed |  |  |  | ☐ Pass ☐ Partial ☐ Blocked |
+| Command prepared |  |  |  | ☐ Pass ☐ Partial ☐ Blocked |
+| Log path prepared |  |  |  | ☐ Pass ☐ Partial ☐ Blocked |
+| Expected result defined |  |  |  | ☐ Pass ☐ Partial ☐ Blocked |
+| Blocking risks listed |  |  |  | ☐ Pass ☐ Partial ☐ Blocked |
+
+## Risk / Blocked Items
+
+| Risk / Blocked Item | Impact | Owner | Next Step | Evidence |
 |---|---|---|---|---|
 |  |  |  |  |  |
 
-## Key Findings
+## Status
 
--
-
-## Risks / Limitations
-
-| Risk | Impact | Next Step |
+| Item | Status | Evidence / Note |
 |---|---|---|
-|  |  |  |
-
-## Conclusion
-
--
+| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
+| If Pending / Blocked | Reason |  |
+| Next step | Action |  |

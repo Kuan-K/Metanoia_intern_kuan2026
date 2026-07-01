@@ -1,45 +1,63 @@
-# RU To Cubb Alignment Questions
+# RU To cuBB Alignment Questions
 
-## Plan Metadata
+## Purpose
 
-| Week | Planned Completion | Due Date |
-|---|---:|---|
-| W2 | 100% | 7/10 |
+說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-- Estimated Time:
-- Status: Not Started / In Progress / Done / Pending / Blocked
-- Evidence Link / Path:
+## Plan Alignment
 
-## Goal
+| Related Week | Planned Completion | Due Date | Planned Deliverable |
+|---|---:|---|---|
+| W2 | 100% | 7/10 | `ru-to-cubb-alignment-questions.md` |
 
--
+## Open Research Playbook Checklist
 
-## Source / Reference
+| Requirement | Check |
+|---|---|
+| Deliverable is measurable and verifiable | ☐ |
+| Evidence path / hyperlink is recorded | ☐ |
+| Unknown items are marked as Need Confirm | ☐ |
+| Pending / Blocked reason is recorded | ☐ |
+| Next step is clear | ☐ |
 
-| Source | Path / Link | Note |
+## Mapping / Alignment Table
+
+| Item | Source Side | Target Side | Expected Relationship | Current Finding | Evidence | Status |
+|---|---|---|---|---|---|---|
+| frequency |  |  | Must match |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| bandwidth |  |  | Must match |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| numerology / SCS |  |  | Must match |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| TDD pattern |  |  | Must match |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| IP / port |  |  | Must be compatible |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| clock / sync |  |  | Must be compatible |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| antenna / gain |  |  | Must be checked |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+| fronthaul / eCPRI |  |  | Must be compatible |  |  | ☐ Match ☐ Need Modify ☐ Need Confirm |
+
+## Modification / Confirmation List
+
+| Item | Required Action | Owner | Due Date | Evidence |
+|---|---|---|---|---|
+|  |  |  |  |  |
+
+## Evidence
+
+| Evidence Type | Path / Link | Note |
 |---|---|---|
-|  |  |  |
+| Source config / source file |  |  |
+| Command / script |  |  |
+| Log / screenshot / output |  |  |
+| Related plan / checkpoint |  |  |
 
-## Work Notes
+## Need Confirm / Open Questions
 
--
+| Question | Owner / Ask Who | Due Date | Status | Evidence / Answer |
+|---|---|---|---|---|
+|  |  |  | ☐ Need Confirm ☐ Confirmed |  |
 
-## Key Findings
+## Status
 
--
-
-## Tables / Details
-
-| Item | Description | Evidence |
+| Item | Status | Evidence / Note |
 |---|---|---|
-|  |  |  |
-
-## Open Questions
-
-| Question | Status | Next Step |
-|---|---|---|
-|  |  |  |
-
-## Result
-
-Done / Pending / Blocked
+| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
+| If Pending / Blocked | Reason |  |
+| Next step | Action |  |

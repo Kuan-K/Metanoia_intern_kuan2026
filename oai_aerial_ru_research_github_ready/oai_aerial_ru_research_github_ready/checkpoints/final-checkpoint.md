@@ -1,45 +1,62 @@
 # Final Checkpoint
 
-## Plan Metadata
+## Purpose
 
-| Week | Planned Completion | Due Date |
-|---|---:|---|
-| Final | 100% | 9/26 |
+說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-- Estimated Time:
-- Status: Not Started / In Progress / Done / Pending / Blocked
-- Evidence Link / Path:
+## Plan Alignment
 
-## Weekly Milestone
-
--
-
-## Planned Deliverables
-
-| Deliverable | Planned Completion | Actual Status | Evidence |
+| Related Week | Planned Completion | Due Date | Planned Deliverable |
 |---|---:|---|---|
-|  |  | Done / Pending / Blocked |  |
+| Final Checkpoint | 100% | Need Confirm | `final-checkpoint.md` |
+
+## Open Research Playbook Checklist
+
+| Requirement | Check |
+|---|---|
+| Deliverable is measurable and verifiable | ☐ |
+| Evidence path / hyperlink is recorded | ☐ |
+| Unknown items are marked as Need Confirm | ☐ |
+| Pending / Blocked reason is recorded | ☐ |
+| Next step is clear | ☐ |
+
+## Checkpoint Review
+
+| Planned Deliverable | Planned Completion | Actual Status | Evidence / Link |
+|---|---:|---|---|
+|  |  | ☐ Done ☐ Pending ☐ Blocked |  |
 
 ## Completed Work
 
--
-
-## Pending / Blocked Items
-
-| Item | Reason | Next Step |
+| Work | Evidence | Note |
 |---|---|---|
 |  |  |  |
 
-## Meeting Action Items Review
+## Pending / Blocked Items
 
-只整理 meeting notes 中已產生的 Action Items；如果本週沒有開會，寫 N/A。
+| Item | Reason | Owner | Next Step | Due Date |
+|---|---|---|---|---|
+|  |  |  |  |  |
+
+## Action Items Review
+
+Action Items 只整理實際 meeting notes 中產生的項目；如果本週沒有正式會議，填 N/A。
 
 | Source Meeting | Action Item | Owner | Status | Evidence |
 |---|---|---|---|---|
-|  |  |  | Done / Pending / Blocked |  |
+| N/A |  |  |  |  |
 
-## Next Week Plan
+## Next Period Plan
 
-| Priority | Task | Expected Deliverable |
+| Priority | Task | Expected Deliverable | Evidence |
+|---|---|---|---|
+| P1 |  |  |  |
+| P2 |  |  |  |
+
+## Status
+
+| Item | Status | Evidence / Note |
 |---|---|---|
-| P1 |  |  |
+| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
+| If Pending / Blocked | Reason |  |
+| Next step | Action |  |

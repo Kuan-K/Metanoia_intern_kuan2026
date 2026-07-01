@@ -1,47 +1,74 @@
-# OAI GNB Parameter Table
-
-## Plan Metadata
-
-| Week | Planned Completion | Due Date |
-|---|---:|---|
-| W2 | 50% | 7/10 |
-| W5 | 90% | 7/31 |
-
-- Estimated Time:
-- Status: Not Started / In Progress / Done / Pending / Blocked
-- Evidence Link / Path:
+# OAI gNB Parameter Table
 
 ## Purpose
 
--
+說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-## Source
+## Plan Alignment
 
-| Item | Path / Source | Note |
-|---|---|---|
-| Config path |  |  |
-| Code path |  |  |
-| Related meeting note |  |  |
-| Related experiment |  |  |
+| Related Week | Planned Completion | Due Date | Planned Deliverable |
+|---|---:|---|---|
+| W1 | 50% | 7/1 | `oai-gnb-parameter-table.md` |
+| W2 | 60% | 7/7 | `oai-gnb-parameter-table.md` |
+| W2 | 60% | 7/10 | `oai-gnb-parameter-table.md` |
+| W5 | 90% | 7/31 | `oai-gnb-parameter-table.md` |
 
-## Parameters / Configs
+## Open Research Playbook Checklist
 
-| Parameter | Current Value | Location | Meaning | Impact | Confirm Status |
+| Requirement | Check |
+|---|---|
+| Deliverable is measurable and verifiable | ☐ |
+| Evidence path / hyperlink is recorded | ☐ |
+| Unknown items are marked as Need Confirm | ☐ |
+| Pending / Blocked reason is recorded | ☐ |
+| Next step is clear | ☐ |
+
+## Scope
+
+- System / Component: OAI gNB
+- Config file path:
+- Source owner:
+- Related setup:
+- Related RU model / band:
+
+## Parameter Table
+
+| Parameter | Value | Meaning | Data Type | Valid Range / Options | Source Location | Impact | Status |
+|---|---|---|---|---|---|---|---|
+|  |  |  |  |  |  |  | ☐ Confirmed ☐ Need Confirm |
+
+## Parameters Related to RU / cuBB Alignment
+
+| Parameter | gNB Side | RU / cuBB Side | Must Match? | Current Status | Evidence |
 |---|---|---|---|---|---|
-|  |  |  |  |  | Confirmed / Need Confirm |
+| frequency |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| bandwidth |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| numerology / SCS |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| TDD pattern |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| IP / port |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| clock / sync |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| antenna / gain |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| fronthaul / eCPRI |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
 
-## Parameters Need Alignment
+## Evidence
 
-| Parameter | Need to Align With | Reason | Status |
-|---|---|---|---|
-|  |  |  |  |
+| Evidence Type | Path / Link | Note |
+|---|---|---|
+| Source config / source file |  |  |
+| Command / script |  |  |
+| Log / screenshot / output |  |  |
+| Related plan / checkpoint |  |  |
 
-## Open Questions
+## Need Confirm / Open Questions
 
-| Question | Ask Who / Source | Due Date | Status |
-|---|---|---|---|
-|  |  |  |  |
+| Question | Owner / Ask Who | Due Date | Status | Evidence / Answer |
+|---|---|---|---|---|
+|  |  |  | ☐ Need Confirm ☐ Confirmed |  |
 
-## Next Step
+## Status
 
--
+| Item | Status | Evidence / Note |
+|---|---|---|
+| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
+| If Pending / Blocked | Reason |  |
+| Next step | Action |  |

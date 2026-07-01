@@ -1,45 +1,58 @@
 # OAI Aerial Metanoia Launch Sequence
 
-## Plan Metadata
+## Purpose
 
-| Week | Planned Completion | Due Date |
-|---|---:|---|
-| W10 | 80% | 9/4 |
+說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-- Estimated Time:
-- Status: Not Started / In Progress / Done / Pending / Blocked
-- Evidence Link / Path:
+## Plan Alignment
 
-## Goal
+| Related Week | Planned Completion | Due Date | Planned Deliverable |
+|---|---:|---|---|
+| W10 | 60% | 9/2 | `oai-aerial-metanoia-launch-sequence.md` |
+| W10 | 80% | 9/4 | `oai-aerial-metanoia-launch-sequence.md` |
 
--
+## Open Research Playbook Checklist
 
-## Source / Reference
+| Requirement | Check |
+|---|---|
+| Deliverable is measurable and verifiable | ☐ |
+| Evidence path / hyperlink is recorded | ☐ |
+| Unknown items are marked as Need Confirm | ☐ |
+| Pending / Blocked reason is recorded | ☐ |
+| Next step is clear | ☐ |
 
-| Source | Path / Link | Note |
+## Environment / Requirement
+
+| Item | Required Value | Source | Status |
+|---|---|---|---|
+| OS |  |  | ☐ Confirmed ☐ Need Confirm |
+| Driver / library |  |  | ☐ Confirmed ☐ Need Confirm |
+| Dependency |  |  | ☐ Confirmed ☐ Need Confirm |
+| Hardware / RU |  |  | ☐ Confirmed ☐ Need Confirm |
+
+## Procedure
+
+| Step | Command / Action | Expected Result | Evidence |
+|---|---|---|---|
+| 1 |  |  |  |
+| 2 |  |  |  |
+
+## Troubleshooting / Blocked Issues
+
+| Issue | Reproduction | Evidence | Next Step |
+|---|---|---|---|
+|  |  |  |  |
+
+## Need Confirm / Open Questions
+
+| Question | Owner / Ask Who | Due Date | Status | Evidence / Answer |
+|---|---|---|---|---|
+|  |  |  | ☐ Need Confirm ☐ Confirmed |  |
+
+## Status
+
+| Item | Status | Evidence / Note |
 |---|---|---|
-|  |  |  |
-
-## Work Notes
-
--
-
-## Key Findings
-
--
-
-## Tables / Details
-
-| Item | Description | Evidence |
-|---|---|---|
-|  |  |  |
-
-## Open Questions
-
-| Question | Status | Next Step |
-|---|---|---|
-|  |  |  |
-
-## Result
-
-Done / Pending / Blocked
+| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
+| If Pending / Blocked | Reason |  |
+| Next step | Action |  |

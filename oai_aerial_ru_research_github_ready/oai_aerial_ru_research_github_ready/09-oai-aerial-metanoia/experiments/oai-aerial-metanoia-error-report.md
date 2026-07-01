@@ -1,52 +1,77 @@
 # OAI Aerial Metanoia Error Report
 
-## Plan Metadata
+## Purpose
 
-| Week | Planned Completion | Due Date |
-|---|---:|---|
-| W11 | 70% | 9/11 |
-| W12 | 100% | 9/16 |
+說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-- Estimated Time:
-- Status: Not Started / In Progress / Done / Pending / Blocked
-- Evidence Link / Path:
+## Plan Alignment
+
+| Related Week | Planned Completion | Due Date | Planned Deliverable |
+|---|---:|---|---|
+| W11 | 50% | 9/9 | `oai-aerial-metanoia-error-report.md` |
+| W11 | 70% | 9/11 | `oai-aerial-metanoia-error-report.md` |
+| W12 | 100% | 9/16 | `oai-aerial-metanoia-error-report.md` |
+
+## Open Research Playbook Checklist
+
+| Requirement | Check |
+|---|---|
+| Deliverable is measurable and verifiable | ☐ |
+| Evidence path / hyperlink is recorded | ☐ |
+| Unknown items are marked as Need Confirm | ☐ |
+| Pending / Blocked reason is recorded | ☐ |
+| Next step is clear | ☐ |
 
 ## Error Summary
 
-- Date:
-- Related experiment:
-- Result status: Pass / Partial / Blocked / Fail
+| Item | Value |
+|---|---|
+| Related experiment / attempt |  |
+| Result status | ☐ Pass ☐ Partial ☐ Blocked ☐ Fail |
+| Error owner / component | ☐ OAI ☐ cuBB ☐ RU ☐ Network ☐ Sync ☐ Unknown |
+| First observed time |  |
 
 ## Environment
 
--
+| Item | Value | Evidence |
+|---|---|---|
+| OS / driver / dependency |  |  |
+| Branch / commit / version |  |  |
+| Config path |  |  |
 
 ## Reproduction Steps
 
-1.
-2.
-3.
+| Step | Command / Action | Expected | Actual |
+|---|---|---|---|
+| 1 |  |  |  |
+| 2 |  |  |  |
 
-## Error Message
+## Error Message / Log Evidence
 
 ```text
-paste error here
+Paste key error message here.
 ```
 
-## Logs
-
-| Component | Log Path | Key Message |
+| Log Path | Key Message | Interpretation |
 |---|---|---|
 |  |  |  |
 
-## Initial Diagnosis
+## Diagnosis and Next Step
 
--
+| Hypothesis | Evidence | Verification Method | Status |
+|---|---|---|---|
+|  |  |  | ☐ Need Test ☐ Confirmed ☐ Rejected |
 
-## Possible Cause
+## Need Confirm / Open Questions
 
--
+| Question | Owner / Ask Who | Due Date | Status | Evidence / Answer |
+|---|---|---|---|---|
+|  |  |  | ☐ Need Confirm ☐ Confirmed |  |
 
-## Next Step
+## Status
 
--
+| Item | Status | Evidence / Note |
+|---|---|---|
+| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
+| If Pending / Blocked | Reason |  |
+| Next step | Action |  |

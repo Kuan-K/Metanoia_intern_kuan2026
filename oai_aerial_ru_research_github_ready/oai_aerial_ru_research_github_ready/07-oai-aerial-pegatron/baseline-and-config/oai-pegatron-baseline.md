@@ -1,47 +1,75 @@
 # OAI Pegatron Baseline
 
-## Plan Metadata
+## Purpose
 
-| Week | Planned Completion | Due Date |
-|---|---:|---|
-| W1 | 60% | 7/3 |
-| W2 | 80% | 7/10 |
-| W5 | 100% | 7/27 |
+說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-- Estimated Time:
-- Status: Not Started / In Progress / Done / Pending / Blocked
-- Evidence Link / Path:
+## Plan Alignment
 
-## Goal
+| Related Week | Planned Completion | Due Date | Planned Deliverable |
+|---|---:|---|---|
+| W1 | 60% | 7/1 | `oai-pegatron-baseline.md` |
+| W2 | 80% | 7/6 | `oai-pegatron-baseline.md` |
+| W2 | 80% | 7/10 | `oai-pegatron-baseline.md` |
+| W5 | 100% | 7/27 | `oai-pegatron-baseline.md` |
 
--
+## Open Research Playbook Checklist
 
-## Source / Reference
+| Requirement | Check |
+|---|---|
+| Deliverable is measurable and verifiable | ☐ |
+| Evidence path / hyperlink is recorded | ☐ |
+| Unknown items are marked as Need Confirm | ☐ |
+| Pending / Blocked reason is recorded | ☐ |
+| Next step is clear | ☐ |
 
-| Source | Path / Link | Note |
+## Baseline Setup
+
+| Item | Value | Source / Evidence | Status |
+|---|---|---|---|
+| gNB config path |  |  | ☐ Confirmed ☐ Need Confirm |
+| RU config path |  |  | ☐ Confirmed ☐ Need Confirm |
+| Pegatron RU model |  |  | ☐ Confirmed ☐ Need Confirm |
+| Pegatron RU band |  |  | ☐ Confirmed ☐ Need Confirm |
+| Known successful command |  |  | ☐ Confirmed ☐ Need Confirm |
+| Success condition |  |  | ☐ Confirmed ☐ Need Confirm |
+| Related log path |  |  | ☐ Confirmed ☐ Need Confirm |
+
+## Reproducibility Notes
+
+| Step | Command / Action | Expected Result | Evidence |
+|---|---|---|---|
+| 1 |  |  |  |
+| 2 |  |  |  |
+
+## Baseline Verification
+
+| Check Item | Result | Evidence | Status |
+|---|---|---|---|
+| Configs found |  |  | ☐ Pass ☐ Partial ☐ Blocked |
+| Commands recorded |  |  | ☐ Pass ☐ Partial ☐ Blocked |
+| Logs recorded |  |  | ☐ Pass ☐ Partial ☐ Blocked |
+| Success criteria recorded |  |  | ☐ Pass ☐ Partial ☐ Blocked |
+
+## Evidence
+
+| Evidence Type | Path / Link | Note |
 |---|---|---|
-|  |  |  |
+| Source config / source file |  |  |
+| Command / script |  |  |
+| Log / screenshot / output |  |  |
+| Related plan / checkpoint |  |  |
 
-## Work Notes
+## Need Confirm / Open Questions
 
--
+| Question | Owner / Ask Who | Due Date | Status | Evidence / Answer |
+|---|---|---|---|---|
+|  |  |  | ☐ Need Confirm ☐ Confirmed |  |
 
-## Key Findings
+## Status
 
--
-
-## Tables / Details
-
-| Item | Description | Evidence |
+| Item | Status | Evidence / Note |
 |---|---|---|
-|  |  |  |
-
-## Open Questions
-
-| Question | Status | Next Step |
-|---|---|---|
-|  |  |  |
-
-## Result
-
-Done / Pending / Blocked
+| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
+| If Pending / Blocked | Reason |  |
+| Next step | Action |  |

@@ -1,71 +1,66 @@
 # Metanoia Build Log
 
-## Plan Metadata
+## Purpose
 
-| Week | Planned Completion | Due Date |
-|---|---:|---|
-| W7 | 100% | 8/11 |
-| W9 | 100% | 8/28 |
+說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-- Estimated Time:
-- Status: Not Started / In Progress / Done / Pending / Blocked
-- Evidence Link / Path:
+## Plan Alignment
 
-## Test Information
+| Related Week | Planned Completion | Due Date | Planned Deliverable |
+|---|---:|---|---|
+| W7 | 100% | 8/11 | `metanoia-build-log.md` |
+| W9 | 100% | 8/28 | `metanoia-build-log.md` |
 
-- Date:
-- Goal:
-- Environment:
-- Branch / Commit:
-- OAI version:
-- Ariel cuBB version:
-- RU:
-- Operator:
+## Open Research Playbook Checklist
 
-## Config Used
+| Requirement | Check |
+|---|---|
+| Deliverable is measurable and verifiable | ☐ |
+| Evidence path / hyperlink is recorded | ☐ |
+| Unknown items are marked as Need Confirm | ☐ |
+| Pending / Blocked reason is recorded | ☐ |
+| Next step is clear | ☐ |
 
-| Component | Config Path | Version / Note |
-|---|---|---|
-| OAI L2/L3 |  |  |
-| Ariel cuBB / OAI L1 |  |  |
-| RU |  |  |
+## Build Attempt Information
 
-## Launch Sequence
+| Item | Value |
+|---|---|
+| Date |  |
+| Repo / branch / commit |  |
+| Environment |  |
+| Dependency / toolchain |  |
 
-1.
-2.
-3.
-
-## Commands
+## Build Command
 
 ```bash
-# paste commands here
+# Paste build command here
 ```
 
-## Expected Result
+## Build Output Summary
 
--
-
-## Actual Result
-
--
+| Item | Result | Evidence |
+|---|---|---|
+| Build started |  |  |
+| Build completed |  |  |
+| Error / warning |  |  |
+| Artifact generated |  |  |
 
 ## Logs
 
-| Component | Log Path | Key Message |
+| Log / Output Path | Key Message | Status |
 |---|---|---|
-| OAI |  |  |
-| Ariel cuBB / OAI L1 |  |  |
-| RU |  |  |
+|  |  | ☐ Pass ☐ Partial ☐ Blocked ☐ Fail |
 
-## Result
+## Need Confirm / Open Questions
 
-Pass / Partial / Blocked / Fail
+| Question | Owner / Ask Who | Due Date | Status | Evidence / Answer |
+|---|---|---|---|---|
+|  |  |  | ☐ Need Confirm ☐ Confirmed |  |
 
-## Analysis
+## Status
 
--
-
-## Next Step
-
--
+| Item | Status | Evidence / Note |
+|---|---|---|
+| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
+| If Pending / Blocked | Reason |  |
+| Next step | Action |  |

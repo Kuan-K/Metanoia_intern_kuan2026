@@ -1,46 +1,62 @@
 # WNC RU Config Index
 
-## Plan Metadata
-
-| Week | Planned Completion | Due Date |
-|---|---:|---|
-| W1 | 30% | 7/3 |
-
-- Estimated Time:
-- Status: Not Started / In Progress / Done / Pending / Blocked
-- Evidence Link / Path:
-
 ## Purpose
 
--
+說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-## Source
+## Plan Alignment
 
-| Item | Path / Source | Note |
-|---|---|---|
-| Config path |  |  |
-| Code path |  |  |
-| Related meeting note |  |  |
-| Related experiment |  |  |
+| Related Week | Planned Completion | Due Date | Planned Deliverable |
+|---|---:|---|---|
+| W1 | 60% | 7/3 | `wnc-ru-config-index.md` |
 
-## Parameters / Configs
+## Open Research Playbook Checklist
 
-| Parameter | Current Value | Location | Meaning | Impact | Confirm Status |
+| Requirement | Check |
+|---|---|
+| Deliverable is measurable and verifiable | ☐ |
+| Evidence path / hyperlink is recorded | ☐ |
+| Unknown items are marked as Need Confirm | ☐ |
+| Pending / Blocked reason is recorded | ☐ |
+| Next step is clear | ☐ |
+
+## Config / Source File Index
+
+| Component | File / Folder Path | Source Owner | Purpose | Status | Evidence |
 |---|---|---|---|---|---|
-|  |  |  |  |  | Confirmed / Need Confirm |
+| gNB config |  |  |  | ☐ Found ☐ Need Confirm |  |
+| RU config |  |  |  | ☐ Found ☐ Need Confirm |  |
+| Launch script / command |  |  |  | ☐ Found ☐ Need Confirm |  |
+| Log path |  |  |  | ☐ Found ☐ Need Confirm |  |
 
-## Parameters Need Alignment
+## Key Metadata
 
-| Parameter | Need to Align With | Reason | Status |
+| Item | Value | Source | Status |
 |---|---|---|---|
-|  |  |  |  |
+| RU model |  |  | ☐ Confirmed ☐ Need Confirm |
+| RU band |  |  | ☐ Confirmed ☐ Need Confirm |
+| Known successful setup |  |  | ☐ Confirmed ☐ Need Confirm |
+| Related branch / version |  |  | ☐ Confirmed ☐ Need Confirm |
 
-## Open Questions
+## Evidence
 
-| Question | Ask Who / Source | Due Date | Status |
-|---|---|---|---|
-|  |  |  |  |
+| Evidence Type | Path / Link | Note |
+|---|---|---|
+| Source config / source file |  |  |
+| Command / script |  |  |
+| Log / screenshot / output |  |  |
+| Related plan / checkpoint |  |  |
 
-## Next Step
+## Need Confirm / Open Questions
 
--
+| Question | Owner / Ask Who | Due Date | Status | Evidence / Answer |
+|---|---|---|---|---|
+|  |  |  | ☐ Need Confirm ☐ Confirmed |  |
+
+## Status
+
+| Item | Status | Evidence / Note |
+|---|---|---|
+| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
+| If Pending / Blocked | Reason |  |
+| Next step | Action |  |

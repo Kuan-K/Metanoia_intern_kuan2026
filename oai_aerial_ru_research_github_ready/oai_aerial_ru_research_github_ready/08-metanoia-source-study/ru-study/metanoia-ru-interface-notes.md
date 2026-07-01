@@ -1,46 +1,52 @@
 # Metanoia RU Interface Notes
 
-## Plan Metadata
+## Purpose
 
-| Week | Planned Completion | Due Date |
-|---|---:|---|
-| W8 | 80% | 8/21 |
-| W9 | 100% | 8/28 |
+說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-- Estimated Time:
-- Status: Not Started / In Progress / Done / Pending / Blocked
-- Evidence Link / Path:
+## Plan Alignment
 
-## Goal
+| Related Week | Planned Completion | Due Date | Planned Deliverable |
+|---|---:|---|---|
+| W8 | 60% | 8/18 | `metanoia-ru-interface-notes.md` |
+| W8 | 80% | 8/21 | `metanoia-ru-interface-notes.md` |
+| W9 | 100% | 8/28 | `metanoia-ru-interface-notes.md` |
 
--
+## Open Research Playbook Checklist
 
-## Source / Reference
+| Requirement | Check |
+|---|---|
+| Deliverable is measurable and verifiable | ☐ |
+| Evidence path / hyperlink is recorded | ☐ |
+| Unknown items are marked as Need Confirm | ☐ |
+| Pending / Blocked reason is recorded | ☐ |
+| Next step is clear | ☐ |
 
-| Source | Path / Link | Note |
+## Work Record
+
+| Item | Description | Evidence | Status |
+|---|---|---|---|
+|  |  |  | ☐ Done ☐ Pending ☐ Blocked |
+
+## Evidence
+
+| Evidence Type | Path / Link | Note |
 |---|---|---|
-|  |  |  |
+| Source config / source file |  |  |
+| Command / script |  |  |
+| Log / screenshot / output |  |  |
+| Related plan / checkpoint |  |  |
 
-## Work Notes
+## Need Confirm / Open Questions
 
--
+| Question | Owner / Ask Who | Due Date | Status | Evidence / Answer |
+|---|---|---|---|---|
+|  |  |  | ☐ Need Confirm ☐ Confirmed |  |
 
-## Key Findings
+## Status
 
--
-
-## Tables / Details
-
-| Item | Description | Evidence |
+| Item | Status | Evidence / Note |
 |---|---|---|
-|  |  |  |
-
-## Open Questions
-
-| Question | Status | Next Step |
-|---|---|---|
-|  |  |  |
-
-## Result
-
-Done / Pending / Blocked
+| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
+| If Pending / Blocked | Reason |  |
+| Next step | Action |  |

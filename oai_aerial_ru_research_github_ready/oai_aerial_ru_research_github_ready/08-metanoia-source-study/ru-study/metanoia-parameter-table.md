@@ -1,48 +1,74 @@
 # Metanoia Parameter Table
 
-## Plan Metadata
-
-| Week | Planned Completion | Due Date |
-|---|---:|---|
-| W7 | 40% | 8/14 |
-| W8 | 90% | 8/21 |
-| W9 | 100% | 8/28 |
-
-- Estimated Time:
-- Status: Not Started / In Progress / Done / Pending / Blocked
-- Evidence Link / Path:
-
 ## Purpose
 
--
+說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-## Source
+## Plan Alignment
 
-| Item | Path / Source | Note |
-|---|---|---|
-| Config path |  |  |
-| Code path |  |  |
-| Related meeting note |  |  |
-| Related experiment |  |  |
+| Related Week | Planned Completion | Due Date | Planned Deliverable |
+|---|---:|---|---|
+| W7 | 40% | 8/14 | `metanoia-parameter-table.md` |
+| W8 | 70% | 8/17 | `metanoia-parameter-table.md` |
+| W8 | 90% | 8/21 | `metanoia-parameter-table.md` |
+| W9 | 100% | 8/28 | `metanoia-parameter-table.md` |
 
-## Parameters / Configs
+## Open Research Playbook Checklist
 
-| Parameter | Current Value | Location | Meaning | Impact | Confirm Status |
+| Requirement | Check |
+|---|---|
+| Deliverable is measurable and verifiable | ☐ |
+| Evidence path / hyperlink is recorded | ☐ |
+| Unknown items are marked as Need Confirm | ☐ |
+| Pending / Blocked reason is recorded | ☐ |
+| Next step is clear | ☐ |
+
+## Scope
+
+- System / Component: Metanoia RU
+- Config file path:
+- Source owner:
+- Related setup:
+- Related RU model / band:
+
+## Parameter Table
+
+| Parameter | Value | Meaning | Data Type | Valid Range / Options | Source Location | Impact | Status |
+|---|---|---|---|---|---|---|---|
+|  |  |  |  |  |  |  | ☐ Confirmed ☐ Need Confirm |
+
+## Parameters Related to RU / cuBB Alignment
+
+| Parameter | gNB Side | RU / cuBB Side | Must Match? | Current Status | Evidence |
 |---|---|---|---|---|---|
-|  |  |  |  |  | Confirmed / Need Confirm |
+| frequency |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| bandwidth |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| numerology / SCS |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| TDD pattern |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| IP / port |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| clock / sync |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| antenna / gain |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
+| fronthaul / eCPRI |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
 
-## Parameters Need Alignment
+## Evidence
 
-| Parameter | Need to Align With | Reason | Status |
-|---|---|---|---|
-|  |  |  |  |
+| Evidence Type | Path / Link | Note |
+|---|---|---|
+| Source config / source file |  |  |
+| Command / script |  |  |
+| Log / screenshot / output |  |  |
+| Related plan / checkpoint |  |  |
 
-## Open Questions
+## Need Confirm / Open Questions
 
-| Question | Ask Who / Source | Due Date | Status |
-|---|---|---|---|
-|  |  |  |  |
+| Question | Owner / Ask Who | Due Date | Status | Evidence / Answer |
+|---|---|---|---|---|
+|  |  |  | ☐ Need Confirm ☐ Confirmed |  |
 
-## Next Step
+## Status
 
--
+| Item | Status | Evidence / Note |
+|---|---|---|
+| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
+| If Pending / Blocked | Reason |  |
+| Next step | Action |  |
