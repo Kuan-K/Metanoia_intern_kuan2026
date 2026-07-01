@@ -11,7 +11,7 @@
 | W1 | 60% | 7/3 | `aerial-cubb-parameter-table.md` |
 | W3 | 70% | 7/14 | `aerial-cubb-parameter-table.md` |
 | W3 | 70% | 7/17 | `aerial-cubb-parameter-table.md` |
-| W5 | 90% | 7/31 | `aerial-cubb-parameter-table.md` |
+| W5 | 100% | 7/31 | `aerial-cubb-parameter-table.md` |
 
 ## Open Research Playbook Checklist
 
