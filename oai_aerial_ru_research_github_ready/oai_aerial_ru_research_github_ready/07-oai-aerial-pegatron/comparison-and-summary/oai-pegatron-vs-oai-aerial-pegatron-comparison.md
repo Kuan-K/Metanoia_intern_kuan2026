@@ -11,7 +11,6 @@
 | W1 | 40% | 7/3 | `oai-pegatron-vs-oai-aerial-pegatron-comparison.md` |
 | W5 | 80% | 7/29 | `oai-pegatron-vs-oai-aerial-pegatron-comparison.md` |
 | W5 | 100% | 7/30 | `oai-pegatron-vs-oai-aerial-pegatron-comparison.md` |
-| W5 | 100% | 7/31 | `oai-pegatron-vs-oai-aerial-pegatron-comparison.md` |
 
 ## Open Research Playbook Checklist
 
