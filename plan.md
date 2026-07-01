@@ -6,7 +6,7 @@
 
 | 月份  | 月目標                                                                  | 月檢查點 |
 | --- | -------------------------------------------------------------------- | ---- |
-| 7 月 | 完成 Richard / Ming 交接，建立 OAI + Ariel cuBB + Pegatron RU baseline 與比較表 | 7/31 |
+| 7 月 | 完成 OAI + Ariel cuBB + Pegatron RU E2E 建立與 OAI + Pegatron RU E2E baseline 比較表 | 7/31 |
 | 8 月 | 完成 Metanoia MOSART 開源碼研究，建立 build / config / parameter / mapping 文件，留下可交接的研究文件  | 8/28 |
 | 9 月 | 完成 OAI + Ariel cuBB + Metanoia RU 整合測試、驗證報告與最終交接文件                   | 9/26 |
 
@@ -16,11 +16,11 @@
 
 | 週次    | 日期        | 週五檢查點 | 週里程碑                                                   | 預期總進度 |
 | ----- | --------- | ----- | ------------------------------------------------------ | ----: |
-| W1    | 7/1–7/3   | 7/3   | 與 Ming / Richard 完成交接，確認 action items 與資料入口                                  | 8%   |
-| W2    | 7/6–7/10  | 7/10  | 完成 OAI + Pegatron RU baseline 深入整理，並整理 DGX Spark / Aerial L1 + OAI L2 安裝手冊  |  16% |
-| W3    | 7/13–7/17 | 7/17  | 完成 Pegatron RU 設定檔理解，嘗試讓 RU 參數對齊 Ariel cuBB 需求                            | 24%  |
-| W4    | 7/20–7/24 | 7/24  | 嘗試跑通 OAI L2/L3 + Ariel cuBB + Pegatron RU E2E                                       | 32%  |
-| W5    | 7/27–7/31 | 7/31  | 完成 OAI + Pegatron baseline 與 OAI + Ariel cuBB + Pegatron 的差異比較與月報             | 40%  |
+| W1    | 7/1–7/3   | 7/3   | 完成兩組已知成功設定檔的背景資料整理，建立後續比較與 Pegatron RU 對接 Ariel cuBB 的基礎                               | 8%   |
+| W2    | 7/6–7/10  | 7/10  | 根據 W1 完成的 OAI + Pegatron RU 與 OAI + cuBB for WNC RU 設定檔整理，補齊參數意義、資料型態、範圍與 Need Confirm 項目，並整理出 Pegatron RU 對接 Ariel cuBB 時需要對齊或修改的參數清單。  |  16% |
+| W3    | 7/13–7/17 | 7/17  | 根據 W1 / W2 的設定檔比較結果，整理 Pegatron RU 對接 Ariel cuBB 時需要修改或確認的參數，建立 OAI + Ariel cuBB + Pegatron RU 初版 config pack 與 launch readiness checklist。                           | 24%  |
+| W4    | 7/20–7/24 | 7/24  | 根據 W1 / W2 / W3 的設定檔比較、mapping checklist 與 config pack，嘗試跑通 OAI L2/L3 + Ariel cuBB + Pegatron RU E2E，並留下完整 experiment log。                                    | 32%  |
+| W5    | 7/27–7/31 | 7/31  | 整理 7 月兩階段比較結果：第一階段比較 OAI + Pegatron RU 與 OAI + cuBB for WNC RU 的成功設定檔差異；第二階段比較 OAI + Pegatron RU baseline 與 OAI + Ariel cuBB + Pegatron RU attempt 的設定、log、狀態與限制，完成 7 月月報。            | 40%  |
 | W6    | 8/3–8/7   | 8/7   | 完成 Metanoia repo 初步研究，找出 source tree、README、build/config 入口                  |   48% |
 | W7    | 8/10–8/14 | 8/14  | 完成 Metanoia build / run / config 初版研究，留下 build log 與 runtime notes             |   56% |
 | W8    | 8/17–8/21 | 8/21  | 完成 Metanoia RU 參數與介面研究，建立 Pegatron RU vs Metanoia RU 比較                     |   64% |
