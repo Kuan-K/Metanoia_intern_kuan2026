@@ -9,7 +9,6 @@
 | Related Week | Planned Completion | Due Date | Planned Deliverable |
 |---|---:|---|---|
 | W1 | 50% | 7/1 | `pegatron-ru-parameter-table.md` |
-| W2 | 60% | 7/8 | `pegatron-ru-parameter-table.md` |
 | W2 | 60% | 7/10 | `pegatron-ru-parameter-table.md` |
 | W5 | 90% | 7/31 | `pegatron-ru-parameter-table.md` |
 
