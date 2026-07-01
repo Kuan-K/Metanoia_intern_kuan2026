@@ -47,36 +47,44 @@
 | Antenna / MIMO | PUSCH antenna ports | `pusch_AntennaPorts` | `4` | 正整數；常見 `1`, `2`, `4` | 需與 UL/MIMO/RU RX 能力一致 |
 | Antenna / MIMO | CSI-RS 開關 | `do_CSIRS` | `1` | `0` 或 `1` | 0=關閉，1=啟用，它是 gNB 下行發給 UE 的參考訊號，UE 量測後可以回報通道狀態。 |
 | Antenna / MIMO | SRS 開關 | `do_SRS` | `0` | `0` 或 `1` | 0=關閉，1=啟用，它是 UE 上行送給 gNB 的參考訊號，讓 gNB 量測上行通道 |
-| SIB / Cell Common | SIB1 TDA | `sib1_tda` | `15` | 整數；常見 `0`–`15` | 需依 OAI/NR TDA 設定確認 |
+| RF / 頻率設定 | Physical Cell ID | `physCellId` | `0` |  |  |
+| RF / 頻率設定 | SSB 絕對頻率 | `absoluteFrequencySSB` | `649920` |  |  |
+| RF / 頻率設定 | DL / UL 頻段 | `dl_frequencyBand`, `ul_frequencyBand` | `78`, `78` | 3GPP NR band 編號； | band n78 需為 RU/UE/頻譜支援 band |
+| RF / 頻率設定 | DL Point A 絕對頻率 | `dl_absoluteFrequencyPointA` | `646724` |  | conf 註解寫 frequency point A = 3700.86 MHz |
+| RF / 頻率設定 | DL / UL carrier offset | `dl_offstToCarrier`, `ul_offstToCarrier` | `0`, `0` |  |  |
+| RF / 頻率設定 | DL / UL subcarrier spacing | `dl_subcarrierSpacing`, `ul_subcarrierSpacing` | `1`, `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz |  |
+| RF / 頻率設定 | DL / UL carrier bandwidth / PRB | `dl_carrierBandwidth`, `ul_carrierBandwidth` | `273`, `273` |  | 100 MHz @ 30 kHz 常見最大為 `273` PRB，需與 RU `number-of-prb` 對應 |
+
+# TDD 設定
 
 | 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
 |---|---|---|---|---|---|
-| TDD Pattern | TDD reference subcarrier spacing | `referenceSubcarrierSpacing` | `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz | conf 註解 |
-| TDD Pattern | DL / UL transmission periodicity | `dl_UL_TransmissionPeriodicity` | `5` | `0`=ms0p5, `1`=ms0p625, `2`=ms1, `3`=ms1p25, `4`=ms2, `5`=ms2p5, `6`=ms5, `7`=ms10 | conf 註解 |
-| TDD Pattern | Downlink slots / symbols 數量 | `nrofDownlinkSlots`, `nrofDownlinkSymbols` | `3`, `6` | slots: `0`–週期內總 slot 數；symbols: `0`–`13` | 需符合 TDD period 與 numerology |
-| TDD Pattern | Uplink slots / symbols 數量 | `nrofUplinkSlots`, `nrofUplinkSymbols` | `1`, `4` | slots: `0`–週期內總 slot 數；symbols: `0`–`13` | 需符合 TDD period 與 numerology |
+| TDD Pattern | TDD reference subcarrier spacing | `referenceSubcarrierSpacing` | `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz | TDD 的參考SCS |
+| TDD Pattern | DL / UL transmission periodicity | `dl_UL_TransmissionPeriodicity` | `5` | `0`=ms0p5, `1`=ms0p625, `2`=ms1, `3`=ms1p25, `4`=ms2, `5`=ms2p5, `6`=ms5, `7`=ms10 |  |
+| TDD Pattern | Downlink slots / symbols 數量 | `nrofDownlinkSlots`, `nrofDownlinkSymbols` | `3`, `6` |  | 需符合 TDD period 與 numerology |
+| TDD Pattern | Uplink slots / symbols 數量 | `nrofUplinkSlots`, `nrofUplinkSymbols` | `1`, `4` |  | 需符合 TDD period 與 numerology |
+
+## 核網設定
 
 | 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
 |---|---|---|---|---|---|
-| SCTP / 5GC | SCTP input / output streams | `SCTP_INSTREAMS`, `SCTP_OUTSTREAMS` | `2`, `2` | 正整數；常見 `1`–`65535` |  |
+| SCTP / 5GC | SCTP input / output streams | `SCTP_INSTREAMS`, `SCTP_OUTSTREAMS` | `2`, `2` | |  |
 | SCTP / 5GC | AMF IP 設定 | `amf_ip_address`, `ipv4` | `"192.168.8.82"` | IPv4 address | 需對應 5GC AMF IP |
 | Network Interface | gNB N2 / NG-AMF IPv4 address | `GNB_IPV4_ADDRESS_FOR_NG_AMF` | `"192.168.8.83"` | IPv4 address | gNB 對 AMF 的 N2/NGAP IP |
 | Network Interface | gNB N3 / NG-U IPv4 address | `GNB_IPV4_ADDRESS_FOR_NGU` | `"192.168.8.83"` | IPv4 address | gNB 對 UPF 的 N3/GTP-U IP |
-| Network Interface | GTP-U / S1-U port | `GNB_PORT_FOR_S1U` | `2152` | `0`–`65535`；標準 GTP-U port 為 `2152` | conf 註解 |
-
+| Network Interface | GTP-U / S1-U port | `GNB_PORT_FOR_S1U` | `2152` | `0`–`65535`；標準 GTP-U port 為 `2152` |  |
+## MAC/RLC 設定
 | 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
 |---|---|---|---|---|---|
-| MAC/RLC | MAC/RLC component carrier 數 | `num_cc` | `1` | 正整數；依 carrier 數量 | 在 `MACRLCs` 區塊 |
-| MAC/RLC | MAC/RLC transport preference | `tr_s_preference`, `tr_n_preference` | `"local_L1"`, `"local_RRC"` | OAI transport 字串；常見 `local_L1`, `local_RRC` 等 | 依 OAI 架構 |
-| MAC/RLC | PUSCH / PUCCH target SNR x10 | `pusch_TargetSNRx10`, `pucch_TargetSNRx10` | `200`, `200` | 整數；單位通常為 SNR ×10 | `200` 約代表 20.0 dB |
-| MAC/RLC | DL BLER target upper / lower | `dl_bler_target_upper`, `dl_bler_target_lower` | `.35`, `.15` | `0.0`–`1.0` |  |
-| MAC/RLC | UL BLER target upper / lower | `ul_bler_target_upper`, `ul_bler_target_lower` | `.35`, `.15` | `0.0`–`1.0` |  |
-| MAC/RLC | PUSCH failure threshold | `pusch_FailureThres` | `100` | 非負整數 | OAI scheduler/PHY 判斷門檻 |
-| MAC/RLC | DL minimum MCS | `dl_min_mcs` | `24` | 常見 `0`–`28`；部分 MCS table 可到 `31` | 依 NR MCS table / OAI 設定 |
-| Security | Ciphering algorithms | `ciphering_algorithms` | `"nea0"` | `nea0`, `nea1`, `nea2`, `nea3` | conf 註解 |
-| Security | Integrity algorithms | `integrity_algorithms` | `"nia2"`, `"nia0"` | `nia0`, `nia1`, `nia2`, `nia3` | conf 註解 |
-| Security | DRB ciphering / integrity 開關 | `drb_ciphering`, `drb_integrity` | `"yes"`, `"no"` | `"yes"` 或 `"no"` | conf 註解 |
+| MAC/RLC | MAC/RLC component carrier 數 | `num_cc` | `1` |  | Component Carrier 數量 |
+| MAC/RLC | MAC/RLC transport preference | `tr_s_preference`, `tr_n_preference` | `"local_L1"`, `"local_RRC"` |  | MAC/RLC 和 L1 、RRC的連接方式 |
+| MAC/RLC | PUSCH / PUCCH target SNR x10 | `pusch_TargetSNRx10`, `pucch_TargetSNRx10` | `200`, `200` |  | PUSCH、PUCCH 目標 SNR |
+| MAC/RLC | DL BLER target upper / lower | `dl_bler_target_upper`, `dl_bler_target_lower` | `.35`, `.15` | `0.0`–`1.0` | 下行 BLER 目標上下限，調整 MCS的指標 |
+| MAC/RLC | UL BLER target upper / lower | `ul_bler_target_upper`, `ul_bler_target_lower` | `.35`, `.15` | `0.0`–`1.0` | 上行 BLER 目標上限，調整 MCS的指標  |
+| MAC/RLC | PUSCH failure threshold | `pusch_FailureThres` | `100` |  | PUSCH 失敗判定門檻 |
+| MAC/RLC | DL minimum MCS | `dl_min_mcs` | `24` |  | 下行最小 MCS 限制 |
 
+## L1設定
 | 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
 |---|---|---|---|---|---|
 | L1 | L1 component carrier 數 | `num_cc` | `1` |  | Component Carrier 數量|
@@ -86,43 +94,40 @@
 | L1 | L1 RX / TX thread core | `L1_rx_thread_core`, `L1_tx_thread_core` | `18`, `19` | |  |
 | L1 | Phase compensation | `phase_compensation` | `0` | 常見 `0` 或 `1`； | 需與 O-RU 設定一致 |
 
+## OAI 裡的 RU（Radio Unit）設定區塊
+主要在描述： 這個 gNB 要怎麼連 RU、RU 有幾根 TX/RX antenna、用哪個頻段、功率/gain 怎麼設、前傳介面怎麼走、CPU core 怎麼綁定。
 | 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
 |---|---|---|---|---|---|
 | RU | Local RF 開關 | `local_rf` | `"no"` | `"yes"` 或 `"no"` | `"no"` 代表使用外部 RU / fronthaul |
-| RU | RU TX / RX 數量 | `nb_tx`, `nb_rx` | `4`, `4` | 正整數；需與 RU antenna / endpoint 數一致 | 本案 4T4R |
-| RU | TX / RX attenuation | `att_tx`, `att_rx` | `0`, `0` | 非負數，單位通常 dB |  |
-| RU | RU bands | `bands` | `[78]` | NR band 編號 list；需為 RU 支援 band | 本案 n78 |
-| RU | Max PDSCH reference signal power | `max_pdschReferenceSignalPower` | `-27` | 常見 dBm 範圍；需依 RU 發射能力與法規 |  |
-| RU | Max RX gain | `max_rxgain` | `75` | 非負數，單位通常 dB；依 RF/RU 硬體 |  |
-| RU | Subframe extension | `sf_extension` | `0` | 非負整數；OAI/RU timing 相關 |  |
-| RU | eNB / gNB instance mapping | `eNB_instances` | `[0]` | instance index list；通常從 `0` 開始 |  |
-| RU | RU thread core | `ru_thread_core` | `12` | CPU core ID，非負整數；需小於系統 CPU core 數 |  |
-| RU | Slot ahead | `sl_ahead` | `5` | 正整數；OAI scheduler / fronthaul look-ahead |  |
-| RU | RU transport preference | `tr_preference` | `"raw_if4p5"` | OAI transport 字串；本案使用 `"raw_if4p5"` 啟用 FHI 7.2 | conf 註解 |
-| RU | Precoding 開關 | `do_precoding` | `0` | `0` 或 `1`；需與 O-RU 設定一致 | conf 註解 |
-| Logging | 各層 log level | `global_log_level`, `hw_log_level`, `phy_log_level`, `mac_log_level`, `rlc_log_level`, `pdcp_log_level`, `rrc_log_level`, `ngap_log_level`, `f1ap_log_level` | 全部 `"info"` | 常見 `error`, `warn`, `info`, `debug`, `trace`；實際依 OAI log 系統 |  |
+| RU | RU TX / RX 數量 | `nb_tx`, `nb_rx` | `4`, `4` | 正整數 | 需與 RU antenna / endpoint 數一致 4T4R |
+| RU | TX / RX attenuation | `att_tx`, `att_rx` | `0`, `0` | | 發射衰減值，單位 dB  |
+| RU | RU bands | `bands` | `[78]` |  | NR 頻段設定，頻率範圍大約在3300 MHz ~ 3800 MHz |
+| RU | Max PDSCH reference signal power | `max_pdschReferenceSignalPower` | `-27` |  | 告訴 UE 下行 reference signal power 大約是多少 |
+| RU | Max RX gain | `max_rxgain` | `75` |  | 上行接收增益上限 |
+| RU | Subframe extension | `sf_extension` | `0` |  |  |
+| RU | eNB / gNB instance mapping | `eNB_instances` | `[0]` |  | 這個 RU 對應到哪一個 gNB |
+| RU | RU thread core | `ru_thread_core` | `12` |  | RU thread 綁定的 CPU core |
+| RU | Slot ahead | `sl_ahead` | `5` |  | slot ahead，提前處理幾個 slot |
+| RU | RU transport preference | `tr_preference` | `"raw_if4p5"` |  | RU 傳輸介面偏好設定，啟用 FHI 7.2 |
+| RU | Precoding 開關 | `do_precoding` | `0` | `0` 或 `1`； | 是否在 OAI 端做 precoding，需與 O-RU 設定一致 |
+
+## OAI gNB / DU 連接 O-RAN O-RU 的 FH 7.2 fronthaul 設定
 
 | 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
 |---|---|---|---|---|---|
-| FHI 7.2 / Fronthaul | DPDK devices | `dpdk_devices` | `"0000:43:0a.0"`, `"0000:43:0a.1"` | PCI BDF 格式裝置清單，例如 `dddd:bb:ss.f` | 需對應 gNB server NIC/VF |
-| FHI 7.2 / Fronthaul | FHI CPU core 設定 | `system_core`, `io_core`, `worker_cores` | `0`, `4`, `(2)` | CPU core ID，非負整數；需小於系統 CPU core 數且避免互相衝突 |  |
-| FHI 7.2 / Fronthaul | RU fronthaul MAC address | `ru_addr` | `"48:21:0b:4b:93:8e"`, `"48:21:0b:4b:93:8e"` | MAC address list，格式 `xx:xx:xx:xx:xx:xx` | 需對應 RU C/U-plane MAC |
-| FHI 7.2 / Fronthaul | Fronthaul MTU | `mtu` | `9000` | 常見 `1500` 或 jumbo frame `9000`/`9216`；需 NIC、switch、RU 都支援 | conf 註解說 `1500` 也可用 |
-| FHI 7.2 / Fronthaul | T1a / Ta4 timing window | `T1a_cp_dl`, `T1a_cp_ul`, `T1a_up`, `Ta4` | `(285,429)`, `(285,429)`, `(96,196)`, `(110,180)` | 二元組 `(min,max)`；非負整數，實際範圍依 O-RAN FH timing、OAI、RU vendor 設定 | 需問 Ming 是否為 Pegatron 建議值或實測值 |
-| FHI 7.2 / Fronthaul | IQ width / PRACH IQ width | `iq_width`, `iq_width_prach` | `9`, `9` | 常見 `8`–`16` bits；需與 O-RU endpoint `iq-bitwidth` 一致 | 本案 RU XML 也是 9 |
-| FHI 7.2 / Fronthaul | PRACH eAxC offset | `eAxC_offset` | `4` | 非負整數；需與 RU PRACH endpoint eAxC ID 起點一致 | 本案 PRACH eAxC 預期 4–7 |
-| FHI 7.2 / Fronthaul | PRACH kbar | `kbar` | `4` | 非負整數；PRACH frequency offset 相關，實際範圍依 PRACH/RU/OAI 設定 | 需問 Ming 確認 |
+| FHI 7.2 / Fronthaul | DPDK devices | `dpdk_devices` | `"0000:43:0a.0"`, `"0000:43:0a.1"` |  | 指定哪幾張網卡 / VF 要給 DPDK 使用，需對應 gNB server NIC/VF |
+| FHI 7.2 / Fronthaul | FHI CPU core 設定 | `system_core`, `io_core`, `worker_cores` | `0`, `4`, `(2)` |  |  |
+| FHI 7.2 / Fronthaul | RU fronthaul MAC address | `ru_addr` | `"48:21:0b:4b:93:8e"`, `"48:21:0b:4b:93:8e"` |  | 需對應 RU C/U-plane MAC |
+| FHI 7.2 / Fronthaul | Fronthaul MTU | `mtu` | `9000` |  | 封包被切成多大，學長為了提高Throughput 設為9000 通常為1500 |
+| FHI 7.2 / Fronthaul | T1a / Ta4 timing window | `T1a_cp_dl`, `T1a_cp_ul`, `T1a_up`, `Ta4` | `(285,429)`, `(285,429)`, `(96,196)`, `(110,180)` |  | # 學長測過的數值之後可以以這個為基準去做修改，每台RU都不一樣須手動調整 |
+| FHI 7.2 / Fronthaul | IQ width / PRACH IQ width | `iq_width`, `iq_width_prach` | `9`, `9` |  | 需與 O-RU endpoint `iq-bitwidth` 一致 |
+| FHI 7.2 / Fronthaul | PRACH eAxC offset | `eAxC_offset` | `4` |  | eAxC ID 偏移量  |
+| FHI 7.2 / Fronthaul | PRACH kbar | `kbar` | `4` |  |  |
 
-# 未確認相對不重要
+# 未確認
 | 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
 |---|---|---|---|---|---|
-| RF / 頻率設定 | Physical Cell ID | `physCellId` | `0` | `0`–`1007` | NR PCI 範圍 |
-| RF / 頻率設定 | SSB 絕對頻率 | `absoluteFrequencySSB` | `649920` | NR-ARFCN 整數；需落在對應 band 支援範圍 | 本檔註解寫 selected SSB frequency = 3349.92 MHz，但疑似舊註解 |
-| RF / 頻率設定 | DL / UL 頻段 | `dl_frequencyBand`, `ul_frequencyBand` | `78`, `78` | 3GPP NR band 編號；需為 RU/UE/頻譜支援 band | 本案為 n78 |
-| RF / 頻率設定 | DL Point A 絕對頻率 | `dl_absoluteFrequencyPointA` | `646724` | NR-ARFCN 整數；需配合 Band/SCS/PRB | conf 註解寫 frequency point A = 3700.86 MHz |
-| RF / 頻率設定 | DL / UL carrier offset | `dl_offstToCarrier`, `ul_offstToCarrier` | `0`, `0` | 非負整數；依 carrier / BWP 配置 |  |
-| RF / 頻率設定 | DL / UL subcarrier spacing | `dl_subcarrierSpacing`, `ul_subcarrierSpacing` | `1`, `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz | conf 註解 |
-| RF / 頻率設定 | DL / UL carrier bandwidth / PRB | `dl_carrierBandwidth`, `ul_carrierBandwidth` | `273`, `273` | 依 3GPP NR channel bandwidth、SCS、band 決定；100 MHz @ 30 kHz 常見最大為 `273` PRB | 需與 RU `number-of-prb` 對應 |
+| SIB / Cell Common | SIB1 TDA | `sib1_tda` | `15` | 整數；常見 `0`–`15` | 需依 OAI/NR TDA 設定確認 |
 | RF / 頻率設定 | UE 最大上行功率 | `pMax` | `23` | 常見 `-30`–`33` dBm | 依 UE capability / 法規 / RRC 設定 |
 | BWP / PDCCH | Initial DL / UL BWP 位置與頻寬 | `initialDLBWPlocationAndBandwidth`, `initialULBWPlocationAndBandwidth` | `1099`, `1099` | RIV 編碼值；範圍依 carrier PRB 數決定 | conf 註解引用 38.101-1 Table 5.3.2-1 |
 | BWP / PDCCH | Initial DL / UL BWP SCS | `initialDLBWPsubcarrierSpacing`, `initialULBWPsubcarrierSpacing` | `1`, `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz | conf 註解 |
@@ -152,6 +157,11 @@
 | SSB / PBCH | SS/PBCH block power | `ssPBCH_BlockPower` | `0` | 常見 `-60`–`50` dBm |  |
 | DMRS | DMRS Type A position | `dmrs_TypeA_Position` | `0` | `0`=pos2, `1`=pos3 | conf 註解 |
 | Numerology | Cell common subcarrier spacing | `subcarrierSpacing` | `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz | conf 註解 |
+| Security | Ciphering algorithms | `ciphering_algorithms` | `"nea0"` | `nea0`, `nea1`, `nea2`, `nea3` | conf 註解 |
+| Security | Integrity algorithms | `integrity_algorithms` | `"nia2"`, `"nia0"` | `nia0`, `nia1`, `nia2`, `nia3` | conf 註解 |
+| Security | DRB ciphering / integrity 開關 | `drb_ciphering`, `drb_integrity` | `"yes"`, `"no"` | `"yes"` 或 `"no"` | conf 註解 |
+| Logging | 各層 log level | `global_log_level`, `hw_log_level`, `phy_log_level`, `mac_log_level`, `rlc_log_level`, `pdcp_log_level`, `rrc_log_level`, `ngap_log_level`, `f1ap_log_level` | 全部 `"info"` | 常見 `error`, `warn`, `info`, `debug`, `trace`；實際依 OAI log 系統 |  |
+
 ## Parameters Related to RU / cuBB Alignment
 
 | Parameter | gNB Side | RU / cuBB Side | Must Match? | Current Status | Evidence |
