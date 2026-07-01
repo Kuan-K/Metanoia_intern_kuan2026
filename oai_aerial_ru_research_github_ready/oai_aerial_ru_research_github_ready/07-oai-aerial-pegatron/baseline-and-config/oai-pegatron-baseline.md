@@ -10,7 +10,6 @@
 |---|---:|---|---|
 | W1 | 60% | 7/1 | `oai-pegatron-baseline.md` |
 | W2 | 80% | 7/6 | `oai-pegatron-baseline.md` |
-| W2 | 80% | 7/10 | `oai-pegatron-baseline.md` |
 | W5 | 100% | 7/27 | `oai-pegatron-baseline.md` |
 
 ## Open Research Playbook Checklist
