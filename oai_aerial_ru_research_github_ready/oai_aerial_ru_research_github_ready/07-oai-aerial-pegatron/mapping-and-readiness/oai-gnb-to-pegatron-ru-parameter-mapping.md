@@ -4,7 +4,8 @@
 
 | Week | Planned Completion | Due Date |
 |---|---:|---|
-| W3 | 70% | 7/17 |
+| W1 | 50% | 7/1 |
+| W3 | 100% | 7/13 |
 
 - Estimated Time:
 - Status: Not Started / In Progress / Done / Pending / Blocked
