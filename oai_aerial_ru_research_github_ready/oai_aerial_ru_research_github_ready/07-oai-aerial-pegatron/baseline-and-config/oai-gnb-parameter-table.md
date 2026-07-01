@@ -10,7 +10,6 @@
 |---|---:|---|---|
 | W1 | 50% | 7/1 | `oai-gnb-parameter-table.md` |
 | W2 | 60% | 7/7 | `oai-gnb-parameter-table.md` |
-| W2 | 60% | 7/10 | `oai-gnb-parameter-table.md` |
 | W5 | 90% | 7/31 | `oai-gnb-parameter-table.md` |
 
 ## Open Research Playbook Checklist
