@@ -4,6 +4,7 @@
 
 | Week | Planned Completion | Due Date |
 |---|---:|---|
+| W1 | 50% | 7/1 |
 | W2 | 60% | 7/10 |
 | W5 | 90% | 7/31 |
 
