@@ -22,6 +22,9 @@
 | Pending / Blocked reason is recorded | ☐ |
 | Next step is clear | ☐ |
 
+## file
+OAI : [gNB config](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/doc/gnb.sa.band78.273prb.fhi72.4x4-pega-1G.conf) 
+pegatron RU : [ietf-interface-processing-element.xml](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/doc/ietf-interface-processing-element.xml), [o-ran-uplane-conf_100M_4x4.xml](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/doc/o-ran-uplane-conf_100M_4x4.xml)
 ## Mapping / Alignment Table
 
 | Item | Source Side | Target Side | Expected Relationship | Current Finding | Evidence | Status |
