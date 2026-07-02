@@ -162,18 +162,6 @@
 | Security | DRB ciphering / integrity 開關 | `drb_ciphering`, `drb_integrity` | `"yes"`, `"no"` | `"yes"` 或 `"no"` |  |
 | Logging | 各層 log level | `global_log_level`, `hw_log_level`, `phy_log_level`, `mac_log_level`, `rlc_log_level`, `pdcp_log_level`, `rrc_log_level`, `ngap_log_level`, `f1ap_log_level` | 全部 `"info"` | 常見 `error`, `warn`, `info`, `debug`, `trace`；實際依 OAI log 系統 |  |
 
-## Parameters Related to RU / cuBB Alignment
-
-| Parameter | gNB Side | RU / cuBB Side | Must Match? | Current Status | Evidence |
-|---|---|---|---|---|---|
-| frequency |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
-| bandwidth |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
-| numerology / SCS |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
-| TDD pattern |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
-| IP / port |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
-| clock / sync |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
-| antenna / gain |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
-| fronthaul / eCPRI |  |  | ☐ Yes ☐ No ☐ Need Confirm |  |  |
 
 ## Evidence
 
