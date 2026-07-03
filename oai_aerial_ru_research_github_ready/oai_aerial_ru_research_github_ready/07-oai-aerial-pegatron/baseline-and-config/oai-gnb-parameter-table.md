@@ -2,33 +2,7 @@
 
 ## Purpose
 
-說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
 
-## Plan Alignment
-
-| Related Week | Planned Completion | Due Date | Planned Deliverable |
-|---|---:|---|---|
-| W1 | 50% | 7/1 | `oai-gnb-parameter-table.md` |
-| W2 | 60% | 7/7 | `oai-gnb-parameter-table.md` |
-| W5 | 100% | 7/31 | `oai-gnb-parameter-table.md` |
-
-## Open Research Playbook Checklist
-
-| Requirement | Check |
-|---|---|
-| Deliverable is measurable and verifiable | ☐ |
-| Evidence path / hyperlink is recorded | ☐ |
-| Unknown items are marked as Need Confirm | ☐ |
-| Pending / Blocked reason is recorded | ☐ |
-| Next step is clear | ☐ |
-
-## Scope
-
-- System / Component: OAI gNB
-- Config file path:
-- Source owner:
-- Related setup:
-- Related RU model / band:
 
 ## Parameter Table
 
@@ -183,25 +157,3 @@ Slot 3: D D D D D D F F F F U U U U
 Slot 4: U U U U U U U U U U U U U U
 ```
 
-## Evidence
-
-| Evidence Type | Path / Link | Note |
-|---|---|---|
-| Source config / source file |  |  |
-| Command / script |  |  |
-| Log / screenshot / output |  |  |
-| Related plan / checkpoint |  |  |
-
-## Need Confirm / Open Questions
-
-| Question | Owner / Ask Who | Due Date | Status | Evidence / Answer |
-|---|---|---|---|---|
-|  |  |  | ☐ Need Confirm ☐ Confirmed |  |
-
-## Status
-
-| Item | Status | Evidence / Note |
-|---|---|---|
-| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
-| If Pending / Blocked | Reason |  |
-| Next step | Action |  |
