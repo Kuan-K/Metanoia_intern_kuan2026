@@ -2,7 +2,7 @@
 
 ## Purpose
 
-說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
+介紹 OAIL2 + Aerial cuBB 中的OAI gNB config parameter
 
 ## Plan Alignment
 
