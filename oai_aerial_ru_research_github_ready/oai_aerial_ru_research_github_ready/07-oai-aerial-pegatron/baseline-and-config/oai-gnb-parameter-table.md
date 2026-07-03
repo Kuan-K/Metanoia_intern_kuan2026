@@ -162,6 +162,26 @@
 | Security | DRB ciphering / integrity 開關 | `drb_ciphering`, `drb_integrity` | `"yes"`, `"no"` | `"yes"` 或 `"no"` |  |
 | Logging | 各層 log level | `global_log_level`, `hw_log_level`, `phy_log_level`, `mac_log_level`, `rlc_log_level`, `pdcp_log_level`, `rrc_log_level`, `ngap_log_level`, `f1ap_log_level` | 全部 `"info"` | 常見 `error`, `warn`, `info`, `debug`, `trace`；實際依 OAI log 系統 |  |
 
+### TDD pattern 
+OAI config
+```
+      referenceSubcarrierSpacing                                    = 1; 
+      # pattern1
+      # dl_UL_TransmissionPeriodicity
+
+      dl_UL_TransmissionPeriodicity                                 = 5;      # 0=ms0p5, 1=ms0p625, 2=ms1, 3=ms1p25, 4=ms2, 5=ms2p5, 6=ms5, 7=ms10
+      nrofDownlinkSlots                                             = 3;      # period 開頭有幾個完整 DL slot
+      nrofDownlinkSymbols                                           = 6;      # special slot 開頭有幾個 DL symbol
+      nrofUplinkSlots                                               = 1;      # special slot 結尾有幾個 UL symbol
+      nrofUplinkSymbols                                             = 4;      # period 結尾有幾個完整 UL slot
+
+Each slot contains 14 symbols  :   D D D S U
+Slot 0: D D D D D D D D D D D D D D
+Slot 1: D D D D D D D D D D D D D D
+Slot 2: D D D D D D D D D D D D D D
+Slot 3: D D D D D D F F F F U U U U
+Slot 4: U U U U U U U U U U U U U U
+```
 
 ## Evidence
 
