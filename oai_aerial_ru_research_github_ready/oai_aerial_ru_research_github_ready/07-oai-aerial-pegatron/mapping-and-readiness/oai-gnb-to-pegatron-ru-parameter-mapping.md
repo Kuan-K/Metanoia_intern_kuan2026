@@ -2,26 +2,6 @@
 
 ## Purpose
 
-說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
-
-## Plan Alignment
-
-| Related Week | Planned Completion | Due Date | Planned Deliverable |
-|---|---:|---|---|
-| W1 | 50% | 7/1 | `oai-gnb-to-pegatron-ru-parameter-mapping.md` |
-| W3 | 70% | 7/13 | `oai-gnb-to-pegatron-ru-parameter-mapping.md` |
-| W4 | 100% | 7/17 | `oai-gnb-to-pegatron-ru-parameter-mapping.md` |
-
-## Open Research Playbook Checklist
-
-| Requirement | Check |
-|---|---|
-| Deliverable is measurable and verifiable | ☐ |
-| Evidence path / hyperlink is recorded | ☐ |
-| Unknown items are marked as Need Confirm | ☐ |
-| Pending / Blocked reason is recorded | ☐ |
-| Next step is clear | ☐ |
-
 ## file
 OAI : [gNB config](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/doc/gnb.sa.band78.273prb.fhi72.4x4-pega-1G.conf) 
 pegatron RU : [ietf-interface-processing-element.xml](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/doc/ietf-interface-processing-element.xml), [o-ran-uplane-conf_100M_4x4.xml](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/doc/o-ran-uplane-conf_100M_4x4.xml)
@@ -83,25 +63,3 @@ absoluteFrequencySSB = 649920 → Freq 3748.8 MHz , dl_absoluteFrequencyPointA =
   PointA                              Center                          右邊界附近
     <----------- 49.14 MHz -----------> <----------- 49.14 MHz ----------->
 ```
-## Evidence
-
-| Evidence Type | Path / Link | Note |
-|---|---|---|
-| Source config / source file |  |  |
-| Command / script |  |  |
-| Log / screenshot / output |  |  |
-| Related plan / checkpoint |  |  |
-
-## Need Confirm / Open Questions
-
-| Question | Owner / Ask Who | Due Date | Status | Evidence / Answer |
-|---|---|---|---|---|
-|  |  |  | ☐ Need Confirm ☐ Confirmed |  |
-
-## Status
-
-| Item | Status | Evidence / Note |
-|---|---|---|
-| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
-| If Pending / Blocked | Reason |  |
-| Next step | Action |  |
