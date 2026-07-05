@@ -2,18 +2,18 @@
 
 ## Purpose
 
-
+Introduce the parameters of the gNB config
 
 ## Parameter Table
 
-| 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
+| Category | name | name in gNB conf | value | Possible Range | notes |
 |---|---|---|---|---|---|
-| gNB 基本設定 | 啟用的 gNB 清單 | `Active_gNBs` | `"gNB-OAI"` | unknown | 需對應 `gNB_name` |
-| gNB 基本設定 | ASN.1 輸出詳細程度 | `Asn1_verbosity` | `"none"` | `none`, `info`, `annoying` | 由左至右為詳細程度 |
-| gNB 基本設定 | gNB 識別碼 | `gNB_ID` | `0xe00` | unknown | 需符合 gNB ID 規劃 |
-| gNB 基本設定 | gNB 名稱 | `gNB_name` | `"gNB-OAI"` | unknown | 需對應`Active_gNBs` |
-| gNB 基本設定 | Tracking Area Code | `tracking_area_code` | `1` | `0x0001`–`0xfffd`；conf 註解保留 `0x0000`, `0xfffe` | TAC 就像是基地台所在區域的區域編號。UE 會用它判斷自己是不是還在同一個核心網追蹤區域內 |
-| gNB 基本設定 | NR Cell ID | `nr_cellid` | `1` |  | 這台 gNB 底下哪一個 cell |
+| gNB basic settings | 啟用的 gNB 清單 | `Active_gNBs` | `"gNB-OAI"` | unknown | 需對應 `gNB_name` |
+| gNB basic settings | ASN.1 輸出詳細程度 | `Asn1_verbosity` | `"none"` | `none`, `info`, `annoying` | 由左至右為詳細程度 |
+| gNB basic settings | gNB 識別碼 | `gNB_ID` | `0xe00` | unknown | 需符合 gNB ID 規劃 |
+| gNB basic settings | gNB 名稱 | `gNB_name` | `"gNB-OAI"` | unknown | 需對應`Active_gNBs` |
+| gNB basic settings | Tracking Area Code | `tracking_area_code` | `1` | `0x0001`–`0xfffd`；conf 註解保留 `0x0000`, `0xfffe` | TAC 就像是基地台所在區域的區域編號。UE 會用它判斷自己是不是還在同一個核心網追蹤區域內 |
+| gNB basic settings | NR Cell ID | `nr_cellid` | `1` |  | 這台 gNB 底下哪一個 cell |
 | PLMN / Slice | MCC / MNC / MNC 長度 | `mcc`, `mnc`, `mnc_length` | `001`, `01`, `2` | `mcc`: 3 位數；`mnc`: 2 或 3 位數；`mnc_length`: `2` 或 `3` | 需與 5GC / SIM 設定一致 |
 | PLMN / Slice | Slice / Service Type | `sst` | `1` | 3GPP SST 為 8-bit 欄位，實際支援依 OAI/核心網版本 |  |
 | Antenna / MIMO | PDSCH antenna port 設定 | `pdsch_AntennaPorts_XP`, `pdsch_AntennaPorts_N1` | `2`, `2` |  | 乘積通常需對應 PDSCH port / MIMO 配置本案 2×2 = 4 |
