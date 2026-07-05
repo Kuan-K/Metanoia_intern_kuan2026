@@ -2,73 +2,13 @@
 
 ## Purpose
 
-說明本文件要交付的可驗證成果，並讓後續接手者可以依照 Source、Evidence、Status 與 Next Step 追蹤進度。
-
-## Plan Alignment
-
-| Related Week | Planned Completion | Due Date | Planned Deliverable |
-|---|---:|---|---|
-| W1 | 60% | 7/1 | `oai-pegatron-baseline.md` |
-| W2 | 80% | 7/6 | `oai-pegatron-baseline.md` |
-| W5 | 100% | 7/27 | `oai-pegatron-baseline.md` |
-
-## Open Research Playbook Checklist
-
-| Requirement | Check |
-|---|---|
-| Deliverable is measurable and verifiable | ☐ |
-| Evidence path / hyperlink is recorded | ☐ |
-| Unknown items are marked as Need Confirm | ☐ |
-| Pending / Blocked reason is recorded | ☐ |
-| Next step is clear | ☐ |
+Basic info and config path links for the gNB and Pegatron RU
 
 ## Baseline Setup
 
 | Item | Value | Source / Evidence | Status |
 |---|---|---|---|
-| gNB config path |  |  | ☐ Confirmed ☐ Need Confirm |
-| RU config path |  |  | ☐ Confirmed ☐ Need Confirm |
-| Pegatron RU model |  |  | ☐ Confirmed ☐ Need Confirm |
-| Pegatron RU band |  |  | ☐ Confirmed ☐ Need Confirm |
-| Known successful command |  |  | ☐ Confirmed ☐ Need Confirm |
-| Success condition |  |  | ☐ Confirmed ☐ Need Confirm |
-| Related log path |  |  | ☐ Confirmed ☐ Need Confirm |
-
-## Reproducibility Notes
-
-| Step | Command / Action | Expected Result | Evidence |
-|---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
-
-## Baseline Verification
-
-| Check Item | Result | Evidence | Status |
-|---|---|---|---|
-| Configs found |  |  | ☐ Pass ☐ Partial ☐ Blocked |
-| Commands recorded |  |  | ☐ Pass ☐ Partial ☐ Blocked |
-| Logs recorded |  |  | ☐ Pass ☐ Partial ☐ Blocked |
-| Success criteria recorded |  |  | ☐ Pass ☐ Partial ☐ Blocked |
-
-## Evidence
-
-| Evidence Type | Path / Link | Note |
-|---|---|---|
-| Source config / source file |  |  |
-| Command / script |  |  |
-| Log / screenshot / output |  |  |
-| Related plan / checkpoint |  |  |
-
-## Need Confirm / Open Questions
-
-| Question | Owner / Ask Who | Due Date | Status | Evidence / Answer |
-|---|---|---|---|---|
-|  |  |  | ☐ Need Confirm ☐ Confirmed |  |
-
-## Status
-
-| Item | Status | Evidence / Note |
-|---|---|---|
-| Current status | ☐ Done ☐ Pending ☐ Blocked |  |
-| If Pending / Blocked | Reason |  |
-| Next step | Action |  |
+| gNB config path | doc/gnb.sa.band78.273prb.fhi72.4x4-pega-1G.conf | [gNB config](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/doc/gnb.sa.band78.273prb.fhi72.4x4-pega-1G.conf) | ☑️  Confirmed ☐ Need Confirm |
+| RU config path | doc/ietf-interface-processing-element.xml , doc/o-ran-uplane-conf_100M_4x4.xml | [RU config1](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/doc/ietf-interface-processing-element.xml),[RU config2](https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/doc/o-ran-uplane-conf_100M_4x4.xml) | ☑️  Confirmed ☐ Need Confirm |
+| Pegatron RU model | P5G-Indoor O-RU-PR1450 | [user guide](https://file.notion.so/f/f/a711600d-4278-4002-b6b0-54d29202188a/f0cd9631-6487-43f5-a726-a89555c8be63/UG-02030_P5G-Indoor_O-RU-PR1450_User_Guide-v1.0.0_(2).pdf?table=block&id=26010098-3143-8035-8bbe-f613bd6b48f5&spaceId=a711600d-4278-4002-b6b0-54d29202188a&expirationTimestamp=1783252800000&signature=cPuU6HSODbMjhaW-wlBpC1hPRnpqWqISbs1uzJ2Lc2U&downloadName=UG-02030+P5G-Indoor+O-RU-PR1450+User+Guide-v1.0.0+%282%29.pdf) |☑️  Confirmed ☐ Need Confirm |
+| Pegatron RU band | n78 | Shown in the gNB config | ☑️ Confirmed ☐ Need Confirm |
