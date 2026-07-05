@@ -2,154 +2,167 @@
 
 ## Purpose
 
-Introduce the parameters of the gNB config
+This note introduces the main parameters used in the OAI gNB configuration file.
 
 ## Parameter Table
 
-| Category | name | name in gNB conf | value | Possible Range | notes |
-|---|---|---|---|---|---|
-| gNB basic settings | 啟用的 gNB 清單 | `Active_gNBs` | `"gNB-OAI"` | unknown | 需對應 `gNB_name` |
-| gNB basic settings | ASN.1 輸出詳細程度 | `Asn1_verbosity` | `"none"` | `none`, `info`, `annoying` | 由左至右為詳細程度 |
-| gNB basic settings | gNB 識別碼 | `gNB_ID` | `0xe00` | unknown | 需符合 gNB ID 規劃 |
-| gNB basic settings | gNB 名稱 | `gNB_name` | `"gNB-OAI"` | unknown | 需對應`Active_gNBs` |
-| gNB basic settings | Tracking Area Code | `tracking_area_code` | `1` | `0x0001`–`0xfffd`；conf 註解保留 `0x0000`, `0xfffe` | TAC 就像是基地台所在區域的區域編號。UE 會用它判斷自己是不是還在同一個核心網追蹤區域內 |
-| gNB basic settings | NR Cell ID | `nr_cellid` | `1` |  | 這台 gNB 底下哪一個 cell |
-| PLMN / Slice | MCC / MNC / MNC 長度 | `mcc`, `mnc`, `mnc_length` | `001`, `01`, `2` | `mcc`: 3 位數；`mnc`: 2 或 3 位數；`mnc_length`: `2` 或 `3` | 需與 5GC / SIM 設定一致 |
-| PLMN / Slice | Slice / Service Type | `sst` | `1` | 3GPP SST 為 8-bit 欄位，實際支援依 OAI/核心網版本 |  |
-| Antenna / MIMO | PDSCH antenna port 設定 | `pdsch_AntennaPorts_XP`, `pdsch_AntennaPorts_N1` | `2`, `2` |  | 乘積通常需對應 PDSCH port / MIMO 配置本案 2×2 = 4 |
-| Antenna / MIMO | 最大 MIMO layers | `maxMIMO_layers` | `4` | 4T4R 常見為 `1`–`4` | RU/UE 支援最大 layer，需與 RU/UE 能力一致 |
-| Antenna / MIMO | PUSCH antenna ports | `pusch_AntennaPorts` | `4` | 正整數；常見 `1`, `2`, `4` | 需與 UL/MIMO/RU RX 能力一致 |
-| Antenna / MIMO | CSI-RS 開關 | `do_CSIRS` | `1` | `0` 或 `1` | 0=關閉，1=啟用，它是 gNB 下行發給 UE 的參考訊號，UE 量測後可以回報通道狀態。 |
-| Antenna / MIMO | SRS 開關 | `do_SRS` | `0` | `0` 或 `1` | 0=關閉，1=啟用，它是 UE 上行送給 gNB 的參考訊號，讓 gNB 量測上行通道 |
-| RF / 頻率設定 | Physical Cell ID | `physCellId` | `0` |  |  |
-| RF / 頻率設定 | SSB 絕對頻率 | `absoluteFrequencySSB` | `649920` |  |  |
-| RF / 頻率設定 | DL / UL 頻段 | `dl_frequencyBand`, `ul_frequencyBand` | `78`, `78` | 3GPP NR band 編號； | band n78 需為 RU/UE/頻譜支援 band |
-| RF / 頻率設定 | DL Point A 絕對頻率 | `dl_absoluteFrequencyPointA` | `646724` |  | conf 註解寫 frequency point A = 3700.86 MHz |
-| RF / 頻率設定 | DL / UL carrier offset | `dl_offstToCarrier`, `ul_offstToCarrier` | `0`, `0` |  |  |
-| RF / 頻率設定 | DL / UL subcarrier spacing | `dl_subcarrierSpacing`, `ul_subcarrierSpacing` | `1`, `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz |  |
-| RF / 頻率設定 | DL / UL carrier bandwidth / PRB | `dl_carrierBandwidth`, `ul_carrierBandwidth` | `273`, `273` |  | 100 MHz @ 30 kHz 常見最大為 `273` PRB，需與 RU `number-of-prb` 對應 |
+| Category                | Parameter                       | Name in gNB Conf                                 | Current Value    | Possible Range                                                                           | Notes                                                                                                                                                        |
+| ----------------------- | ------------------------------- | ------------------------------------------------ | ---------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| gNB basic settings      | Active gNB list                 | `Active_gNBs`                                    | `"gNB-OAI"`      | unknown                                                                                  | Must match `gNB_name`.                                                                                                                                       |
+| gNB basic settings      | ASN.1 output verbosity          | `Asn1_verbosity`                                 | `"none"`         | `none`, `info`, `annoying`                                                               | The verbosity increases from left to right.                                                                                                                  |
+| gNB basic settings      | gNB identifier                  | `gNB_ID`                                         | `0xe00`          | unknown                                                                                  | Must follow the planned gNB ID allocation.                                                                                                                   |
+| gNB basic settings      | gNB name                        | `gNB_name`                                       | `"gNB-OAI"`      | unknown                                                                                  | Must match `Active_gNBs`.                                                                                                                                    |
+| gNB basic settings      | Tracking Area Code              | `tracking_area_code`                             | `1`              | `0x0001`–`0xfffd`; the conf comments reserve `0x0000` and `0xfffe`                       | TAC is similar to the area code of the base station location. The UE uses it to check whether it is still in the same tracking area,if not, it will attempt a Registration Update.|
+| gNB basic settings      | NR Cell ID                      | `nr_cellid`                                      | `1`              |                                                                                          | Indicates which cell belongs to this gNB.                                                                                                                    |
+| PLMN / Slice            | MCC / MNC / MNC length          | `mcc`, `mnc`, `mnc_length`                       | `001`, `01`, `2` | `mcc`: 3 digits; `mnc`: 2 or 3 digits; `mnc_length`: `2` or `3`                          | Must be consistent with the 5GC and SIM settings.                                                                                                            |
+| PLMN / Slice            | Slice / Service Type            | `sst`                                            | `1`              | The 3GPP SST field is 8-bit. Actual support depends on the OAI and core network version. |                                                                                                                                                              |
+| Antenna / MIMO          | PDSCH antenna port setting      | `pdsch_AntennaPorts_XP`, `pdsch_AntennaPorts_N1` | `2`, `2`         |                                                                                          | The product usually needs to match the PDSCH port / MIMO configuration. In this case, 2 × 2 = 4.                                                             |
+| Antenna / MIMO          | Maximum MIMO layers             | `maxMIMO_layers`                                 | `4`              | For 4T4R, common values are `1`–`4`.                                                     | This should match the maximum layer capability supported by the RU and UE.                                                                                   |
+| Antenna / MIMO          | PUSCH antenna ports             | `pusch_AntennaPorts`                             | `4`              | Positive integer; common values are `1`, `2`, `4`.                                       | Must be consistent with the UL/MIMO/RU RX capability.                                                                                                        |
+| Antenna / MIMO          | CSI-RS switch                   | `do_CSIRS`                                       | `1`              | `0` or `1`                                                                               | `0` = disabled, `1` = enabled. CSI-RS is a downlink reference signal sent from the gNB to the UE. After measuring it, the UE can report the channel state.   |
+| Antenna / MIMO          | SRS switch                      | `do_SRS`                                         | `0`              | `0` or `1`                                                                               | `0` = disabled, `1` = enabled. SRS is an uplink reference signal sent from the UE to the gNB, allowing the gNB to measure the uplink channel.                |
+| RF / Frequency settings | Physical Cell ID                | `physCellId`                                     | `0`              |                                                                                          |                                                                                                                                                              |
+| RF / Frequency settings | Absolute SSB frequency          | `absoluteFrequencySSB`                           | `649920`         |                                                                                          |                                                                                                                                                              |
+| RF / Frequency settings | DL / UL frequency band          | `dl_frequencyBand`, `ul_frequencyBand`           | `78`, `78`       | 3GPP NR band number                                                                      | Band n78 must be supported by the RU, UE, and available spectrum.                                                                                            |
+| RF / Frequency settings | DL absolute frequency Point A   | `dl_absoluteFrequencyPointA`                     | `646724`         |                                                                                          | The conf comment says frequency Point A = 3700.86 MHz.                                                                                                       |
+| RF / Frequency settings | DL / UL carrier offset          | `dl_offstToCarrier`, `ul_offstToCarrier`         | `0`, `0`         |                                                                                          |                                                                                                                                                              |
+| RF / Frequency settings | DL / UL subcarrier spacing      | `dl_subcarrierSpacing`, `ul_subcarrierSpacing`   | `1`, `1`         | `0` = 15 kHz, `1` = 30 kHz, `2` = 60 kHz, `3` = 120 kHz                                  |                                                                                                                                                              |
+| RF / Frequency settings | DL / UL carrier bandwidth / PRB | `dl_carrierBandwidth`, `ul_carrierBandwidth`     | `273`, `273`     |                                                                                          | For 100 MHz at 30 kHz SCS, the common maximum is `273` PRBs. This should match the RU `number-of-prb`.                                                       |
 
-# TDD 設定
+# TDD Configuration
 
-| 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
-|---|---|---|---|---|---|
-| TDD Pattern | TDD reference subcarrier spacing | `referenceSubcarrierSpacing` | `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz | TDD 的參考SCS |
-| TDD Pattern | DL / UL transmission periodicity | `dl_UL_TransmissionPeriodicity` | `5` | `0`=ms0p5, `1`=ms0p625, `2`=ms1, `3`=ms1p25, `4`=ms2, `5`=ms2p5, `6`=ms5, `7`=ms10 |  |
-| TDD Pattern | Downlink slots / symbols 數量 | `nrofDownlinkSlots`, `nrofDownlinkSymbols` | `3`, `6` |  | 需符合 TDD period 與 numerology |
-| TDD Pattern | Uplink slots / symbols 數量 | `nrofUplinkSlots`, `nrofUplinkSymbols` | `1`, `4` |  | 需符合 TDD period 與 numerology |
+| Category    | Parameter                          | Name in Conf                               | Current Value | Possible Range                                                                                     | Notes                                       |
+| ----------- | ---------------------------------- | ------------------------------------------ | ------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| TDD Pattern | TDD reference subcarrier spacing   | `referenceSubcarrierSpacing`               | `1`           | `0` = 15 kHz, `1` = 30 kHz, `2` = 60 kHz, `3` = 120 kHz                                            | Reference SCS for TDD.                      |
+| TDD Pattern | DL / UL transmission periodicity   | `dl_UL_TransmissionPeriodicity`            | `5`           | `0` = ms0p5, `1` = ms0p625, `2` = ms1, `3` = ms1p25, `4` = ms2, `5` = ms2p5, `6` = ms5, `7` = ms10 |                                             |
+| TDD Pattern | Number of downlink slots / symbols | `nrofDownlinkSlots`, `nrofDownlinkSymbols` | `3`, `6`      |                                                                                                    | Must satisfy the TDD period and numerology. |
+| TDD Pattern | Number of uplink slots / symbols   | `nrofUplinkSlots`, `nrofUplinkSymbols`     | `1`, `4`      |                                                                                                    | Must satisfy the TDD period and numerology. |
 
-## 核網設定
+## Core Network Configuration
 
-| 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
-|---|---|---|---|---|---|
-| SCTP / 5GC | SCTP input / output streams | `SCTP_INSTREAMS`, `SCTP_OUTSTREAMS` | `2`, `2` | |  |
-| SCTP / 5GC | AMF IP 設定 | `amf_ip_address`, `ipv4` | `"192.168.8.82"` | IPv4 address | 需對應 5GC AMF IP |
-| Network Interface | gNB N2 / NG-AMF IPv4 address | `GNB_IPV4_ADDRESS_FOR_NG_AMF` | `"192.168.8.83"` | IPv4 address | gNB 對 AMF 的 N2/NGAP IP |
-| Network Interface | gNB N3 / NG-U IPv4 address | `GNB_IPV4_ADDRESS_FOR_NGU` | `"192.168.8.83"` | IPv4 address | gNB 對 UPF 的 N3/GTP-U IP |
-| Network Interface | GTP-U / S1-U port | `GNB_PORT_FOR_S1U` | `2152` | `0`–`65535`；標準 GTP-U port 為 `2152` |  |
-## MAC/RLC 設定
-| 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
-|---|---|---|---|---|---|
-| MAC/RLC | MAC/RLC component carrier 數 | `num_cc` | `1` |  | Component Carrier 數量 |
-| MAC/RLC | MAC/RLC transport preference | `tr_s_preference`, `tr_n_preference` | `"local_L1"`, `"local_RRC"` |  | MAC/RLC 和 L1 、RRC的連接方式 |
-| MAC/RLC | PUSCH / PUCCH target SNR x10 | `pusch_TargetSNRx10`, `pucch_TargetSNRx10` | `200`, `200` |  | PUSCH、PUCCH 目標 SNR |
-| MAC/RLC | DL BLER target upper / lower | `dl_bler_target_upper`, `dl_bler_target_lower` | `.35`, `.15` | `0.0`–`1.0` | 下行 BLER 目標上下限，調整 MCS的指標 |
-| MAC/RLC | UL BLER target upper / lower | `ul_bler_target_upper`, `ul_bler_target_lower` | `.35`, `.15` | `0.0`–`1.0` | 上行 BLER 目標上限，調整 MCS的指標  |
-| MAC/RLC | PUSCH failure threshold | `pusch_FailureThres` | `100` |  | PUSCH 失敗判定門檻 |
-| MAC/RLC | DL minimum MCS | `dl_min_mcs` | `24` |  | 下行最小 MCS 限制 |
+| Category          | Parameter                    | Name in Conf                        | Current Value    | Possible Range                                 | Notes                                                |
+| ----------------- | ---------------------------- | ----------------------------------- | ---------------- | ---------------------------------------------- | ---------------------------------------------------- |
+| SCTP / 5GC        | SCTP input / output streams  | `SCTP_INSTREAMS`, `SCTP_OUTSTREAMS` | `2`, `2`         |                                                |                                                      |
+| SCTP / 5GC        | AMF IP setting               | `amf_ip_address`, `ipv4`            | `"192.168.8.82"` | IPv4 address                                   | Must match the 5GC AMF IP address.                   |
+| Network Interface | gNB N2 / NG-AMF IPv4 address | `GNB_IPV4_ADDRESS_FOR_NG_AMF`       | `"192.168.8.83"` | IPv4 address                                   | The gNB IP address used for N2/NGAP toward the AMF.  |
+| Network Interface | gNB N3 / NG-U IPv4 address   | `GNB_IPV4_ADDRESS_FOR_NGU`          | `"192.168.8.83"` | IPv4 address                                   | The gNB IP address used for N3/GTP-U toward the UPF. |
+| Network Interface | GTP-U / S1-U port            | `GNB_PORT_FOR_S1U`                  | `2152`           | `0`–`65535`; the standard GTP-U port is `2152` |                                                      |
 
-## L1設定
-| 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
-|---|---|---|---|---|---|
-| L1 | L1 component carrier 數 | `num_cc` | `1` |  | Component Carrier 數量|
-| L1 | L1 northbound transport preference | `tr_n_preference` | `"local_mac"` |  | L1 要跟哪一種 MAC 架構連接 |
-| L1 | PRACH / PUCCH0 / PUSCH DTX threshold | `prach_dtx_threshold`, `pucch0_dtx_threshold`, `pusch_dtx_threshold` | `130`, `80`, `10` | 整數 |  OAI PHY 偵測門檻 |
-| L1 | TX amplitude backoff | `tx_amp_backoff_dB` | `20` |  | 單位 dB；需與 O-RU 設定一致 |
-| L1 | L1 RX / TX thread core | `L1_rx_thread_core`, `L1_tx_thread_core` | `18`, `19` | |  |
-| L1 | Phase compensation | `phase_compensation` | `0` | 常見 `0` 或 `1`； | 需與 O-RU 設定一致 |
+## MAC/RLC Configuration
 
-## OAI 裡的 RU（Radio Unit）設定區塊
-主要在描述： 這個 gNB 要怎麼連 RU、RU 有幾根 TX/RX antenna、用哪個頻段、功率/gain 怎麼設、前傳介面怎麼走、CPU core 怎麼綁定。
-| 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
-|---|---|---|---|---|---|
-| RU | Local RF 開關 | `local_rf` | `"no"` | `"yes"` 或 `"no"` | `"no"` 代表使用外部 RU / fronthaul |
-| RU | RU TX / RX 數量 | `nb_tx`, `nb_rx` | `4`, `4` | 正整數 | 需與 RU antenna / endpoint 數一致 4T4R |
-| RU | TX / RX attenuation | `att_tx`, `att_rx` | `0`, `0` | | 發射衰減值，單位 dB  |
-| RU | RU bands | `bands` | `[78]` |  | NR 頻段設定，頻率範圍大約在3300 MHz ~ 3800 MHz |
-| RU | Max PDSCH reference signal power | `max_pdschReferenceSignalPower` | `-27` |  | 告訴 UE 下行 reference signal power 大約是多少 |
-| RU | Max RX gain | `max_rxgain` | `75` |  | 上行接收增益上限 |
-| RU | Subframe extension | `sf_extension` | `0` |  |  |
-| RU | eNB / gNB instance mapping | `eNB_instances` | `[0]` |  | 這個 RU 對應到哪一個 gNB |
-| RU | RU thread core | `ru_thread_core` | `12` |  | RU thread 綁定的 CPU core |
-| RU | Slot ahead | `sl_ahead` | `5` |  | slot ahead，提前處理幾個 slot |
-| RU | RU transport preference | `tr_preference` | `"raw_if4p5"` |  | RU 傳輸介面偏好設定，啟用 FHI 7.2 |
-| RU | Precoding 開關 | `do_precoding` | `0` | `0` 或 `1`； | 是否在 OAI 端做 precoding，需與 O-RU 設定一致 |
+| Category | Parameter                            | Name in Conf                                   | Current Value               | Possible Range | Notes                                                                             |
+| -------- | ------------------------------------ | ---------------------------------------------- | --------------------------- | -------------- | --------------------------------------------------------------------------------- |
+| MAC/RLC  | Number of MAC/RLC component carriers | `num_cc`                                       | `1`                         |                | Number of Component Carriers.                                                     |
+| MAC/RLC  | MAC/RLC transport preference         | `tr_s_preference`, `tr_n_preference`           | `"local_L1"`, `"local_RRC"` |                | Defines how MAC/RLC connects to L1 and RRC.                                       |
+| MAC/RLC  | PUSCH / PUCCH target SNR x10         | `pusch_TargetSNRx10`, `pucch_TargetSNRx10`     | `200`, `200`                |                | Target SNR values for PUSCH and PUCCH.                                            |
+| MAC/RLC  | DL BLER target upper / lower         | `dl_bler_target_upper`, `dl_bler_target_lower` | `.35`, `.15`                | `0.0`–`1.0`    | Upper and lower DL BLER targets. These are used as indicators for MCS adjustment. |
+| MAC/RLC  | UL BLER target upper / lower         | `ul_bler_target_upper`, `ul_bler_target_lower` | `.35`, `.15`                | `0.0`–`1.0`    | Upper and lower UL BLER targets. These are used as indicators for MCS adjustment. |
+| MAC/RLC  | PUSCH failure threshold              | `pusch_FailureThres`                           | `100`                       |                | Threshold used to determine PUSCH failure.                                        |
+| MAC/RLC  | DL minimum MCS                       | `dl_min_mcs`                                   | `24`                        |                | Minimum MCS limitation for downlink transmission.                                 |
 
-## OAI gNB / DU 連接 O-RAN O-RU 的 FH 7.2 fronthaul 設定
+## L1 Configuration
 
-| 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
-|---|---|---|---|---|---|
-| FHI 7.2 / Fronthaul | DPDK devices | `dpdk_devices` | `"0000:43:0a.0"`, `"0000:43:0a.1"` |  | 指定哪幾張網卡 / VF 要給 DPDK 使用，需對應 gNB server NIC/VF |
-| FHI 7.2 / Fronthaul | FHI CPU core 設定 | `system_core`, `io_core`, `worker_cores` | `0`, `4`, `(2)` |  |  |
-| FHI 7.2 / Fronthaul | RU fronthaul MAC address | `ru_addr` | `"48:21:0b:4b:93:8e"`, `"48:21:0b:4b:93:8e"` |  | 需對應 RU C/U-plane MAC |
-| FHI 7.2 / Fronthaul | Fronthaul MTU | `mtu` | `9000` |  | 封包被切成多大，學長為了提高Throughput 設為9000 通常為1500 |
-| FHI 7.2 / Fronthaul | T1a / Ta4 timing window | `T1a_cp_dl`, `T1a_cp_ul`, `T1a_up`, `Ta4` | `(285,429)`, `(285,429)`, `(96,196)`, `(110,180)` |  | # 學長測過的數值之後可以以這個為基準去做修改，每台RU都不一樣須手動調整 |
-| FHI 7.2 / Fronthaul | IQ width / PRACH IQ width | `iq_width`, `iq_width_prach` | `9`, `9` |  | 需與 O-RU endpoint `iq-bitwidth` 一致 |
-| FHI 7.2 / Fronthaul | PRACH eAxC offset | `eAxC_offset` | `4` |  | eAxC ID 偏移量  |
-| FHI 7.2 / Fronthaul | PRACH kbar | `kbar` | `4` |  |  |
+| Category | Parameter                            | Name in Conf                                                         | Current Value     | Possible Range                | Notes                                               |
+| -------- | ------------------------------------ | -------------------------------------------------------------------- | ----------------- | ----------------------------- | --------------------------------------------------- |
+| L1       | Number of L1 component carriers      | `num_cc`                                                             | `1`               |                               | Number of Component Carriers.                       |
+| L1       | L1 northbound transport preference   | `tr_n_preference`                                                    | `"local_mac"`     |                               | Defines which MAC architecture L1 connects to.      |
+| L1       | PRACH / PUCCH0 / PUSCH DTX threshold | `prach_dtx_threshold`, `pucch0_dtx_threshold`, `pusch_dtx_threshold` | `130`, `80`, `10` | Integer                       | OAI PHY detection thresholds.                       |
+| L1       | TX amplitude backoff                 | `tx_amp_backoff_dB`                                                  | `20`              |                               | Unit: dB. Must be consistent with the O-RU setting. |
+| L1       | L1 RX / TX thread core               | `L1_rx_thread_core`, `L1_tx_thread_core`                             | `18`, `19`        |                               |                                                     |
+| L1       | Phase compensation                   | `phase_compensation`                                                 | `0`               | Common values are `0` or `1`. | Must be consistent with the O-RU setting.           |
 
-# 未確認
-| 類別 | 參數名稱 | conf 中名稱 | 目前值 | 可能範圍 | 備註 |
-|---|---|---|---|---|---|
-| SIB / Cell Common | SIB1 TDA | `sib1_tda` | `15` | | |
-| RF / 頻率設定 | UE 最大上行功率 | `pMax` | `23` | | |
-| BWP / PDCCH | Initial DL / UL BWP 位置與頻寬 | `initialDLBWPlocationAndBandwidth`, `initialULBWPlocationAndBandwidth` | `1099`, `1099` | | |
-| BWP / PDCCH | Initial DL / UL BWP SCS | `initialDLBWPsubcarrierSpacing`, `initialULBWPsubcarrierSpacing` | `1`, `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz |  |
-| BWP / PDCCH | Initial DL BWP CORESET#0 | `initialDLBWPcontrolResourceSetZero` | `10` || |
-| BWP / PDCCH | Initial DL BWP SearchSpace#0 | `initialDLBWPsearchSpaceZero` | `0` | | |
-| PRACH / RACH | PRACH configuration index | `prach_ConfigurationIndex` | `159` |  |  |
-| PRACH / RACH | PRACH Msg1 FDM | `prach_msg1_FDM` | `0` | `0`=one, `1`=two, `2`=four, `3`=eight |  |
-| PRACH / RACH | PRACH Msg1 frequency start | `prach_msg1_FrequencyStart` | `0` |  |  |
-| PRACH / RACH | Zero correlation zone config | `zeroCorrelationZoneConfig` | `15` |  |  |
-| PRACH / RACH | Preamble 接收目標功率 | `preambleReceivedTargetPower` | `-104` |  |  |
-| PRACH / RACH | Preamble 最大重傳次數 | `preambleTransMax` | `7` | index `0`–`10` 對應 `3,4,5,6,7,8,10,20,50,100,200` | |
-| PRACH / RACH | Power ramping step | `powerRampingStep` | `2` | `0`=dB0, `1`=dB2, `2`=dB4, `3`=dB6 |  |
-| PRACH / RACH | RA response window | `ra_ResponseWindow` | `5` | 常見 index `0`–`7` 對應 `1,2,4,8,10,20,40,80` slots |  |
-| PRACH / RACH | SSB per RACH occasion 設定 | `ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR`, `ssb_perRACH_OccasionAndCB_PreamblesPerSSB` | `4`, `15` | PR: `1`=oneeighth, `2`=onefourth, `3`=half, `4`=one, `5`=two, `6`=four, `7`=eight, `8`=sixteen；Preambles: `0`–`15` 對應 `4,8,12,...,64` |  |
-| PRACH / RACH | RA contention resolution timer | `ra_ContentionResolutionTimer` | `7` | index `0`–`7` 對應 `8,16,24,32,40,48,56,64` | |
-| PRACH / RACH | RSRP threshold SSB | `rsrp_ThresholdSSB` | `19` | | |
-| PRACH / RACH | PRACH root sequence index 設定 | `prach_RootSequenceIndex_PR`, `prach_RootSequenceIndex` | `2`, `1` | PR: `1`=839, `2`=139；index 範圍依 root sequence length，839 約 `0`–`837`，139 約 `0`–`137` |  |
-| PRACH / RACH | Msg1 subcarrier spacing | `msg1_SubcarrierSpacing` | `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz |  |
-| PRACH / RACH | Restricted set config | `restrictedSetConfig` | `0` | `0`=unrestricted, `1`=restricted type A, `2`=restricted type B |  |
-| PRACH / RACH | Msg3 delta preamble | `msg3_DeltaPreamble` | `2` |  |  |
-| PRACH / RACH | P0 nominal with grant | `p0_NominalWithGrant` | `-96` |  |  |
-| PUCCH | PUCCH group hopping | `pucchGroupHopping` | `0` | `0`=neither, `1`=group hopping, `2`=sequence hopping |  |
-| PUCCH | Hopping ID | `hoppingId` | `0` |  |  |
-| PUCCH | PUCCH P0 nominal | `p0_nominal` | `-96` |  |  |
-| SSB / PBCH | SSB positions in burst bitmap | `ssb_PositionsInBurst_Bitmap` | `0x1` | |  |
-| SSB / PBCH | SSB periodicity serving cell | `ssb_periodicityServingCell` | `2` | `0`=ms5, `1`=ms10, `2`=ms20, `3`=ms40, `4`=ms80, `5`=ms160, `6`=spare2, `7`=spare1 |  |
-| SSB / PBCH | SS/PBCH block power | `ssPBCH_BlockPower` | `0` |  |  |
-| DMRS | DMRS Type A position | `dmrs_TypeA_Position` | `0` | `0`=pos2, `1`=pos3 |  |
-| Numerology | Cell common subcarrier spacing | `subcarrierSpacing` | `1` | `0`=15 kHz, `1`=30 kHz, `2`=60 kHz, `3`=120 kHz |  |
-| Security | Ciphering algorithms | `ciphering_algorithms` | `"nea0"` | `nea0`, `nea1`, `nea2`, `nea3` |  |
-| Security | Integrity algorithms | `integrity_algorithms` | `"nia2"`, `"nia0"` | `nia0`, `nia1`, `nia2`, `nia3` |  |
-| Security | DRB ciphering / integrity 開關 | `drb_ciphering`, `drb_integrity` | `"yes"`, `"no"` | `"yes"` 或 `"no"` |  |
-| Logging | 各層 log level | `global_log_level`, `hw_log_level`, `phy_log_level`, `mac_log_level`, `rlc_log_level`, `pdcp_log_level`, `rrc_log_level`, `ngap_log_level`, `f1ap_log_level` | 全部 `"info"` | 常見 `error`, `warn`, `info`, `debug`, `trace`；實際依 OAI log 系統 |  |
+## RU Configuration Block in OAI
 
-### TDD pattern 
-OAI config
-```
+This section mainly describes how the gNB connects to the RU, how many TX/RX antennas the RU has, which frequency band is used, how power/gain is configured, how the fronthaul interface is used, and how CPU cores are bound.
+
+| Category | Parameter                        | Name in Conf                    | Current Value | Possible Range    | Notes                                                                                                    |
+| -------- | -------------------------------- | ------------------------------- | ------------- | ----------------- | -------------------------------------------------------------------------------------------------------- |
+| RU       | Local RF switch                  | `local_rf`                      | `"no"`        | `"yes"` or `"no"` | `"no"` means an external RU / fronthaul is used.                                                         |
+| RU       | Number of RU TX / RX paths       | `nb_tx`, `nb_rx`                | `4`, `4`      | Positive integer  | Must match the number of RU antennas / endpoints. This case is 4T4R.                                     |
+| RU       | TX / RX attenuation              | `att_tx`, `att_rx`              | `0`, `0`      |                   | Transmission attenuation value, in dB.                                                                   |
+| RU       | RU bands                         | `bands`                         | `[78]`        |                   | NR band setting. The frequency range is approximately 3300 MHz to 3800 MHz.                              |
+| RU       | Max PDSCH reference signal power | `max_pdschReferenceSignalPower` | `-27`         |                   | Tells the UE the approximate downlink reference signal power.                                            |
+| RU       | Max RX gain                      | `max_rxgain`                    | `75`          |                   | Maximum uplink receive gain.                                                                             |
+| RU       | Subframe extension               | `sf_extension`                  | `0`           |                   |                                                                                                          |
+| RU       | eNB / gNB instance mapping       | `eNB_instances`                 | `[0]`         |                   | Indicates which gNB this RU maps to.                                                                     |
+| RU       | RU thread core                   | `ru_thread_core`                | `12`          |                   | CPU core bound to the RU thread.                                                                         |
+| RU       | Slot ahead                       | `sl_ahead`                      | `5`           |                   | Slot-ahead value, meaning how many slots are processed in advance.                                       |
+| RU       | RU transport preference          | `tr_preference`                 | `"raw_if4p5"` |                   | RU transport interface preference. This enables FHI 7.2.                                                 |
+| RU       | Precoding switch                 | `do_precoding`                  | `0`           | `0` or `1`        | Indicates whether precoding is performed on the OAI side. This must be consistent with the O-RU setting. |
+
+## FH 7.2 Fronthaul Configuration for Connecting OAI gNB / DU to O-RAN O-RU
+
+| Category            | Parameter                 | Name in Conf                              | Current Value                                     | Possible Range | Notes                                                                                                                                                     |
+| ------------------- | ------------------------- | ----------------------------------------- | ------------------------------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FHI 7.2 / Fronthaul | DPDK devices              | `dpdk_devices`                            | `"0000:43:0a.0"`, `"0000:43:0a.1"`                |                | Specifies which NICs / VFs are assigned to DPDK. This must match the gNB server NIC/VF.                                                                   |
+| FHI 7.2 / Fronthaul | FHI CPU core setting      | `system_core`, `io_core`, `worker_cores`  | `0`, `4`, `(2)`                                   |                |                                                                                                                                                           |
+| FHI 7.2 / Fronthaul | RU fronthaul MAC address  | `ru_addr`                                 | `"48:21:0b:4b:93:8e"`, `"48:21:0b:4b:93:8e"`      |                | Must match the RU C/U-plane MAC address.                                                                                                                  |
+| FHI 7.2 / Fronthaul | Fronthaul MTU             | `mtu`                                     | `9000`                                            |                | Defines the packet size. The senior student set it to 9000 to improve throughput. The common default is usually 1500.                                     |
+| FHI 7.2 / Fronthaul | T1a / Ta4 timing window   | `T1a_cp_dl`, `T1a_cp_ul`, `T1a_up`, `Ta4` | `(285,429)`, `(285,429)`, `(96,196)`, `(110,180)` |                | These values were tested by the senior student and can be used as a baseline for future modification. Each RU is different, so manual tuning is required. |
+| FHI 7.2 / Fronthaul | IQ width / PRACH IQ width | `iq_width`, `iq_width_prach`              | `9`, `9`                                          |                | Must be consistent with the O-RU endpoint `iq-bitwidth`.                                                                                                  |
+| FHI 7.2 / Fronthaul | PRACH eAxC offset         | `eAxC_offset`                             | `4`                                               |                | eAxC ID offset.                                                                                                                                           |
+| FHI 7.2 / Fronthaul | PRACH kbar                | `kbar`                                    | `4`                                               |                |                                                                                                                                                           |
+
+# Unverified / To Be Confirmed
+
+| Category                | Parameter                                  | Name in Conf                                                                                                                                                 | Current Value      | Possible Range                                                                                                                                                                             | Notes |
+| ----------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----- |
+| SIB / Cell Common       | SIB1 TDA                                   | `sib1_tda`                                                                                                                                                   | `15`               |                                                                                                                                                                                            |       |
+| RF / Frequency settings | UE maximum uplink power                    | `pMax`                                                                                                                                                       | `23`               |                                                                                                                                                                                            |       |
+| BWP / PDCCH             | Initial DL / UL BWP location and bandwidth | `initialDLBWPlocationAndBandwidth`, `initialULBWPlocationAndBandwidth`                                                                                       | `1099`, `1099`     |                                                                                                                                                                                            |       |
+| BWP / PDCCH             | Initial DL / UL BWP SCS                    | `initialDLBWPsubcarrierSpacing`, `initialULBWPsubcarrierSpacing`                                                                                             | `1`, `1`           | `0` = 15 kHz, `1` = 30 kHz, `2` = 60 kHz, `3` = 120 kHz                                                                                                                                    |       |
+| BWP / PDCCH             | Initial DL BWP CORESET#0                   | `initialDLBWPcontrolResourceSetZero`                                                                                                                         | `10`               |                                                                                                                                                                                            |       |
+| BWP / PDCCH             | Initial DL BWP SearchSpace#0               | `initialDLBWPsearchSpaceZero`                                                                                                                                | `0`                |                                                                                                                                                                                            |       |
+| PRACH / RACH            | PRACH configuration index                  | `prach_ConfigurationIndex`                                                                                                                                   | `159`              |                                                                                                                                                                                            |       |
+| PRACH / RACH            | PRACH Msg1 FDM                             | `prach_msg1_FDM`                                                                                                                                             | `0`                | `0` = one, `1` = two, `2` = four, `3` = eight                                                                                                                                              |       |
+| PRACH / RACH            | PRACH Msg1 frequency start                 | `prach_msg1_FrequencyStart`                                                                                                                                  | `0`                |                                                                                                                                                                                            |       |
+| PRACH / RACH            | Zero correlation zone config               | `zeroCorrelationZoneConfig`                                                                                                                                  | `15`               |                                                                                                                                                                                            |       |
+| PRACH / RACH            | Preamble received target power             | `preambleReceivedTargetPower`                                                                                                                                | `-104`             |                                                                                                                                                                                            |       |
+| PRACH / RACH            | Maximum number of preamble transmissions   | `preambleTransMax`                                                                                                                                           | `7`                | Index `0`–`10` corresponds to `3,4,5,6,7,8,10,20,50,100,200`.                                                                                                                              |       |
+| PRACH / RACH            | Power ramping step                         | `powerRampingStep`                                                                                                                                           | `2`                | `0` = dB0, `1` = dB2, `2` = dB4, `3` = dB6                                                                                                                                                 |       |
+| PRACH / RACH            | RA response window                         | `ra_ResponseWindow`                                                                                                                                          | `5`                | Common index `0`–`7` corresponds to `1,2,4,8,10,20,40,80` slots.                                                                                                                           |       |
+| PRACH / RACH            | SSB per RACH occasion setting              | `ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR`, `ssb_perRACH_OccasionAndCB_PreamblesPerSSB`                                                                  | `4`, `15`          | PR: `1` = one eighth, `2` = one fourth, `3` = half, `4` = one, `5` = two, `6` = four, `7` = eight, `8` = sixteen; Preambles: `0`–`15` corresponds to `4,8,12,...,64`.                      |       |
+| PRACH / RACH            | RA contention resolution timer             | `ra_ContentionResolutionTimer`                                                                                                                               | `7`                | Index `0`–`7` corresponds to `8,16,24,32,40,48,56,64`.                                                                                                                                     |       |
+| PRACH / RACH            | RSRP threshold SSB                         | `rsrp_ThresholdSSB`                                                                                                                                          | `19`               |                                                                                                                                                                                            |       |
+| PRACH / RACH            | PRACH root sequence index setting          | `prach_RootSequenceIndex_PR`, `prach_RootSequenceIndex`                                                                                                      | `2`, `1`           | PR: `1` = 839, `2` = 139; the index range depends on the root sequence length. For length 839, the range is approximately `0`–`837`; for length 139, the range is approximately `0`–`137`. |       |
+| PRACH / RACH            | Msg1 subcarrier spacing                    | `msg1_SubcarrierSpacing`                                                                                                                                     | `1`                | `0` = 15 kHz, `1` = 30 kHz, `2` = 60 kHz, `3` = 120 kHz                                                                                                                                    |       |
+| PRACH / RACH            | Restricted set config                      | `restrictedSetConfig`                                                                                                                                        | `0`                | `0` = unrestricted, `1` = restricted type A, `2` = restricted type B                                                                                                                       |       |
+| PRACH / RACH            | Msg3 delta preamble                        | `msg3_DeltaPreamble`                                                                                                                                         | `2`                |                                                                                                                                                                                            |       |
+| PRACH / RACH            | P0 nominal with grant                      | `p0_NominalWithGrant`                                                                                                                                        | `-96`              |                                                                                                                                                                                            |       |
+| PUCCH                   | PUCCH group hopping                        | `pucchGroupHopping`                                                                                                                                          | `0`                | `0` = neither, `1` = group hopping, `2` = sequence hopping                                                                                                                                 |       |
+| PUCCH                   | Hopping ID                                 | `hoppingId`                                                                                                                                                  | `0`                |                                                                                                                                                                                            |       |
+| PUCCH                   | PUCCH P0 nominal                           | `p0_nominal`                                                                                                                                                 | `-96`              |                                                                                                                                                                                            |       |
+| SSB / PBCH              | SSB positions in burst bitmap              | `ssb_PositionsInBurst_Bitmap`                                                                                                                                | `0x1`              |                                                                                                                                                                                            |       |
+| SSB / PBCH              | SSB periodicity serving cell               | `ssb_periodicityServingCell`                                                                                                                                 | `2`                | `0` = ms5, `1` = ms10, `2` = ms20, `3` = ms40, `4` = ms80, `5` = ms160, `6` = spare2, `7` = spare1                                                                                         |       |
+| SSB / PBCH              | SS/PBCH block power                        | `ssPBCH_BlockPower`                                                                                                                                          | `0`                |                                                                                                                                                                                            |       |
+| DMRS                    | DMRS Type A position                       | `dmrs_TypeA_Position`                                                                                                                                        | `0`                | `0` = pos2, `1` = pos3                                                                                                                                                                     |       |
+| Numerology              | Cell common subcarrier spacing             | `subcarrierSpacing`                                                                                                                                          | `1`                | `0` = 15 kHz, `1` = 30 kHz, `2` = 60 kHz, `3` = 120 kHz                                                                                                                                    |       |
+| Security                | Ciphering algorithms                       | `ciphering_algorithms`                                                                                                                                       | `"nea0"`           | `nea0`, `nea1`, `nea2`, `nea3`                                                                                                                                                             |       |
+| Security                | Integrity algorithms                       | `integrity_algorithms`                                                                                                                                       | `"nia2"`, `"nia0"` | `nia0`, `nia1`, `nia2`, `nia3`                                                                                                                                                             |       |
+| Security                | DRB ciphering / integrity switch           | `drb_ciphering`, `drb_integrity`                                                                                                                             | `"yes"`, `"no"`    | `"yes"` or `"no"`                                                                                                                                                                          |       |
+| Logging                 | Log level for each layer                   | `global_log_level`, `hw_log_level`, `phy_log_level`, `mac_log_level`, `rlc_log_level`, `pdcp_log_level`, `rrc_log_level`, `ngap_log_level`, `f1ap_log_level` | All are `"info"`   | Common values: `error`, `warn`, `info`, `debug`, `trace`; actual support depends on the OAI logging system.                                                                                |       |
+
+### TDD Pattern
+
+OAI config:
+
+```c
       referenceSubcarrierSpacing                                    = 1; 
       # pattern1
       # dl_UL_TransmissionPeriodicity
 
       dl_UL_TransmissionPeriodicity                                 = 5;      # 0=ms0p5, 1=ms0p625, 2=ms1, 3=ms1p25, 4=ms2, 5=ms2p5, 6=ms5, 7=ms10
-      nrofDownlinkSlots                                             = 3;      # period 開頭有幾個完整 DL slot
-      nrofDownlinkSymbols                                           = 6;      # special slot 開頭有幾個 DL symbol
-      nrofUplinkSlots                                               = 1;      # special slot 結尾有幾個 UL symbol
-      nrofUplinkSymbols                                             = 4;      # period 結尾有幾個完整 UL slot
+      nrofDownlinkSlots                                             = 3;      # number of full DL slots at the beginning of the period
+      nrofDownlinkSymbols                                           = 6;      # number of DL symbols at the beginning of the special slot
+      nrofUplinkSlots                                               = 1;      # number of full UL slots at the end of the period
+      nrofUplinkSymbols                                             = 4;      # number of UL symbols at the end of the special slot
+```
 
-Each slot contains 14 symbols  :   D D D S U
+Each slot contains 14 symbols:
+
+```text
+TDD pattern: D D D S U
+
 Slot 0: D D D D D D D D D D D D D D
 Slot 1: D D D D D D D D D D D D D D
 Slot 2: D D D D D D D D D D D D D D
@@ -157,3 +170,15 @@ Slot 3: D D D D D D F F F F U U U U
 Slot 4: U U U U U U U U U U U U U U
 ```
 
+This means the current OAI TDD pattern can be described as:
+
+```text
+3 full downlink slots
+1 special slot
+1 full uplink slot
+
+Special slot:
+6 downlink symbols
+4 flexible / guard symbols
+4 uplink symbols
+```
