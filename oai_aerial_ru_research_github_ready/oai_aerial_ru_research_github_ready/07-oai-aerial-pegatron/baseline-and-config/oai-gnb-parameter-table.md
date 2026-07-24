@@ -4,6 +4,9 @@
 
 This note introduces the main parameters used in the OAI gNB configuration file.
 
+## reference
+
+> config: https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/doc/gnb.sa.band78.273prb.fhi72.4x4-pega-1G.conf
 ## Parameter Table
 
 | Category                | Parameter                       | Name in gNB Conf                                 | Current Value    | Possible Range                                                                           | Notes                                                                                                                                                        |
