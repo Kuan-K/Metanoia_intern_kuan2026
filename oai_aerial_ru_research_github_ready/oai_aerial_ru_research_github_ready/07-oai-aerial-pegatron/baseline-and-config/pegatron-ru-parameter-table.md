@@ -4,6 +4,13 @@
 
 This note introduces the main parameters used in the Pegatron RU configuration, including carrier settings, TX/RX carrier settings, endpoint mapping, timing configuration, network interface settings, and fronthaul link mapping.
 
+## reference
+
+> https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/doc/ietf-interface-processing-element.xml
+>
+> https://github.com/Kuan-K/Metanoia_intern_kuan2026/blob/main/doc/o-ran-uplane-conf_100M_4x4.xml
+> 
+
 ## Parameter Table
 
 | Category        | Name in Conf                          | Current Value | Possible Range | Notes                                                                                                                                                                                                           |
